@@ -1,0 +1,33 @@
+@use "sass:math";
+
+@function strip-units($number) {
+  @return math.div($number, $number * 0 + 1);
+}
+
+@mixin responsive-tlt($minFz, $maxFz) {
+  $raznostFz: strip-units($maxFz - $minFz);
+  @media (max-width: 320px) {
+    font-size: $minFz
+  }
+  @include media-breakpoint-only(xl) {
+    font-size: $maxFz
+  }
+  @include media-breakpoint-between('320', lg) {
+    font-size: calc(#{$minFz} + #{$raznostFz} * (100vw - 320px) / 790)
+  }
+}
+
+/*** Functions ***/
+
+/**
+ * Set font color according the background
+ * $background - background color - format accepted: hsla, rgb, #
+ * @return #color
+ */
+ @function set-text-color($background) {
+  @if (lightness($background) > 50) {
+    @return #000; // Lighter backgorund, return dark color
+  } @else {
+    @return #fff; // Darker background, return light color
+  }
+}

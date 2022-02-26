@@ -1,0 +1,16 @@
+module.exports = [
+	'./gulp/clean',
+	'./gulp/html',
+	'./gulp/php',
+	'./gulp/sass',
+	'./gulp/js',
+	'./gulp/img',
+	'./gulp/fonts',
+	'./gulp/watch',
+	'./gulp/bsync',
+	'./gulp/critical',
+	'./gulp/favicons',
+	'./gulp/zip',
+	'./gulp/ftp',
+	'./gulp/resources',
+];
