@@ -1,0 +1,13 @@
+.post-main {
+  background-color: var(--light-white);
+
+  @media only screen and (max-width: 780px) {
+    .section-sidebar__body {
+      flex-direction: column;
+    }
+  }
+}
+
+.post-service {
+  background-color: var(--blue-01);
+}

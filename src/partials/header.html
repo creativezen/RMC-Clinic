@@ -1,3 +1,107 @@
 <header class="header">
-  <div class="container"></div>
+  <div class="header__top">
+    <div class="header__top_content container">
+      <div class="header__top_location">
+        <div class="badge-icon">
+          <svg class="badge-icon__icon" viewbox="0 0 24 24">
+            <use xlink:href="#icon-location"></use>
+          </svg>
+          <span class="badge-icon__text">Екатеринбург, ул. Краснолесья д. 24</span>
+        </div>
+      </div>
+      <div class="header__top_buttons">
+        <span class="top-button" role="button" aria-pressed="false" data-graph-path="modal-call">
+          <div class="badge-icon">
+            <svg class="badge-icon__icon" viewbox="0 0 24 24">
+              <use xlink:href="#icon-call"></use>
+            </svg>
+            <span class="badge-icon__text">Заказать звонок</span>
+          </div>
+        </span>
+        <span class="top-button" role="button" aria-pressed="false" data-graph-path="modal-question">
+          <div class="badge-icon">
+            <svg class="badge-icon__icon" viewbox="0 0 24 24">
+              <use xlink:href="#icon-help"></use>
+            </svg>
+            <span class="badge-icon__text">Задать вопрос</span>
+          </div>
+        </span>
+        <span class="top-button" role="button" aria-pressed="fasle">
+          <div class="badge-icon">
+            <svg class="badge-icon__icon" viewbox="0 0 24 24">
+              <use xlink:href="#icon-look"></use>
+            </svg>
+            <span class="badge-icon__text">Версия для слабовидящих</span>
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="header__main">
+    <div class="header__main_content container">
+      <button class="button-burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="button-burger__lines">
+          <span class="button-burger__lines_item"></span>
+          <span class="button-burger__lines_item"></span>
+          <span class="button-burger__lines_item"></span>
+        </span>
+      </button>
+      <div class="element-logo">
+        <a class="link-absolute" href="#"></a>
+        <img src="img/svg/logo.svg" alt="RMC-Clinic">
+      </div>
+
+      <div class="header__main_functions">
+        <a class="element-phone" href="tel:+78004958787">
+          <span class="element-phone__content">
+            <p class="element-phone__number">8 (343) 345 00 00</p>
+            <small class="element-phone__small">Контактный центр</small>
+          </span>
+          <span href="#" role="button" aria-pressed="false" class="btn-link-icon">
+            <svg class="btn-svg" viewbox="0 0 24 24">
+              <use xlink:href="#icon-call"></use>
+            </svg>
+          </span>
+        </a>
+        <form class="header__main_search">
+          <fieldset class="form__search">
+            <input class="input-search active" type="text" placeholder="Искать на сайте...">
+            <button class="input-search__submit" type="submit"></button>
+          </fieldset>
+          <span href="#" role="button" aria-pressed="false" class="btn-link-icon" data-graph-path="modal-search">
+            <svg class="btn-svg" viewbox="0 0 24 24">
+              <use xlink:href="#icon-search"></use>
+            </svg>
+          </span>
+        </form>
+        <span role="button" aria-pressed="false" class="btn-link-icon" data-graph-path="modal-director">
+          <svg class="btn-svg" viewbox="0 0 24 24">
+            <use xlink:href="#icon-email"></use>
+          </svg>
+          <span>Написать<br>письмо директору</span>
+        </span>
+        <button type="button" aria-pressed="false" class="btn" data-graph-path="modal-appointment">Записаться на прием</button>
+      </div>
+    </div>
+  </div>
+  <div class="header__nav" data-menu>
+    <span class="button-burger-close" aria-label="Закрыть меню" data-menu-close>
+      <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+    </span>
+    <div class="container">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li data-menu-item><a href="#">О клинике</a></li>
+          <li class="active" data-menu-item><a href="#">Направления</a></li>
+          <li data-menu-item><a href="#">Специалисты</a></li>
+          <li data-menu-item><a href="#">Цены</a></li>
+          <li data-menu-item><a href="#">Акции</a></li>
+          <li data-menu-item><a href="#">Вопрос-ответ</a></li>
+          <li data-menu-item><a href="#">Отзывы</a></li>
+          <li data-menu-item><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+    <button type="button" aria-pressed="false" class="btn" data-graph-path="modal-appointment">Записаться на прием</button>
+  </div>
 </header>

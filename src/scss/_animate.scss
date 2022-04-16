@@ -1,0 +1,10 @@
+// Bg animate
+// ===================================
+@keyframes bg-animate {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}

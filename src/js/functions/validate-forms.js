@@ -1,6 +1,11 @@
 import JustValidate from 'just-validate';
 import Inputmask from "inputmask";
 
+const validationConfig = {
+  errorFieldCssClass: 'is-invalid',
+  lockForm: true,
+}
+
 export const validateForms = (selector, rules, afterSend) => {
   const form = document?.querySelector(selector);
   const telSelector = form?.querySelector('input[type="tel"]');
@@ -33,7 +38,7 @@ export const validateForms = (selector, rules, afterSend) => {
     }
   }
 
-  const validation = new JustValidate(selector);
+  const validation = new JustValidate(selector, validationConfig);
 
   for (let item of rules) {
     validation
@@ -42,7 +47,6 @@ export const validateForms = (selector, rules, afterSend) => {
 
   validation.onSuccess((ev) => {
     let formData = new FormData(ev.target);
-
     let xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function () {
@@ -58,8 +62,6 @@ export const validateForms = (selector, rules, afterSend) => {
 
     xhr.open('POST', 'mail.php', true);
     xhr.send(formData);
-
     ev.target.reset();
   })
-
 };

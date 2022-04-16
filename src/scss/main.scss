@@ -1,16 +1,60 @@
-// базовые подключения
-@import "vars";
-@import "mixins";
-@import "fonts";
-@import "settings";
+// base
+@use "./reset";
+@use "./vars";
+@use "./fonts";
+@use "./settings";
+@use "./typography";
+@use "./vendor";
+@use "./components/button";
+@use "./components/link";
 
-// подключения компонентов страницы
-@import "./components/header";
+// layout
+@use "./layout/page";
+@use "./layout/header";
+@use "./layout/footer";
+@use "./layout/nav";
+@use "./layout/section";
+@use "./layout/article";
+@use "./layout/grid";
+@use "./layout/modal";
 
-// тестовые стили, удалите их
-.page__body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: var(--vh);
-}
+// components
+@use "./components/breadcrumb";
+@use "./components/pagination";
+@use "./components/hero";
+@use "./components/badge";
+@use "./components/form";
+@use "./components/slider";
+@use "./components/card";
+@use "./components/person";
+@use "./components/sidebar";
+@use "./components/table";
+@use "./components/element";
+@use "./components/list";
+@use "./components/map";
+@use "./components/video";
+
+// pages
+@use "./pages/home";
+@use "./pages/directions";
+@use "./pages/direction";
+@use "./pages/specialists";
+@use "./pages/specialist";
+@use "./pages/news";
+@use "./pages/partners";
+@use "./pages/organizations";
+@use "./pages/documents";
+@use "./pages/licenses";
+@use "./pages/feedbacks";
+@use "./pages/vacancies";
+@use "./pages/sales";
+@use "./pages/contacts";
+@use "./pages/administration";
+@use "./pages/about";
+@use "./pages/post";
+@use "./pages/sale";
+@use "./pages/feedback";
+@use "./pages/questions";
+@use "./pages/service";
+@use "./pages/prices";
+@use "./pages/prices-direction";

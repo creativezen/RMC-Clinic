@@ -1,0 +1,128 @@
+@use "../mixins" as mix;
+
+// Table price
+// ===================================
+.table-price {
+  $parent: &;
+
+  &__header {
+    @include mix.interpolate(border-top-left-radius, 320px, 1480px, 6px, 10px);
+    @include mix.interpolate(border-top-right-radius, 320px, 1480px, 6px, 10px);
+    overflow: hidden;
+
+    @media only screen and (max-width: 480px) {
+      display: none;
+    }
+
+    #{$parent}__row {
+      background-color: rgba(179, 225, 240, 0.3);
+    }
+
+    #{$parent}__cell {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.4;
+      color: var(--dark-primary);
+
+      &.cell-price {
+        color: var(--dark-primary);
+      }
+    }
+  }
+
+  &__body {
+    #{$parent}__row {
+      transition: var(--transition);
+
+      &:hover {
+        #{$parent}__cell {
+          color: var(--dark-primary);
+        }
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    @media only screen and (max-width: 480px) {
+      display: block;
+    }
+  }
+
+  &__row + &__row {
+    border-top: 1px solid var(--dark-01);
+  }
+
+  @media only screen and (max-width: 480px) {
+    &__row + &__row {
+      margin-top: 10px;
+      padding-top: 10px;
+    }
+  }
+
+  &__cell {
+    padding: 15px 20px;
+    font-weight: 400;
+    color: var(--dark-075);
+    transition: var(--transition);
+
+    @media only screen and (max-width: 480px) {
+      padding: 0;
+      display: flex;
+      align-items: flex-start;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.2;
+
+      &::before {
+        flex-shrink: 0;
+        width: 95px;
+        margin-right: 12px;
+        content: attr(data-content);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.2;
+        text-align: right;
+        color: var(--dark-primary);
+      }
+    }
+
+    &.cell-code,
+    &.cell-price {
+      flex: 1 0 160px;
+      max-width: 160px;
+
+      @media only screen and (max-width: 780px) {
+        max-width: 140px;
+      }
+
+      @media only screen and (max-width: 480px) {
+        max-width: none;
+        width: 100%;
+      }
+    }
+
+    &.cell-price {
+      font-weight: 500;
+      text-align: right;
+      color: var(--brand-blue);
+
+      @media only screen and (max-width: 480px) {
+        text-align: left;
+      }
+    }
+
+    &.cell-auto {
+      flex: auto;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    &__cell + &__cell {
+      margin-top: 6px;
+    }
+  }
+}

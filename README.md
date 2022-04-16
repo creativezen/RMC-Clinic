@@ -1,4 +1,4 @@
-# Gulp - сборка FORWEB|Agency
+# Gulp - Forweb.Agency
 
 > Используется Gulp 4
 

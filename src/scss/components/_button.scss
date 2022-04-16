@@ -1,0 +1,307 @@
+@use "../mixins" as mix;
+
+// Button prototype
+// ===================================
+.btn-proto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  border-style: solid;
+  transition: var(--transition);
+  cursor: pointer;
+
+  &:focus {
+    outline-color: transparent;
+  }
+}
+
+// Button default
+// ===================================
+.btn-default {
+  @extend .btn-proto;
+  @include mix.interpolate(padding-top, 320px, 1480px, 13px, 17px);
+  @include mix.interpolate(padding-right, 320px, 1480px, 20px, 23px);
+  @include mix.interpolate(padding-bottom, 320px, 1480px, 13px, 17px);
+  @include mix.interpolate(padding-left, 320px, 1480px, 20px, 23px);
+  font-size: 16px;
+  border-radius: 4px;
+  border-width: 2px;
+
+  &--xl {
+    @extend .btn-proto;
+    @include mix.interpolate(padding-top, 320px, 1480px, 13px, 23px);
+    @include mix.interpolate(padding-right, 320px, 1480px, 20px, 38px);
+    @include mix.interpolate(padding-bottom, 320px, 1480px, 13px, 23px);
+    @include mix.interpolate(padding-left, 320px, 1480px, 20px, 38px);
+    font-size: 22px;
+    border-radius: 6px;
+    letter-spacing: -0.02em;
+
+    @media only screen and (max-width: 780px) {
+      font-size: 16px;
+      border-radius: 4px;
+      border-width: 2px;
+    }
+  }
+  &--sm {
+    @extend .btn-proto;
+    padding: 8px 12px;
+    font-size: 13px;
+    border-radius: 3px;
+  }
+}
+
+// Button green
+// ===================================
+.btn-green {
+  color: #fff;
+  background-color: var(--green-primary);
+  border-color: var(--green-primary);
+
+  @include mix.hover {
+    background-color: var(--green-hover);
+    border-color: var(--green-hover);
+    color: darken(rgba(22, 181, 151, 1), 10%);
+  }
+  &:active {
+    background-color: var(--green-pressed);
+    border-color: var(--green-pressed);
+    // color: var(--dark-black);
+  }
+}
+
+// Button zero
+// ===================================
+.btn-zero {
+  background-color: transparent;
+  color: var(--dark-black);
+
+  &:hover {
+    color: darken(rgba(22, 181, 151, 1), 10%);
+  }
+}
+
+// Button
+// ===================================
+.btn {
+  @extend .btn-default;
+  @extend .btn-green;
+}
+
+// Button big
+// ===================================
+.btn-big {
+  @extend .btn-default--xl;
+  @extend .btn-green;
+}
+
+// Button small
+// ===================================
+.btn-small {
+  @extend .btn-default--sm;
+  @extend .btn-green;
+  border-width: 1px;
+}
+
+// Button icon
+// ===================================
+.btn-icon {
+  @extend .btn;
+  @include mix.interpolate(padding-top, 320px, 1480px, 9px, 13px);
+  @include mix.interpolate(padding-right, 320px, 1480px, 16px, 18px);
+  @include mix.interpolate(padding-bottom, 320px, 1480px, 9px, 13px);
+  @include mix.interpolate(padding-left, 320px, 1480px, 20px, 23px);
+
+  .btn-svg {
+    margin-left: 6px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+// Button icon big
+// ===================================
+.btn-big-icon {
+  @extend .btn-big;
+  padding: 19px 30px 19px 38px;
+
+  @media only screen and (max-width: 780px) {
+    padding: 12px 18px 12px 23px;
+  }
+
+  .btn-svg {
+    margin-left: 8px;
+    width: 30px;
+    height: 30px;
+
+    @media only screen and (max-width: 780px) {
+      margin-left: 6px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+// Button icon small
+// ===================================
+.btn-small-icon {
+  @extend .btn-small;
+  padding: 6.5px 8px 6.5px 12px;
+
+  .btn-svg {
+    margin-left: 4px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+// Button link icon
+// ===================================
+.btn-link-icon {
+  $parent: &;
+  display: flex;
+  align-items: center;
+  line-height: 1.2;
+  text-decoration: none;
+  color: var(--dark-black);
+  transition: var(--transition);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--blue-primary);
+
+    .btn-svg {
+      background-color: var(--brand-blue);
+      border-color: var(--brand-blue);
+
+      use {
+        fill: var(--light-white);
+      }
+    }
+  }
+
+  .btn-svg {
+    flex-shrink: 0;
+    padding: 12px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--blue-03);
+    background-color: var(--light-white);
+    transition: var(--transition);
+
+    @media only screen and (max-width: 480px) {
+      padding: 8px;
+      width: 38px;
+      height: 38px;
+    }
+
+    use {
+      fill: var(--brand-blue);
+      transition: var(--transition);
+    }
+  }
+
+  .btn-svg + * {
+    margin-left: 15px;
+  }
+}
+
+.btn-icon,
+.btn-big-icon,
+.btn-small-icon {
+
+  &:hover {
+    .btn-svg use {
+      fill: darken(rgba(22, 181, 151, 1), 10%);
+    }
+  }
+
+  .btn-svg use {
+    fill: var(--light-white);
+    transition: var(--transition);
+  }
+
+  &.btn-disabled {
+    .btn-svg use {
+      fill: var(--dark-03);
+    }
+  }
+}
+
+.btn--zero,
+.btn-big--zero,
+.btn-small--zero,
+.btn-icon--zero,
+.btn-big-icon--zero,
+.btn-small-icon--zero {
+  @extend .btn-zero;
+}
+
+.btn-icon--zero,
+.btn-big-icon--zero,
+.btn-small-icon--zero {
+
+  .btn-svg use {
+    fill: var(--green-primary);
+  }
+
+  &:hover {
+    .btn-svg use {
+      fill: darken(rgba(22, 181, 151, 1), 10%);
+    }
+  }
+}
+
+.btn-disabled {
+  background-color: var(--light-03);
+  border-color: var(--light-03);
+  color: var(--dark-03);
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+// Button burger
+// ===================================
+.button-burger {
+  @extend .btn-proto;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 0.4em;
+  background-color: var(--brand-green);
+
+  @media only screen and (max-width: 480px) {
+    width: 38px;
+    height: 38px;
+  }
+
+  &__lines {
+    width: 60%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    &_item {
+      width: 80%;
+      height: 2px;
+      border-radius: 10px;
+      background-color: var(--light-white);
+    }
+  }
+}
+
+.button-burger-close {
+  margin-bottom: 40px;
+  width: 30px;
+  height: 30px;
+
+  svg use {
+    fill: var(--light-white);
+  }
+}

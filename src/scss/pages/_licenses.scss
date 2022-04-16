@@ -1,0 +1,22 @@
+.licences-main {
+  background-color: var(--blue-01);
+
+  &__list {
+
+    .card-document {
+      border-color: var(--light-white);
+
+      &:hover {
+        border-color: var(--light-gray);
+      }
+    }
+
+    .card-document + .card-document {
+      margin-top: 20px;
+
+      @media only screen and (max-width: 680px) {
+        margin-top: 20px;
+      }
+    }
+  }
+}

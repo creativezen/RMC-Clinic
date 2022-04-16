@@ -1,0 +1,53 @@
+@use "../mixins" as mix;
+
+// contacts main
+// ===================================
+.contacts-main {
+  background-color: var(--light-white);
+}
+
+// contacts requisites
+// ===================================
+.contacts-requisites {
+  background-color: var(--light-01);
+}
+
+// contacts socials
+// ===================================
+.contacts-socials {
+  background-color: var(--light-white);
+
+  .section-default__body {
+
+    .grid-group {
+      @media only screen and (max-width: 480px) {
+        gap: 10px;
+      }
+    }
+
+    .grid-child {
+      grid-column: 4 span;
+
+      @media only screen and (max-width: 780px) {
+        grid-column: 6 span;
+      }
+    }
+  }
+}
+
+// contacts feedbacks
+// ===================================
+.contacts-feedbacks {
+  background-color: var(--blue-01);
+
+  .section-default__body {
+
+    .card-feedback {
+      border-color: var(--light-white);
+
+      @include mix.hover {
+        border-color: var(--dark-01);
+      }
+    }
+  }
+}

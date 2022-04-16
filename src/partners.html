@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+  @include('./partials/head.html', {
+  "title": 'Страховые партнёры | RMC-Clinic',
+  })
+
+  @include('partials/svg-sprite.html')
+
+  <body class="page__body">
+    @include('partials/header.html')
+
+    <main class="main">
+      <section class="section hero-cover">
+        <picture class="hero-cover__img">
+          <img src="img/hero-img-05.jpg" alt="О клинике" loading="lazy" width="1920" height="500">
+        </picture>
+        <div class="hero-cover__content container">
+          <h1 class="hero-cover__title">Страховые партнеры</h1>
+          <div class="breadcrumb">
+            <ul class="breadcrumb__nav">
+              <li><a href="#" class="link-breadcrumb">Главная</a></li>
+              <li><a href="#" class="link-breadcrumb">О клинике</a></li>
+              <li><a href="#" class="link-breadcrumb">Страховые партнеры</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section-default partners-main">
+        <div class="container">
+          <div class="section-default__body">
+            <div class="grid-group">
+              <div class="grid-child">
+                <div class="card-partner">
+                  <div class="card-partner__header">
+                    <div class="person-card">
+                      <picture class="person-card__photo">
+                        <img loading="lazy" src="img/partners/partner-img-04.png" width="338" height="160" alt="ООО «Инвитро-Урал» | Партнёр">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="card-partner__body">
+                    <h3 class="card-partner__body_name">Росгосстрах</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-child">
+                <div class="card-partner">
+                  <div class="card-partner__header">
+                    <div class="person-card">
+                      <picture class="person-card__photo">
+                        <img loading="lazy" src="img/partners/partner-img-05.png" width="338" height="160" alt="ООО «Инвитро-Урал» | Партнёр">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="card-partner__body">
+                    <h3 class="card-partner__body_name">Сбербанк страхование</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-child">
+                <div class="card-partner">
+                  <div class="card-partner__header">
+                    <div class="person-card">
+                      <picture class="person-card__photo">
+                        <img loading="lazy" src="img/partners/partner-img-06.png" width="338" height="160" alt="ООО «Инвитро-Урал» | Партнёр">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="card-partner__body">
+                    <h3 class="card-partner__body_name">Альфа страхование</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-child">
+                <div class="card-partner">
+                  <div class="card-partner__header">
+                    <div class="person-card">
+                      <picture class="person-card__photo">
+                        <img loading="lazy" src="img/partners/partner-img-07.png" width="338" height="160" alt="ООО «Инвитро-Урал» | Партнёр">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="card-partner__body">
+                    <h3 class="card-partner__body_name">Согаз</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-child">
+                <div class="card-partner">
+                  <div class="card-partner__header">
+                    <div class="person-card">
+                      <picture class="person-card__photo">
+                        <img loading="lazy" src="img/partners/partner-img-08.png" width="338" height="160" alt="ООО «Инвитро-Урал» | Партнёр">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="card-partner__body">
+                    <h3 class="card-partner__body_name">Ингосстрах</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-child">
+                <div class="card-partner">
+                  <div class="card-partner__header">
+                    <div class="person-card">
+                      <picture class="person-card__photo">
+                        <img loading="lazy" src="img/partners/partner-img-09.png" width="338" height="160" alt="ООО «Инвитро-Урал» | Партнёр">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="card-partner__body">
+                    <h3 class="card-partner__body_name">Альянс Жизнь</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html')
+    @include('partials/modal.html')
+  </body>
+
+</html>

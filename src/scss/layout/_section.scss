@@ -1,0 +1,289 @@
+@use "../mixins" as mix;
+
+// section home
+// ===================================
+.section-home {
+  padding: 80px 0 120px;
+  @include mix.interpolate(padding-top, 320px, 1480px, 26px, 80px);
+  @include mix.interpolate(padding-bottom, 320px, 1480px, 50px, 120px);
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    align-items: flex-end;
+
+    .title-home {
+      flex: auto;
+
+      @media only screen and (max-width: 780px) {
+        max-width: 65%;
+      }
+
+      @media only screen and (max-width: 480px) {
+        max-width: none;
+        width: 100%;
+      }
+    }
+
+    .link-arrow {
+      margin-left: auto;
+      margin-bottom: 10px;
+
+      @media only screen and (max-width: 480px) {
+        display: none;
+      }
+    }
+  }
+
+  &__body {
+    position: relative;
+    @include mix.interpolate(margin-top, 320px, 1480px, 20px, 50px);
+
+    &_accent {
+      margin-bottom: 40px;
+      @include mix.interpolate(font-size, 320px, 1480px, 20px, 24px);
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+
+      @media only screen and (max-width: 480px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .card-question + .card-question {
+      @include mix.interpolate(margin-top, 320px, 1480px, 20px, 40px);
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      transform: translateY(-65%);
+
+      svg {
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    .swiper-button-next {
+      right: -5%;
+
+      @media only screen and (max-width: 1280px) {
+        right: -10px;
+      }
+      @media only screen and (max-width: 1080px) {
+        right: -1000%;
+      }
+    }
+
+    .swiper-button-prev {
+      left: -5%;
+
+      @media only screen and (max-width: 1280px) {
+        left: -10px;
+      }
+      @media only screen and (max-width: 1080px) {
+        left: -1000%;
+      }
+    }
+  }
+
+  &__footer {
+    @include mix.interpolate(margin-top, 320px, 1480px, 20px, 50px);
+
+    @media only screen and (max-width: 480px) {
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// section sidebar
+// ===================================
+.section-sidebar {
+  @include mix.interpolate(padding-top, 320px, 1480px, 40px, 90px);
+  @include mix.interpolate(padding-bottom, 320px, 1480px, 40px, 90px);
+
+  &__header {
+    .title {
+      // Компенсируем верхний оступ из-за высоты строки заголовка
+      @include mix.interpolate(margin-top, 320px, 1480px, -16px, -26px);
+      @include mix.interpolate(margin-bottom, 320px, 1480px, 0px, -5px);
+
+      @media only screen and (max-width: 780px) {
+        max-width: 65%;
+      }
+
+      @media only screen and (max-width: 480px) {
+        max-width: none;
+        width: 100%;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 780px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__main {
+    flex: auto;
+
+    .card-question + .card-question {
+      @include mix.interpolate(margin-top, 320px, 1480px, 20px, 40px);
+    }
+  }
+
+  &__aside {
+    margin-left: 60px;
+    flex: 1 0 315px;
+    max-width: 315px;
+
+    @media only screen and (max-width: 1080px) {
+      margin-left: 30px;
+    }
+
+    @media only screen and (max-width: 880px) {
+      max-width: 240px;
+    }
+
+    @media only screen and (max-width: 780px) {
+      margin-left: 0;
+      max-width: none;
+      flex: auto;
+
+      .sidebar-filter {
+
+        &__body {
+          max-height: 170px;
+          overflow: auto;
+        }
+
+        &__footer {
+          position: relative;
+          box-shadow: 0px -6px 6px rgba(0, 0, 0, 0.08);
+        }
+      }
+    }
+
+    .aside-item + .aside-item {
+      margin-top: 20px;
+    }
+
+    .stiky {
+      position: sticky;
+      top: 10px;
+
+      @media only screen and (max-width: 780px) {
+        position: static;
+      }
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  &.post-main {
+    @include mix.interpolate(padding-top, 320px, 1480px, 20px, 50px);
+  }
+
+  @media only screen and (max-width: 780px) {
+    &__main + &__aside {
+      @include mix.interpolate(margin-top, 320px, 1480px, 20px, 30px);
+    }
+  }
+
+  &__body + &__footer,
+  &__header + &__footer,
+  &__header + &__body {
+    @include mix.interpolate(margin-top, 320px, 1480px, 15px, 50px);
+  }
+}
+
+// section default
+// ===================================
+.section-default {
+  @extend .section-sidebar;
+  overflow: hidden;
+
+  &__header {
+    @extend .section-home__header;
+    align-items: center;
+
+    .title {
+      // Компенсируем верхний оступ из-за высоты строки заголовка
+      @include mix.interpolate(margin-top, 320px, 1480px, -16px, -26px);
+      @include mix.interpolate(margin-bottom, 320px, 1480px, 0px, -5px);
+
+      @media only screen and (max-width: 780px) {
+        max-width: 65%;
+      }
+
+      @media only screen and (max-width: 480px) {
+        max-width: none;
+        width: 100%;
+      }
+    }
+  }
+
+  &__body {
+    position: relative;
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      transform: translateY(-65%);
+
+      svg {
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    .swiper-button-next {
+      right: -5%;
+
+      @media only screen and (max-width: 1280px) {
+        right: -10px;
+      }
+      @media only screen and (max-width: 1080px) {
+        right: -1000%;
+      }
+    }
+
+    .swiper-button-prev {
+      left: -5%;
+
+      @media only screen and (max-width: 1280px) {
+        left: -10px;
+      }
+      @media only screen and (max-width: 1080px) {
+        left: -1000%;
+      }
+    }
+  }
+
+  &__body + &__footer,
+  &__header + &__footer,
+  &__header + &__body {
+    @include mix.interpolate(margin-top, 320px, 1480px, 15px, 50px);
+  }
+
+  &.sale-main,
+  &.feedback-main {
+    @include mix.interpolate(padding-top, 320px, 1480px, 20px, 50px);
+  }
+
+  .card-form {
+    @include mix.interpolate(padding, 320px, 1480px, 20px, 40px);
+
+    .form__footer {
+      @include mix.interpolate(margin-top, 320px, 1480px, 20px, 40px);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.administration-hero {
+  background-color: var(--light-01);
+}
+
+.administration-main {
+
+  .section-default__body {
+
+    .card-person + .card-person {
+      margin-top: 40px;
+
+      @media only screen and (max-width: 480px) {
+        margin-top: 30px;
+      }
+    }
+  }
+}

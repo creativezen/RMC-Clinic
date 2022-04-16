@@ -1,9 +1,7 @@
-const {
-  src,
-  dest,
-  series,
-  watch
-} = require('gulp');
+const { src, dest, series, watch } = require('gulp');
+const { readFileSync } = require('fs');
+const config = require('./package.json')
+
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const del = require('del');
@@ -22,13 +20,12 @@ const htmlmin = require('gulp-htmlmin');
 const gulpif = require('gulp-if');
 const notify = require('gulp-notify');
 const image = require('gulp-imagemin');
-const {
-  readFileSync
-} = require('fs');
 const typograf = require('gulp-typograf');
 const webp = require('gulp-webp');
 const avif = require('gulp-avif');
+const favicons = require('gulp-favicons');
 const mainSass = gulpSass(sass);
+const pxtorem = require('gulp-pxtorem');
 const webpackStream = require('webpack-stream');
 const plumber = require('gulp-plumber');
 const path = require('path');
@@ -108,6 +105,26 @@ const styles = () => {
     .pipe(gulpif(isProd, cleanCSS({
       level: 2
     })))
+    .pipe(pxtorem({
+      replace: true,
+      propWhiteList: [
+        'font-size',
+        'margin',
+        'padding',
+        'margin-top',
+        'margin-right',
+        'margin-bottom',
+        'margin-left',
+        'padding-top',
+        'padding-right',
+        'padding-bottom',
+        'padding-left',
+        'border-radius',
+        'width',
+        'height',
+        'gap'
+      ]
+    }))
     .pipe(dest(paths.buildCssFolder, { sourcemaps: '.' }))
     .pipe(browserSync.stream());
 };
@@ -126,6 +143,26 @@ const stylesBackend = () => {
       cascade: false,
       grid: true,
       overrideBrowserslist: ["last 5 versions"]
+    }))
+    .pipe(pxtorem({
+      replace: true,
+      propWhiteList: [
+        'font-size',
+        'margin',
+        'padding',
+        'margin-top',
+        'margin-right',
+        'margin-bottom',
+        'margin-left',
+        'padding-top',
+        'padding-right',
+        'padding-bottom',
+        'padding-left',
+        'border-radius',
+        'width',
+        'height',
+        'gap'
+      ]
     }))
     .pipe(dest(paths.buildCssFolder))
     .pipe(browserSync.stream());
@@ -230,17 +267,71 @@ const images = () => {
     .pipe(dest(paths.buildImgFolder))
 };
 
-const webpImages = () => {
-  return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`])
-    .pipe(webp())
-    .pipe(dest(paths.buildImgFolder))
-};
+// const webpImages = () => {
+//   return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`])
+//     .pipe(webp())
+//     .pipe(dest(paths.buildImgFolder))
+// };
 
-const avifImages = () => {
-  return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`])
-    .pipe(avif())
-    .pipe(dest(paths.buildImgFolder))
-};
+// const avifImages = () => {
+//   return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`])
+//     .pipe(avif())
+//     .pipe(dest(paths.buildImgFolder))
+// };
+
+// favicon lg
+const faviconLarge = () => {
+  return src(`${paths.srcImgFolder}/favicon/favicon-lg.{jpg,jpeg,png,svg}`)
+		.pipe(plumber())
+		.pipe(favicons({
+			appName: config.name,
+			appShortName: config.name,
+			appDescription: config.description,
+			html: 'favicons.html',
+			pipeHTML: true,
+			url: 'http://localhost/',
+			path: '/img/favicon/',
+			replace: true,
+			version: 3,
+			lang: 'ru-RU',
+			icons: {
+				appleIcon: true,
+				favicons: false,
+				online: false,
+				appleStartup: false,
+				android: true,
+				firefox: true,
+				yandex: true,
+				windows: true,
+				coast: true
+			}
+		}))
+		.pipe(dest(`${paths.buildImgFolder}/favicon`))
+}
+
+// favicon sm
+const faviconSmall = () => {
+  return src(`${paths.srcImgFolder}/favicon/favicon-sm.{jpg,jpeg,png,svg}`)
+		.pipe(plumber())
+		.pipe(favicons({
+			html: 'favicons-logo.html',
+			pipeHTML: true,
+			path: '/img/favicon/',
+			replace: true,
+			icons: {
+				appleIcon: false,
+				favicons: true,
+				online: false,
+				appleStartup: false,
+				android: false,
+				firefox: false,
+				yandex: false,
+				windows: false,
+				coast: false
+			}
+		}))
+		.pipe(dest(`${paths.buildImgFolder}/favicon`))
+}
 
 const htmlInclude = () => {
   return src([`${srcFolder}/*.html`])
@@ -268,8 +359,8 @@ const watchFiles = () => {
   watch(`${srcFolder}/*.html`, htmlInclude);
   watch(`${paths.resourcesFolder}/**`, resources);
   watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`, images);
-  watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
-  watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, avifImages);
+  // watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
+  // watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, avifImages);
   watch(paths.srcSvg, svgSprites);
 }
 
@@ -324,11 +415,14 @@ const toProd = (done) => {
   done();
 };
 
-exports.default = series(clean, htmlInclude, scripts, styles, resources, images, webpImages, avifImages, svgSprites, watchFiles);
+// exports.default = series(clean, htmlInclude, scripts, styles, resources, images, webpImages, avifImages, svgSprites, faviconLarge, faviconSmall, watchFiles);
+exports.default = series(clean, htmlInclude, scripts, styles, resources, images, svgSprites, faviconLarge, faviconSmall, watchFiles);
 
-exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, webpImages, avifImages, svgSprites)
+// exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, webpImages, avifImages, svgSprites, faviconLarge, faviconSmall)
+exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, svgSprites, faviconLarge, faviconSmall)
 
-exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, webpImages, avifImages, svgSprites, htmlMinify);
+// exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, webpImages, avifImages, svgSprites, faviconLarge, faviconSmall, htmlMinify);
+exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, svgSprites, faviconLarge, faviconSmall);
 
 exports.cache = series(cache, rewrite);
 

@@ -1,0 +1,13 @@
+@use "../mixins" as mix;
+
+.questions-main {
+
+  @media only screen and (max-width: 780px) {
+
+    .section-sidebar__main + .section-sidebar__aside {
+      margin-top: 0;
+      @include mix.interpolate(margin-bottom, 320px, 1480px, 20px, 30px);
+    }
+  }
+
+}

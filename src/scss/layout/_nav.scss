@@ -1,0 +1,65 @@
+@use '../mixins' as mix;
+
+.nav {
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 1080px) {
+      padding: 0 14px;
+    }
+
+    @media only screen and (max-width: 880px) {
+      display: block;
+      text-align: center;
+    }
+
+    li {
+      background-color: rgba(67, 97, 106, 0);
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -0.01em;
+      transition: var(--transition);
+
+      @include mix.hover {
+        background-color: rgba(67, 97, 106, 0.5);
+      }
+
+      a {
+        display: block;
+        padding: 22px 20px;
+        color: var(--light-white);
+        text-decoration: none;
+
+        @media only screen and (max-width: 1080px) {
+          padding: 18px 10px;
+        }
+
+        @media only screen and (max-width: 480px) {
+          padding: 16px 20px;
+        }
+      }
+
+      &.active {
+        pointer-events: none;
+
+        a {
+          color: var(--brand-green);
+        }
+      }
+    }
+  }
+
+  .btn {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -1000%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}

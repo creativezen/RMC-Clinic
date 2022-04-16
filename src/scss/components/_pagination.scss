@@ -1,0 +1,77 @@
+@use "../mixins" as mix;
+
+// pagination
+// ===================================
+.pagination {
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    li {
+      a {
+        padding: 0.4em 0.75em;
+        background-color: transparent;
+        border-radius: 4px;
+        @include mix.interpolate(font-size, 320px, 1480px, 13px, 16px);
+        font-weight: 400;
+        line-height: 1;
+        color: var(--dark-primary);
+        text-decoration: none;
+        transition: var(--transition);
+      }
+
+      &:hover {
+        a {
+          background-color: var(--green-03);
+        }
+      }
+
+      &.active {
+        a {
+          background-color: var(--brand-green);
+          font-weight: 500;
+          color: var(--light-white);
+        }
+      }
+    }
+
+    &_button {
+      position: relative;
+      @include mix.interpolate(width, 320px, 1480px, 20px, 24px);
+      @include mix.interpolate(height, 320px, 1480px, 20px, 24px);
+
+      @media only screen and (max-width: 380px) {
+        top: 2px;
+      }
+
+      &:hover {
+        svg use {
+          fill: var(--green-pressed);
+        }
+      }
+
+      a {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      svg use {
+        fill: var(--dark-075);
+        transition: var(--transition);
+      }
+
+      &.prev {
+        margin-right: 10px;
+        transform: rotate(-180deg);
+      }
+
+      &.next {
+        margin-left: 10px;
+      }
+    }
+  }
+}

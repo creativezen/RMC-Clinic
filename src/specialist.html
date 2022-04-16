@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+  @include('./partials/head.html', {
+  "title": 'Директор центра ООО «RMC» | RMC-Clinic',
+  })
+
+  @include('partials/svg-sprite.html')
+
+  <body class="page__body">
+    @include('partials/header.html')
+
+    <main class="main">
+      <section class="section hero-post">
+        <div class="hero-post__content container">
+          <div class="breadcrumb">
+            <ul class="breadcrumb__nav">
+              <li><a href="#" class="link-breadcrumb">Главная</a></li>
+              <li><a href="#" class="link-breadcrumb">Направления</a></li>
+              <li><a href="#" class="link-breadcrumb">Онкология</a></li>
+              <li><a href="#" class="link-breadcrumb">Гладков Олег Александрович</a></li>
+            </ul>
+          </div>
+          <h1 class="hero-post__title">Директор центра ООО «RMC»</h1>
+        </div>
+      </section>
+      <section class="section-default specialist-main">
+        <div class="container">
+          <div class="section-default__body">
+            <div class="card-person__content">
+              <picture class="card-person__photo">
+                <img loading="lazy" src="img/card-person-img-01.jpg" alt="Гладков Олег Александрович">
+              </picture>
+              <div class="card-person__info">
+                <div class="card-person__info_header">
+                  <h2 class="title">Гладков Олег Александрович</h2>
+                </div>
+                <div class="card-person__info_body">
+                  <p class="text">Онколог. Директор медицинского центра ООО «RMC». Доктор медицинских наук.</p>
+                </div>
+                <div class="card-person__info_footer">
+                  <a href="#" class="btn" data-graph-path="modal-appointment">Записаться на прием</a>
+                  <span class="btn-link-icon" role="button" aria-pressed="false" data-graph-path="modal-call">
+                    <svg class="btn-svg" viewbox="0 0 24 24">
+                      <use xlink:href="#icon-email"></use>
+                    </svg>
+                    <span>Заказать звонок</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="grid-group">
+              <div class="grid-child">
+                <div class="card-contact">
+                  <div class="card-contact__icon">
+                    <img src="img/svg/specialist/book.svg" alt="">
+                  </div>
+                  <div class="card-contact__text">Доктор медицинских наук</div>
+                  <small class="card-contact__small">Квалифицикация</small>
+                </div>
+              </div>
+              <div class="grid-child">
+                <div class="card-contact">
+                  <div class="card-contact__icon">
+                    <img src="img/svg/specialist/badge.svg" alt="">
+                  </div>
+                  <div class="card-contact__text">Заслуженный врач Российской Федерации</div>
+                  <small class="card-contact__small">Заслуги, звания</small>
+                </div>
+              </div>
+              <div class="grid-child">
+                <div class="card-contact">
+                  <div class="card-contact__icon">
+                    <img src="img/svg/specialist/calendar.svg" alt="">
+                  </div>
+                  <div class="card-contact__text">Более 27 лет</div>
+                  <small class="card-contact__small">Стаж работы</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-default specialist-biography">
+        <div class="container">
+          <div class="section-default__body">
+            <div class="grid-group">
+              <div class="grid-child">
+                <div class="biography-list">
+                  <h2 class="title">Опыт работы</h2>
+                  <ul>
+                    <li><strong>1989-1991 гг.</strong>врач-хирург Кетовская ЦРБ Курганской обл.</li>
+                    <li><strong>1992-2000 гг.</strong>врач-хирург торакального отделения ГБУЗ ЧОКОД.</li>
+                    <li><strong>2000-2014 гг.</strong>зав. отделением химиотерапии ГБУЗ ЧОКОД.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="grid-child">
+                <div class="biography-list">
+                  <h2 class="title">Образование</h2>
+                  <ul>
+                    <li><strong>1981-1987 гг.</strong>ЧелГМИ</li>
+                    <li><strong>1987-1988 гг.</strong>Интернатура г. Курган</li>
+                    <li><strong>1991-1992 гг.</strong>Клиническая ординатура ЧГМИ</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-default specialist-documents">
+        <div class="container">
+          <div class="section-default__header">
+            <h1 class="title">Документы</h1>
+          </div>
+          <div class="section-default__body">
+            <ul class="documents-list">
+              <div class="card-document">
+                <div class="card-document__cover">
+                  <div class="card-document__cover_icon">
+                    <img src="img/svg/card-document-icon.svg" alt="">
+                  </div>
+                  <p class="card-document__cover_text">Сертификат</p>
+                </div>
+                <div class="card-document__body">
+                  <p class="card-document__body_text">Номер: 0174180237958</p>
+                  <p class="card-document__body_text">Кем выдан: ГБОУ ВПО «ЮУ ГМУ»</p>
+                  <p class="card-document__body_text">Когда выдан: 01.07.2014</p>
+                </div>
+                <div class="card-document__link">
+                  <a href="#" class="link-download" target="_blank">
+                    <span class="link-download__text">Открыть документ</span>
+                    <svg class="link-download__icon" viewbox="0 0 24 24">
+                      <use xlink:href="#icon-download"></use>
+                    </svg>
+                  </a>
+                  <small class="card-document__link_small">(pdf, 1 МБ)</small>
+                </div>
+              </div>
+              <div class="card-document">
+                <div class="card-document__cover">
+                  <div class="card-document__cover_icon">
+                    <img src="img/svg/card-document-icon.svg" alt="">
+                  </div>
+                  <p class="card-document__cover_text">Диплом</p>
+                </div>
+                <div class="card-document__body">
+                  <p class="card-document__body_text">Номер: МВ №577210</p>
+                  <p class="card-document__body_text">Кем выдан: Челябинский государственный медицинский институт</p>
+                  <p class="card-document__body_text">Когда выдан: 30.06.1987</p>
+                </div>
+                <div class="card-document__link">
+                  <a href="#" class="link-download" target="_blank">
+                    <span class="link-download__text">Открыть документ</span>
+                    <svg class="link-download__icon" viewbox="0 0 24 24">
+                      <use xlink:href="#icon-download"></use>
+                    </svg>
+                  </a>
+                  <small class="card-document__link_small">(pdf, 1 МБ)</small>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section-default specialist-feedbacks">
+        <div class="container">
+          <div class="section-default__header">
+            <h1 class="title">Отзывы о враче</h1>
+          </div>
+          <div class="section-default__body">
+            <div class="swiper js-swiper-feedback" data-slider="3">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="card-feedback">
+                    <div class="card-feedback__header">
+                      <div class="badge badge--small">Онкология</div>
+                      <p class="card-feedback__header_text">Имя Фамилия</p>
+                      <div class="card-feedback__header_info">
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">15 ноября 2019 г.</span>
+                        </div>
+                        <div class="badge-rating">
+                          <div class="badge-rating__icon"></div>
+                          <span class="badge-rating__text">5.0</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-feedback__body">
+                      <p class="card-feedback__body_text">
+                        Добрый день! Хочу выразить огромную благодарность всему коллективу клиники за профессиональный подход к каждому человеку. Моей маме в Ставрополе поставили диагноз рак лёгких 4 степени и уже назначили химиотерапию. Я со всеми анализами обратился к Гладкову Олегу Александровичу. Он сказал срочно везти ее в Челябинск.
+                      </p>
+                    </div>
+                    <div class="card-feedback__footer">
+                      <a href="#" class="link-arrow link-arrow--small">
+                        <span class="link-arrow__text">Читать полностью</span>
+                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                          <use xlink:href="#icon-arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card-feedback">
+                    <div class="card-feedback__header">
+                      <div class="badge badge--small">Онкология</div>
+                      <p class="card-feedback__header_text">Имя Фамилия</p>
+                      <div class="card-feedback__header_info">
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">15 ноября 2019 г.</span>
+                        </div>
+                        <div class="badge-rating">
+                          <div class="badge-rating__icon"></div>
+                          <span class="badge-rating__text">5.0</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-feedback__body">
+                      <p class="card-feedback__body_text">
+                        Добрый день! Хочу выразить огромную благодарность всему коллективу клиники за профессиональный подход к каждому человеку. Моей маме в Ставрополе поставили диагноз рак лёгких 4 степени и уже назначили химиотерапию. Я со всеми анализами обратился к Гладкову Олегу Александровичу. Он сказал срочно везти ее в Челябинск.
+                      </p>
+                    </div>
+                    <div class="card-feedback__footer">
+                      <a href="#" class="link-arrow link-arrow--small">
+                        <span class="link-arrow__text">Читать полностью</span>
+                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                          <use xlink:href="#icon-arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card-feedback">
+                    <div class="card-feedback__header">
+                      <div class="badge badge--small">Онкология</div>
+                      <p class="card-feedback__header_text">Имя Фамилия</p>
+                      <div class="card-feedback__header_info">
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">15 ноября 2019 г.</span>
+                        </div>
+                        <div class="badge-rating">
+                          <div class="badge-rating__icon"></div>
+                          <span class="badge-rating__text">5.0</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-feedback__body">
+                      <p class="card-feedback__body_text">
+                        Добрый день! Хочу выразить огромную благодарность всему коллективу клиники за профессиональный подход к каждому человеку. Моей маме в Ставрополе поставили диагноз рак лёгких 4 степени и уже назначили химиотерапию. Я со всеми анализами обратился к Гладкову Олегу Александровичу. Он сказал срочно везти ее в Челябинск.
+                      </p>
+                    </div>
+                    <div class="card-feedback__footer">
+                      <a href="#" class="link-arrow link-arrow--small">
+                        <span class="link-arrow__text">Читать полностью</span>
+                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                          <use xlink:href="#icon-arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card-feedback">
+                    <div class="card-feedback__header">
+                      <div class="badge badge--small">Онкология</div>
+                      <p class="card-feedback__header_text">Имя Фамилия</p>
+                      <div class="card-feedback__header_info">
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">15 ноября 2019 г.</span>
+                        </div>
+                        <div class="badge-rating">
+                          <div class="badge-rating__icon"></div>
+                          <span class="badge-rating__text">5.0</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-feedback__body">
+                      <p class="card-feedback__body_text">
+                        Добрый день! Хочу выразить огромную благодарность всему коллективу клиники за профессиональный подход к каждому человеку. Моей маме в Ставрополе поставили диагноз рак лёгких 4 степени и уже назначили химиотерапию. Я со всеми анализами обратился к Гладкову Олегу Александровичу. Он сказал срочно везти ее в Челябинск.
+                      </p>
+                    </div>
+                    <div class="card-feedback__footer">
+                      <a href="#" class="link-arrow link-arrow--small">
+                        <span class="link-arrow__text">Читать полностью</span>
+                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                          <use xlink:href="#icon-arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card-feedback">
+                    <div class="card-feedback__header">
+                      <div class="badge badge--small">Онкология</div>
+                      <p class="card-feedback__header_text">Имя Фамилия</p>
+                      <div class="card-feedback__header_info">
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">15 ноября 2019 г.</span>
+                        </div>
+                        <div class="badge-rating">
+                          <div class="badge-rating__icon"></div>
+                          <span class="badge-rating__text">5.0</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-feedback__body">
+                      <p class="card-feedback__body_text">
+                        Добрый день! Хочу выразить огромную благодарность всему коллективу клиники за профессиональный подход к каждому человеку. Моей маме в Ставрополе поставили диагноз рак лёгких 4 степени и уже назначили химиотерапию. Я со всеми анализами обратился к Гладкову Олегу Александровичу. Он сказал срочно везти ее в Челябинск.
+                      </p>
+                    </div>
+                    <div class="card-feedback__footer">
+                      <a href="#" class="link-arrow link-arrow--small">
+                        <span class="link-arrow__text">Читать полностью</span>
+                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                          <use xlink:href="#icon-arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card-feedback">
+                    <div class="card-feedback__header">
+                      <div class="badge badge--small">Онкология</div>
+                      <p class="card-feedback__header_text">Имя Фамилия</p>
+                      <div class="card-feedback__header_info">
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">15 ноября 2019 г.</span>
+                        </div>
+                        <div class="badge-rating">
+                          <div class="badge-rating__icon"></div>
+                          <span class="badge-rating__text">5.0</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-feedback__body">
+                      <p class="card-feedback__body_text">
+                        Добрый день! Хочу выразить огромную благодарность всему коллективу клиники за профессиональный подход к каждому человеку. Моей маме в Ставрополе поставили диагноз рак лёгких 4 степени и уже назначили химиотерапию. Я со всеми анализами обратился к Гладкову Олегу Александровичу. Он сказал срочно везти ее в Челябинск.
+                      </p>
+                    </div>
+                    <div class="card-feedback__footer">
+                      <a href="#" class="link-arrow link-arrow--small">
+                        <span class="link-arrow__text">Читать полностью</span>
+                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                          <use xlink:href="#icon-arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slider-pagination swiper-pagination"></div>
+            </div>
+            <div class="swiper-button-next next-feedback">
+              <svg class="btn-svg" viewbox="0 0 24 24"><use xlink:href="#icon-arrow-right"></use></svg>
+            </div>
+            <div class="swiper-button-prev prev-feedback">
+              <svg class="btn-svg" viewbox="0 0 24 24"><use xlink:href="#icon-arrow-right"></use></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @include('partials/footer.html')
+    @include('partials/modal.html')
+  </body>
+
+</html>

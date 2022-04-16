@@ -1,0 +1,17 @@
+@use "../mixins" as mix;
+
+.page {
+  height: 100%;
+  font-family: var(--font-family);
+  @include mix.interpolate(font-size, 320px, 1360px, 14.5px, 16px);
+  color: var(--dark-primary);
+}
+
+.page__body {
+  margin: 0;
+  min-width: var(--min-width);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-075);
+}

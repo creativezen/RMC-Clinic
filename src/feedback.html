@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+  @include('./partials/head.html', {
+  "title": 'Имя Фамилия | RMC-Clinic',
+  })
+
+  @include('partials/svg-sprite.html')
+
+  <body class="page__body">
+    @include('partials/header.html')
+
+    <main class="main">
+      <section class="section hero-post">
+        <div class="hero-post__content container">
+          <div class="breadcrumb">
+            <ul class="breadcrumb__nav">
+              <li><a href="#" class="link-breadcrumb">Главная</a></li>
+              <li><a href="#" class="link-breadcrumb">Отзывы</a></li>
+              <li><a href="#" class="link-breadcrumb">Заголовок отзыва</a></li>
+            </ul>
+          </div>
+          <div class="hero-post__badges">
+            <div class="badge-date">
+              <div class="badge-date__icon"></div>
+              <span class="badge-date__text">15 ноября 2019 г.</span>
+            </div>
+            <div class="badge-rating">
+              <div class="badge-rating__icon"></div>
+              <span class="badge-rating__text">5.0</span>
+            </div>
+          </div>
+          <h1 class="hero-post__title">Заголовок отзыва</h1>
+        </div>
+      </section>
+      <section class="section-default feedback-main">
+        <div class="container">
+          <div class="section-default__body">
+            <article class="article">
+              <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).</p>
+              <p>Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором. Он использует словарь из более чем 200 латинских слов, а также набор моделей предложений. В результате сгенерированный Lorem Ipsum выглядит правдоподобно, не имеет повторяющихся абзацей или "невозможных" слов.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section-default feedback-feedbacks">
+        <div class="container">
+          <div class="section-default__header">
+            <h1 class="title">Другие отзывы</h1>
+            <a href="#" class="link-arrow">
+              <span class="link-arrow__text">Посмотреть все отзывы</span>
+              <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                <use xlink:href="#icon-arrow-simple"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="section-default__body">
+            <div class="swiper js-swiper-feedback" data-slider="3">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="card-feedback">
+                    <div class="card-feedback__header">
+                      <div class="badge badge--small">Онкология</div>
+                      <p class="card-feedback__header_text">Имя Фамилия</p>
+                      <div class="card-feedback__header_info">
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">15 ноября 2019 г.</span>
+                        </div>
+                        <div class="badge-rating">
+                          <div class="badge-rating__icon"></div>
+                          <span class="badge-rating__text">5.0</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-feedback__body">
+                      <p class="card-feedback__body_text">
+                        Добрый день! Хочу выразить огромную благодарность всему коллективу клиники за профессиональный подход к каждому человеку. Моей маме в Ставрополе поставили диагноз рак лёгких 4 степени и уже назначили химиотерапию. Я со всеми анализами обратился к Гладкову Олегу Александровичу. Он сказал срочно везти ее в Челябинск.
+                      </p>
+                    </div>
+                    <div class="card-feedback__footer">
+                      <a href="#" class="link-arrow link-arrow--small">
+                        <span class="link-arrow__text">Читать полностью</span>
+                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                          <use xlink:href="#icon-arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card-feedback">
+                    <div class="card-feedback__header">
+                      <div class="badge badge--small">Онкология</div>
+                      <p class="card-feedback__header_text">Имя Фамилия</p>
+                      <div class="card-feedback__header_info">
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">15 ноября 2019 г.</span>
+                        </div>
+                        <div class="badge-rating">
+                          <div class="badge-rating__icon"></div>
+                          <span class="badge-rating__text">5.0</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-feedback__body">
+                      <p class="card-feedback__body_text">
+                        Добрый день! Хочу выразить огромную благодарность всему коллективу клиники за профессиональный подход к каждому человеку. Моей маме в Ставрополе поставили диагноз рак лёгких 4 степени и уже назначили химиотерапию. Я со всеми анализами обратился к Гладкову Олегу Александровичу. Он сказал срочно везти ее в Челябинск.
+                      </p>
+                    </div>
+                    <div class="card-feedback__footer">
+                      <a href="#" class="link-arrow link-arrow--small">
+                        <span class="link-arrow__text">Читать полностью</span>
+                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                          <use xlink:href="#icon-arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card-feedback">
+                    <div class="card-feedback__header">
+                      <div class="badge badge--small">Онкология</div>
+                      <p class="card-feedback__header_text">Имя Фамилия</p>
+                      <div class="card-feedback__header_info">
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">15 ноября 2019 г.</span>
+                        </div>
+                        <div class="badge-rating">
+                          <div class="badge-rating__icon"></div>
+                          <span class="badge-rating__text">5.0</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-feedback__body">
+                      <p class="card-feedback__body_text">
+                        Добрый день! Хочу выразить огромную благодарность всему коллективу клиники за профессиональный подход к каждому человеку. Моей маме в Ставрополе поставили диагноз рак лёгких 4 степени и уже назначили химиотерапию. Я со всеми анализами обратился к Гладкову Олегу Александровичу. Он сказал срочно везти ее в Челябинск.
+                      </p>
+                    </div>
+                    <div class="card-feedback__footer">
+                      <a href="#" class="link-arrow link-arrow--small">
+                        <span class="link-arrow__text">Читать полностью</span>
+                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                          <use xlink:href="#icon-arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card-feedback">
+                    <div class="card-feedback__header">
+                      <div class="badge badge--small">Онкология</div>
+                      <p class="card-feedback__header_text">Имя Фамилия</p>
+                      <div class="card-feedback__header_info">
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">15 ноября 2019 г.</span>
+                        </div>
+                        <div class="badge-rating">
+                          <div class="badge-rating__icon"></div>
+                          <span class="badge-rating__text">5.0</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-feedback__body">
+                      <p class="card-feedback__body_text">
+                        Добрый день! Хочу выразить огромную благодарность всему коллективу клиники за профессиональный подход к каждому человеку. Моей маме в Ставрополе поставили диагноз рак лёгких 4 степени и уже назначили химиотерапию. Я со всеми анализами обратился к Гладкову Олегу Александровичу. Он сказал срочно везти ее в Челябинск.
+                      </p>
+                    </div>
+                    <div class="card-feedback__footer">
+                      <a href="#" class="link-arrow link-arrow--small">
+                        <span class="link-arrow__text">Читать полностью</span>
+                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                          <use xlink:href="#icon-arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card-feedback">
+                    <div class="card-feedback__header">
+                      <div class="badge badge--small">Онкология</div>
+                      <p class="card-feedback__header_text">Имя Фамилия</p>
+                      <div class="card-feedback__header_info">
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">15 ноября 2019 г.</span>
+                        </div>
+                        <div class="badge-rating">
+                          <div class="badge-rating__icon"></div>
+                          <span class="badge-rating__text">5.0</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-feedback__body">
+                      <p class="card-feedback__body_text">
+                        Добрый день! Хочу выразить огромную благодарность всему коллективу клиники за профессиональный подход к каждому человеку. Моей маме в Ставрополе поставили диагноз рак лёгких 4 степени и уже назначили химиотерапию. Я со всеми анализами обратился к Гладкову Олегу Александровичу. Он сказал срочно везти ее в Челябинск.
+                      </p>
+                    </div>
+                    <div class="card-feedback__footer">
+                      <a href="#" class="link-arrow link-arrow--small">
+                        <span class="link-arrow__text">Читать полностью</span>
+                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                          <use xlink:href="#icon-arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slider-pagination swiper-pagination"></div>
+            </div>
+            <div class="swiper-button-next next-feedback">
+              <svg class="btn-svg" viewbox="0 0 24 24"><use xlink:href="#icon-arrow-right"></use></svg>
+            </div>
+            <div class="swiper-button-prev prev-feedback">
+              <svg class="btn-svg" viewbox="0 0 24 24"><use xlink:href="#icon-arrow-right"></use></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html')
+    @include('partials/modal.html')
+  </body>
+
+</html>

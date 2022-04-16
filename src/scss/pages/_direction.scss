@@ -1,0 +1,67 @@
+@use "../mixins" as mix;
+
+// direction main
+// ===================================
+.direction-main {
+  background-color: var(--light-white);
+
+  @media only screen and (max-width: 780px) {
+    .section-sidebar__main + .section-sidebar__aside {
+      margin-top: 0;
+      @include mix.interpolate(margin-bottom, 320px, 1480px, 20px, 30px);
+    }
+  }
+
+  .section-sidebar__body {
+    .grid-group {
+      @media only screen and (max-width: 480px) {
+        gap: 20px;
+      }
+    }
+    .grid-child {
+      grid-column: 6 span;
+
+      @media only screen and (max-width: 780px) {
+        grid-column: 3 span;
+      }
+      .card-direction {
+        height: 100%
+      }
+    }
+  }
+}
+
+// direction services
+// ===================================
+.direction-services {
+  @include mix.interpolate(margin-top, 320px, 1480px, 30px, 50px);
+}
+
+// direction specialists
+// ===================================
+.direction-specialists {
+  background-color: var(--blue-01);
+
+  .grid-child {
+    grid-column: 4 span;
+
+    @media only screen and (max-width: 780px) {
+      grid-column: 3 span;
+    }
+
+    .card-specialist {
+      height: 100%;
+      border-color: var(--light-white);
+
+      &:hover {
+        border-color: var(--blue-03);
+      }
+    }
+  }
+}
+
+// direction form
+// ===================================
+.direction-form {
+  background-color: var(--light-white);
+}

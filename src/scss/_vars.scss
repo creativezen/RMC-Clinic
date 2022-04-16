@@ -1,12 +1,64 @@
-// если вы хотите использовать sass-переменные - удалите root
 // colors
 :root {
   // base
-  --font-family: "Open Sans", sans-serif;
-  --content-width: 1170px;
-  --container-offset: 15px;
-  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --font-family: "TT-Hoves", sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 
-  // colors
-  --light-color: #fff;
+  --max-width: 1480px;
+  --min-widht: 320px;
+  --content-width: 1220px;
+  --container-offset: 20px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --transition: all 0.3s ease-in-out;
+
+  // brand colors
+  --brand-blue: rgba(0, 156, 206, 1);
+  --brand-green: rgba(27, 217, 182, 1);
+  --brand-salad: rgba(155, 239, 179, 1);
+  --brand-gradient: linear-gradient(188deg, #009CCE 0%, #1BD9B6 60.69%, #9BEFB3 100%);
+
+  // green colors
+  --green-primary: rgba(27, 217, 182, 1);
+  --green-pressed: rgba(22, 181, 151, 1);
+  --green-hover: rgba(41, 241, 204, 1);
+  --green-05: rgba(141, 236, 218, 1);
+  --green-03: rgba(187, 244, 233, 1);
+  --green-01: rgba(232, 251, 248, 1);
+
+  // blue colors
+  --blue-primary: rgba(0, 156, 206, 1);
+  --blue-pressed: rgba(0, 126, 166, 1);
+  --blue-hover: rgba(13, 176, 228, 1);
+  --blue-05: rgba(128, 205, 230, 1);
+  --blue-03: rgba(179, 225, 240, 1);
+  --blue-01: rgba(244, 252, 255, 1);
+
+  // salad colors
+  --salad-primary: rgba(155, 239, 179, 1);
+  --salad-pressed: rgba(123, 215, 149, 1);
+  --salad-hover: rgba(153, 255, 182, 1);
+  --salad-05: rgba(205, 247, 217, 1);
+  --salad-03: rgba(225, 250, 232, 1);
+  --salad-01: rgba(245, 253, 247, 1);
+
+  // dark colors
+  --dark-primary: rgba(4, 44, 56, 1);
+  --dark-black: rgba(2, 27, 34, 1);
+  --dark-075: rgba(67, 97, 106, 1);
+  --dark-05: rgba(129, 149, 155, 1);
+  --dark-03: rgba(181, 202, 208, 1);
+  --dark-01: rgba(230, 234, 235, 1);
+
+  // light colors
+  --light-white: rgba(255, 255, 255, 1);
+  --light-gray: rgba(214, 214, 214, 1);
+  --light-075: rgba(248, 248, 248, 1);
+  --light-05: rgba(234, 234, 234, 1);
+  --light-03: rgba(243, 243, 243, 1);
+  --light-01: rgba(251, 251, 251, 1);
+  --light-disabled: rgba(239, 239, 239, 1);
+
+
+
+  // special colors
+  --spec-red: rgba(251, 117, 117, 1);
 }

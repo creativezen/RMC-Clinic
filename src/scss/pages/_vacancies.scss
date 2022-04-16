@@ -1,0 +1,25 @@
+.vacancies-main {
+
+  .section-default__body {
+
+    .grid-child {
+      grid-column: 3 span;
+
+      @media only screen and (max-width: 780px) {
+        grid-column: 3 span;
+      }
+    }
+
+    .card-service {
+      min-height: 310px;
+
+      &:hover {
+        border-color: var(--light-gray);
+      }
+
+      @media only screen and (max-width: 480px) {
+        min-height: 200px;
+      }
+    }
+  }
+}

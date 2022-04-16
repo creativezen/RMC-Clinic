@@ -1,0 +1,43 @@
+@use "../mixins" as mix;
+
+// service main
+// ===================================
+.service-main {
+  background-color: var(--light-white);
+
+  @media only screen and (max-width: 780px) {
+    .section-sidebar__main + .section-sidebar__aside {
+      margin-top: 0;
+      @include mix.interpolate(margin-bottom, 320px, 1480px, 20px, 30px);
+    }
+  }
+}
+
+// service specialists
+// ===================================
+.service-specialists {
+  background-color: var(--blue-01);
+
+  .grid-child {
+    grid-column: 4 span;
+
+    @media only screen and (max-width: 780px) {
+      grid-column: 3 span;
+    }
+
+    .card-specialist {
+      height: 100%;
+      border-color: var(--light-white);
+
+      &:hover {
+        border-color: var(--blue-03);
+      }
+    }
+  }
+}
+
+// service form
+// ===================================
+.service-form {
+  background-color: var(--light-white);
+}

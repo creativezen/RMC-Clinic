@@ -1,0 +1,21 @@
+@use "../mixins" as mix;
+
+// grid group
+// ===================================
+.grid-group {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  @include mix.interpolate(gap, 780px, 1480px, 15px, 40px);
+  grid-auto-rows: auto;
+
+  @media only screen and (max-width: 780px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @media only screen and (max-width: 380px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// grid child
+// ===================================

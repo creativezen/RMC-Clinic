@@ -1,0 +1,27 @@
+.sales-main {
+
+  .section-default__body {
+
+    .grid-group {
+      @media only screen and (max-width: 480px) {
+        gap: 20px;
+      }
+    }
+
+    .grid-child {
+      grid-column: 4 span;
+
+      @media only screen and (max-width: 780px) {
+        grid-column: 3 span;
+      }
+    }
+
+    .card-news {
+      border-color: var(--light-white);
+
+      &:hover {
+        border-color: var(--light-gray);
+      }
+    }
+  }
+}

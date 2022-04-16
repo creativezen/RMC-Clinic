@@ -1,0 +1,44 @@
+
+// prices-direction main
+// ===================================
+.prices-direction-main {
+
+  @media only screen and (max-width: 780px) {
+    .section-sidebar__body {
+      flex-direction: column;
+    }
+  }
+
+  .list-service__item {
+    background-color: var(--light-white);
+  }
+}
+
+// prices-direction article
+// ===================================
+.prices-direction-specialists {
+  background-color: var(--blue-01);
+
+  .grid-child {
+    grid-column: 4 span;
+
+    @media only screen and (max-width: 780px) {
+      grid-column: 3 span;
+    }
+
+    .card-specialist {
+      height: 100%;
+      border-color: var(--light-white);
+
+      &:hover {
+        border-color: var(--blue-03);
+      }
+    }
+  }
+}
+
+// prices-direction article
+// ===================================
+.prices-direction-article {
+  background-color: var(--light-white);
+}

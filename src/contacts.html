@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+  @include('./partials/head.html', {
+  "title": 'Контакты | RMC-Clinic',
+  })
+
+  @include('partials/svg-sprite.html')
+
+  <body class="page__body">
+    @include('partials/header.html')
+
+    <main class="main">
+      <section class="section hero-post">
+        <div class="hero-post__content container">
+          <div class="breadcrumb">
+            <ul class="breadcrumb__nav">
+              <li><a href="#" class="link-breadcrumb">Главная</a></li>
+              <li><a href="#" class="link-breadcrumb">Контакты</a></li>
+            </ul>
+          </div>
+          <h1 class="hero-post__title">Контакты</h1>
+        </div>
+      </section>
+      <section class="section-default contacts-main">
+        <div class="container">
+          <div class="section-default__body">
+            <div class="home-contact__map">
+              <div id="map-rmc"  class="map"></div>
+            </div>
+            <div class="home-contact__info">
+              <div class="grid-group">
+                <div class="grid-child">
+                  <div class="card-contact">
+                    <div class="card-contact__icon">
+                      <img src="img/svg/contacts/contact-call.svg" alt="">
+                    </div>
+                    <div class="card-contact__text">8 (343) 345 00 00</div>
+                    <small class="card-contact__small">Контактный центр</small>
+                  </div>
+                </div>
+                <div class="grid-child">
+                  <div class="card-contact">
+                    <div class="card-contact__icon">
+                      <img src="img/svg/contacts/contact-mail.svg" alt="">
+                    </div>
+                    <div class="card-contact__text">info@rmc.ru</div>
+                    <small class="card-contact__small">E-mail</small>
+                  </div>
+                </div>
+                <div class="grid-child">
+                  <div class="card-contact">
+                    <div class="card-contact__icon">
+                      <img src="img/svg/contacts/contact-location.svg" alt="">
+                    </div>
+                    <div class="card-contact__text">Екатеринбург, ул. Краснолесья д. 24</div>
+                    <small class="card-contact__small">Адрес</small>
+                  </div>
+                </div>
+                <div class="grid-child">
+                  <div class="card-contact">
+                    <div class="card-contact__icon">
+                      <img src="img/svg/contacts/contact-clock.svg" alt="">
+                    </div>
+                    <div class="card-contact__text">Пн-сб: 8:00 — 20:00 Вс: выходной</div>
+                    <small class="card-contact__small">Время работы</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-default__footer">
+            <button class="btn-big block" data-graph-path="modal-contact">Связаться с нами</button>
+          </div>
+        </div>
+      </section>
+      <section class="section-default contacts-requisites">
+        <div class="container">
+          <div class="section-default__header">
+            <h1 class="title">Реквизиты</h1>
+          </div>
+          <div class="section-default__body">
+            <li class="card-document card-document--props">
+              <div class="card-document__cover">
+                <div class="card-document__cover_icon">
+                  <img src="img/svg/card-document-icon.svg" alt="">
+                </div>
+                <p class="card-document__cover_text">Реквизиты ООО «RMC»</p>
+              </div>
+              <div class="card-document__link">
+                <a href="#" class="link-download" target="_blank">
+                  <span class="link-download__text">Открыть документ</span>
+                  <svg class="link-download__icon" viewbox="0 0 24 24">
+                    <use xlink:href="#icon-download"></use>
+                  </svg>
+                </a>
+                <small class="card-document__link_small">(pdf, 1 МБ)</small>
+              </div>
+            </li>
+          </div>
+        </div>
+      </section>
+      <section class="section-default contacts-socials">
+        <div class="container">
+          <div class="section-default__header">
+            <h1 class="title">Мы в социальных сетях</h1>
+          </div>
+          <div class="section-default__body">
+            <div class="grid-group">
+              <div class="grid-child">
+                <div class="card-social">
+                  <a href="#" class="link-absolute" target="_blank" rel="nowfollow"></a>
+                  <div class="card-social__cover">
+                    <img class="card-social__cover_icon" src="img/svg/card-social-youtube.svg" alt="">
+                    <div class="card-social__cover_text">YouTube</div>
+                  </div>
+                  <div class="card-social__arrow">
+                    <svg viewbox="0 0 24 24">
+                      <use xlink:href="#icon-arrow-right"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-child">
+                <div class="card-social">
+                  <a href="#" class="link-absolute" target="_blank" rel="nowfollow"></a>
+                  <div class="card-social__cover">
+                    <img class="card-social__cover_icon" src="img/svg/card-social-vk.svg" alt="">
+                    <div class="card-social__cover_text">ВКонтакте</div>
+                  </div>
+                  <div class="card-social__arrow">
+                    <svg viewbox="0 0 24 24">
+                      <use xlink:href="#icon-arrow-right"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-child">
+                <div class="card-social">
+                  <a href="#" class="link-absolute" target="_blank" rel="nowfollow"></a>
+                  <div class="card-social__cover">
+                    <img class="card-social__cover_icon" src="img/svg/card-social-ok.svg" alt="">
+                    <div class="card-social__cover_text">Одноклассники</div>
+                  </div>
+                  <div class="card-social__arrow">
+                    <svg viewbox="0 0 24 24">
+                      <use xlink:href="#icon-arrow-right"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-default contacts-feedbacks">
+        <div class="container">
+          <div class="section-default__header">
+            <h1 class="title">Отзывы о нашей работе</h1>
+            <a href="#" class="link-arrow">
+              <span class="link-arrow__text">Посмотреть все отзывы</span>
+              <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                <use xlink:href="#icon-arrow-simple"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="section-default__body">
+            <div class="swiper js-swiper-feedback" data-slider="3">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="card-feedback">
+                    <div class="card-feedback__header">
+                      <div class="badge badge--small">Онкология</div>
+                      <p class="card-feedback__header_text">Имя Фамилия</p>
+                      <div class="card-feedback__header_info">
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">15 ноября 2019 г.</span>
+                        </div>
+                        <div class="badge-rating">
+                          <div class="badge-rating__icon"></div>
+                          <span class="badge-rating__text">5.0</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-feedback__body">
+                      <p class="card-feedback__body_text">
+                        Добрый день! Хочу выразить огромную благодарность всему коллективу клиники за профессиональный подход к каждому человеку. Моей маме в Ставрополе поставили диагноз рак лёгких 4 степени и уже назначили химиотерапию. Я со всеми анализами обратился к Гладкову Олегу Александровичу. Он сказал срочно везти ее в Челябинск.
+                      </p>
+                    </div>
+                    <div class="card-feedback__footer">
+                      <a href="#" class="link-arrow link-arrow--small">
+                        <span class="link-arrow__text">Читать полностью</span>
+                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                          <use xlink:href="#icon-arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card-feedback">
+                    <div class="card-feedback__header">
+                      <div class="badge badge--small">Онкология</div>
+                      <p class="card-feedback__header_text">Имя Фамилия</p>
+                      <div class="card-feedback__header_info">
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">15 ноября 2019 г.</span>
+                        </div>
+                        <div class="badge-rating">
+                          <div class="badge-rating__icon"></div>
+                          <span class="badge-rating__text">5.0</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-feedback__body">
+                      <p class="card-feedback__body_text">
+                        Добрый день! Хочу выразить огромную благодарность всему коллективу клиники за профессиональный подход к каждому человеку. Моей маме в Ставрополе поставили диагноз рак лёгких 4 степени и уже назначили химиотерапию. Я со всеми анализами обратился к Гладкову Олегу Александровичу. Он сказал срочно везти ее в Челябинск.
+                      </p>
+                    </div>
+                    <div class="card-feedback__footer">
+                      <a href="#" class="link-arrow link-arrow--small">
+                        <span class="link-arrow__text">Читать полностью</span>
+                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                          <use xlink:href="#icon-arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card-feedback">
+                    <div class="card-feedback__header">
+                      <div class="badge badge--small">Онкология</div>
+                      <p class="card-feedback__header_text">Имя Фамилия</p>
+                      <div class="card-feedback__header_info">
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">15 ноября 2019 г.</span>
+                        </div>
+                        <div class="badge-rating">
+                          <div class="badge-rating__icon"></div>
+                          <span class="badge-rating__text">5.0</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-feedback__body">
+                      <p class="card-feedback__body_text">
+                        Добрый день! Хочу выразить огромную благодарность всему коллективу клиники за профессиональный подход к каждому человеку. Моей маме в Ставрополе поставили диагноз рак лёгких 4 степени и уже назначили химиотерапию. Я со всеми анализами обратился к Гладкову Олегу Александровичу. Он сказал срочно везти ее в Челябинск.
+                      </p>
+                    </div>
+                    <div class="card-feedback__footer">
+                      <a href="#" class="link-arrow link-arrow--small">
+                        <span class="link-arrow__text">Читать полностью</span>
+                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                          <use xlink:href="#icon-arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card-feedback">
+                    <div class="card-feedback__header">
+                      <div class="badge badge--small">Онкология</div>
+                      <p class="card-feedback__header_text">Имя Фамилия</p>
+                      <div class="card-feedback__header_info">
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">15 ноября 2019 г.</span>
+                        </div>
+                        <div class="badge-rating">
+                          <div class="badge-rating__icon"></div>
+                          <span class="badge-rating__text">5.0</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-feedback__body">
+                      <p class="card-feedback__body_text">
+                        Добрый день! Хочу выразить огромную благодарность всему коллективу клиники за профессиональный подход к каждому человеку. Моей маме в Ставрополе поставили диагноз рак лёгких 4 степени и уже назначили химиотерапию. Я со всеми анализами обратился к Гладкову Олегу Александровичу. Он сказал срочно везти ее в Челябинск.
+                      </p>
+                    </div>
+                    <div class="card-feedback__footer">
+                      <a href="#" class="link-arrow link-arrow--small">
+                        <span class="link-arrow__text">Читать полностью</span>
+                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                          <use xlink:href="#icon-arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card-feedback">
+                    <div class="card-feedback__header">
+                      <div class="badge badge--small">Онкология</div>
+                      <p class="card-feedback__header_text">Имя Фамилия</p>
+                      <div class="card-feedback__header_info">
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">15 ноября 2019 г.</span>
+                        </div>
+                        <div class="badge-rating">
+                          <div class="badge-rating__icon"></div>
+                          <span class="badge-rating__text">5.0</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-feedback__body">
+                      <p class="card-feedback__body_text">
+                        Добрый день! Хочу выразить огромную благодарность всему коллективу клиники за профессиональный подход к каждому человеку. Моей маме в Ставрополе поставили диагноз рак лёгких 4 степени и уже назначили химиотерапию. Я со всеми анализами обратился к Гладкову Олегу Александровичу. Он сказал срочно везти ее в Челябинск.
+                      </p>
+                    </div>
+                    <div class="card-feedback__footer">
+                      <a href="#" class="link-arrow link-arrow--small">
+                        <span class="link-arrow__text">Читать полностью</span>
+                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                          <use xlink:href="#icon-arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card-feedback">
+                    <div class="card-feedback__header">
+                      <div class="badge badge--small">Онкология</div>
+                      <p class="card-feedback__header_text">Имя Фамилия</p>
+                      <div class="card-feedback__header_info">
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">15 ноября 2019 г.</span>
+                        </div>
+                        <div class="badge-rating">
+                          <div class="badge-rating__icon"></div>
+                          <span class="badge-rating__text">5.0</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-feedback__body">
+                      <p class="card-feedback__body_text">
+                        Добрый день! Хочу выразить огромную благодарность всему коллективу клиники за профессиональный подход к каждому человеку. Моей маме в Ставрополе поставили диагноз рак лёгких 4 степени и уже назначили химиотерапию. Я со всеми анализами обратился к Гладкову Олегу Александровичу. Он сказал срочно везти ее в Челябинск.
+                      </p>
+                    </div>
+                    <div class="card-feedback__footer">
+                      <a href="#" class="link-arrow link-arrow--small">
+                        <span class="link-arrow__text">Читать полностью</span>
+                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                          <use xlink:href="#icon-arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slider-pagination swiper-pagination"></div>
+            </div>
+            <div class="swiper-button-next next-feedback">
+              <svg class="btn-svg" viewbox="0 0 24 24"><use xlink:href="#icon-arrow-right"></use></svg>
+            </div>
+            <div class="swiper-button-prev prev-feedback">
+              <svg class="btn-svg" viewbox="0 0 24 24"><use xlink:href="#icon-arrow-right"></use></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @include('partials/footer.html')
+    @include('partials/modal.html')
+  </body>
+
+</html>

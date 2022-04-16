@@ -1,0 +1,8 @@
+@use "../mixins" as mix;
+
+.map {
+  height: 430px;
+  @include mix.interpolate(border-radius, 320px, 1480px, 12px, 20px);
+  border: 1px solid var(--dark-01);
+  overflow: hidden;
+}

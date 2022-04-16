@@ -1,0 +1,74 @@
+@use "../mixins" as mix;
+
+// element logo
+// ===================================
+.element-logo {
+  position: relative;
+}
+
+// element phone
+// ===================================
+.element-phone {
+  text-decoration: none;
+
+  &__number {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--dark-primary);
+
+    @media only screen and (max-width: 880px) {
+      font-size: 18px;
+    }
+  }
+
+  &__small {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--dark-05);
+  }
+
+  .link {
+    display: block;
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--light-white);
+    }
+  }
+}
+
+// element partner
+// ===================================
+.element-partner {
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 160px;
+    background-color: var(--blue-01);
+  }
+
+  &__text {
+    margin-top: 20px;
+    @include mix.interpolate(font-size, 320px, 1480px, 18px, 24px);
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    text-align: center;
+
+    @media only screen and (max-width: 480px) {
+      margin-top: 10px;
+    }
+  }
+}

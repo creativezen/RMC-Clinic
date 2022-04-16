@@ -1,0 +1,84 @@
+// Person answer
+// ===================================
+.person-answer {
+  display: flex;
+  align-items: center;
+
+  @media only screen and (max-width: 480px) {
+    flex-wrap: wrap;
+  }
+
+  &__photo {
+    margin-right: 20px;
+    flex: auto;
+    max-width: 72px;
+    min-height: 72px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__info {
+    flex: auto;
+
+    @media only screen and (max-width: 480px) {
+      margin-top: 8px;
+    }
+
+    &_name {
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.6;
+      letter-spacing: 0.01em;
+    }
+
+    &_badges {
+      margin-top: 6px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      > * + * {
+        margin-left: 14px;
+
+        @media only screen and (max-width: 320px) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+// Person card
+// ===================================
+.person-card {
+  position: relative;
+
+  &__photo {
+    display: block;
+    max-height: 380px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    @media only screen and (max-width: 380px) {
+      max-height: 220px;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding-right: 20px;
+
+    @media only screen and (max-width: 480px) {
+      bottom: 10px;
+      left: 10px;
+      padding-right: 10px;
+    }
+
+    .badge {
+      margin-right: 8px;
+      margin-top: 6px;
+    }
+  }
+}

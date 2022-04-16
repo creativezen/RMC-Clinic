@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+  @include('./partials/head.html', {
+  "title": 'О клинике | RMC-Clinic',
+  })
+
+  @include('partials/svg-sprite.html')
+
+  <body class="page__body">
+    @include('partials/header.html')
+
+    <main class="main">
+      <section class="section hero-cover">
+        <picture class="hero-cover__img">
+          <img src="img/hero-img-12.jpg" alt="О клинике" loading="lazy" width="1920" height="500">
+        </picture>
+        <div class="hero-cover__content container">
+          <h1 class="hero-cover__title">О клинике</h1>
+          <div class="breadcrumb">
+            <ul class="breadcrumb__nav">
+              <li><a href="#" class="link-breadcrumb">Главная</a></li>
+              <li><a href="#" class="link-breadcrumb">О клинике</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section-sidebar about-main">
+        <div class="container">
+          <div class="section-sidebar__body">
+            <div class="section-sidebar__main">
+              <article class="article">
+                <h2>Наша основная задача</h2>
+                <p><big>Своевременно обеспечить пациентов с онкологическими заболеваниями эффективной помощью, направленной на достижение ощутимых позитивных изменений и на полное выздоровление.</big></p>
+                <p>Медицинский центр RMC располагается недалеко от центра Екатеринбурга, рядом с дорожной клинической больницей. Клиника занимает первые два этажа в жилом 10 этажном доме.</p>
+                <p>Клиника предоставляет пациентам с онкологическими заболеваниями чрезвычайно востребованную и при этом труднодоступную в нашей стране медицинскую помощь. Амбулаторное проведение химиотерапии, активное ведение тяжёлых онкологических пациентов, паллиативную помощь, реабилитацию больных после проведения лучевой терапии – вот далеко не полный список услуг клиники.</p>
+                <p>Не менее важный аспект нашей работы – научная деятельность. Сотрудники клиники принимают участие в исследованиях в области онкологии и смежных дисциплин, активно публикуются в российских и зарубежных научных изданиях, выступают с лекциями и докладами. Мы стремимся обеспечить нашим специалистам возможность непрерывно повышать свою квалификацию и оставаться «на волне» новейших достижений мировой онкологии.</p>
+
+                <hr>
+
+                <h2>Структура клиники</h2>
+                <h4>Поликлиническое отделение</h4>
+                <p>Консультации проводят более 20 опытных специалистов – онкологов, химиотерапевтов и врачей других специальностей. В отделении имеется всё необходимое оборудование для проведения малых хирургических операции, всех видов биопсии, а также лапароцентезов под контролем УЗИ.</p>
+                <h4>Отделение химиотерапии</h4>
+                <p>Специалисты центра обладают значительным клиническим опытом проведения курсов химиотерапии и коррекции побочных эффектов лечения. В отделении проводится, в том числе, прицельная химиотерапия, в ходе которой препарат поступает непосредственно в артериальное русло, а также выполняется уникальный для России анализ опухоли на чувствительность к химиопрепаратам. Результаты этого анализа используются при разработке индивидуальной схемы лечения, учитывающей особенности заболевания самого пациента.</p>
+                <h4>Отделение эндоскопии</h4>
+                <p>Врачи клиники, владеющие методиками проведения эндоскопических вмешательств, решают серьезные диагностические и лечебные задачи малотравматичными способами. Квалификация эндоскопистом центра позволяет с минимальными рисками восстанавливать проходимость ЖКТ и бронхиального дерева у самых тяжелых пациентов.</p>
+
+                <hr>
+
+                <h2>Высокотехнологичная медицинская помощь</h2>
+                <p><big>Проведение курсов химиотерапии по европейским, американским и израильским схемам.</big></p>
+
+                <div class="video-cover">
+                  <!-- <a href="#" class="link-absolute"></a> -->
+                  <div class="video-cover__img">
+                    <img src="img/card-video-img-01.jpg" alt="" width="840" height="500">
+                  </div>
+                  <div class="video-cover__play" role="button" aria-pressed="fasle"></div>
+                </div>
+              </article>
+            </div>
+            <div class="section-sidebar__aside">
+              <div class="stiky">
+                <ul class="sidebar-nav aside-item">
+                  <div class="sidebar-nav__header">
+                    <p class="sidebar-nav__header_text">Полезное</p>
+                  </div>
+                  <li class="sidebar-nav__item"><a href="#">Лицензии</a></li>
+                  <li class="sidebar-nav__item"><a href="#">Новости</a></li>
+                  <li class="sidebar-nav__item"><a href="#">Администрация клиники</a></li>
+                  <li class="sidebar-nav__item"><a href="#">Структура клиники</a></li>
+                  <li class="sidebar-nav__item"><a href="#">Нормативные документы</a></li>
+                  <li class="sidebar-nav__item"><a href="#">Вакансии</a></li>
+                  <li class="sidebar-nav__item"><a href="#">Взаимодействие с медицинскими организациями</a></li>
+                  <li class="sidebar-nav__item"><a href="#">Страховые партнеры</a></li>
+                </ul>
+                <div class="card-gradient aside-item">
+                  <div class="card-gradient__header">
+                    <h3 class="card-gradient__header_title">Узнайте больше о медицинском центре RMC</h3>
+                  </div>
+                  <div class="card-gradient__body">
+                    <p class="card-gradient__body_text">в 3-минутном видео</p>
+                  </div>
+                  <div class="card-gradient__footer">
+                    <a href="#" class="btn btn--zero block">Посмотреть видео</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html')
+    @include('partials/modal.html')
+  </body>
+
+</html>

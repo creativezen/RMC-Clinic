@@ -1,0 +1,287 @@
+@use "../mixins" as mix;
+
+.footer {
+  margin-top: auto;
+
+  &__top {
+    @include mix.interpolate(padding-top, 320px, 1480px, 20px, 40px);
+    @include mix.interpolate(padding-bottom, 320px, 1480px, 20px, 40px);
+    border-top: 1px solid var(--dark-01);
+    background-color: var(--light-white);
+
+    &_content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @media only screen and (max-width: 480px) {
+        display: block;
+      }
+    }
+
+    .element-logo {
+      margin-right: 60px;
+
+      @media only screen and (max-width: 780px) {
+        margin-right: 30px;
+      }
+
+      @media only screen and (max-width: 480px) {
+        margin-bottom: 20px;
+
+        img {
+          max-width: 140px;
+        }
+      }
+    }
+
+    &_text {
+      flex: auto;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--dark-075);
+    }
+
+    &_functions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @media only screen and (max-width: 480px) {
+        margin-top: 16px;
+      }
+
+      @media only screen and (max-width: 380px) {
+        display: block;
+
+        .btn {
+          max-width: none;
+          width: 100%;
+        }
+      }
+
+      > * + * {
+        margin-left: 30px;
+
+        @media only screen and (max-width: 380px) {
+          margin-left: 0;
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    background-color: var(--dark-primary);
+    @include mix.interpolate(padding-top, 320px, 1480px, 20px, 50px);
+    @include mix.interpolate(padding-bottom, 320px, 1480px, 20px, 50px);
+
+    &_content {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 40px;
+
+      @media only screen and (max-width: 480px) {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 20px;
+      }
+    }
+
+    &_block {
+      grid-column: 4 span;
+
+      @media only screen and (max-width: 780px) {
+        grid-column: 6 span;
+      }
+    }
+
+    &_title {
+      margin-bottom: 16px;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+      color: var(--light-white);
+    }
+
+    &_list {
+      column-count: 2;
+
+      li {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.6;
+
+        a {
+          display: inline-block;
+          color: var(--dark-05);
+          transition: var(--transition);
+          text-decoration: none;
+
+          &:hover {
+            color: var(--light-white);
+          }
+        }
+      }
+    }
+  }
+
+  &__contact {
+    @include mix.interpolate(padding-top, 320px, 1480px, 20px, 40px);
+    @include mix.interpolate(padding-bottom, 320px, 1480px, 20px, 40px);
+    background-color: var(--dark-black);
+
+    &_content {
+      display: flex;
+      justify-content: space-between;
+
+      @media only screen and (max-width: 480px) {
+        display: block;
+      }
+    }
+
+    &_block {
+      .element-phone__number {
+        color: var(--light-white);
+      }
+    }
+
+    &_block + &_block {
+      margin-left: 40px;
+
+      @media only screen and (max-width: 780px) {
+        margin-left: 18px;
+      }
+
+      @media only screen and (max-width: 480px) {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+
+    &_small {
+      margin-bottom: 10px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.4;
+      color: var(--dark-05);
+
+      @media only screen and (max-width: 480px) {
+        margin-bottom: 6px;
+      }
+    }
+
+    &_text {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.4;
+      color: var(--dark-05);
+    }
+
+    &_social {
+      display: flex;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 6px;
+        background-color: var(--dark-primary);
+        transition: var(--transition);
+
+        &:hover {
+          background-color: var(--light-white);
+
+          svg use {
+            fill: var(--dark-black);
+          }
+        }
+
+        svg {
+            use {
+            fill: var(--dark-05);
+          }
+        }
+
+        .soc-youtube {
+          width: 18px;
+          height: 13px;
+        }
+
+        .soc-vk {
+          width: 20px;
+          height: 12px;
+        }
+
+        .soc-ok {
+          width: 12px;
+          height: 20px;
+        }
+      }
+
+      > a + a {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &__bottom {
+    @include mix.interpolate(padding-top, 320px, 1480px, 10px, 20px);
+    @include mix.interpolate(padding-bottom, 320px, 1480px, 10px, 20px);
+    background-color: var(--light-075);
+
+    &_content {
+      display: flex;
+      align-items: center;
+
+      @media only screen and (max-width: 480px) {
+        display: block;
+      }
+    }
+
+    &_link {
+      @media only screen and (max-width: 480px) {
+        display: block;
+      }
+    }
+
+    &_link,
+    &_forweb {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.4;
+      color: var(--dark-075);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    &_link:hover {
+      color: var(--dark-black);
+    }
+
+    &_link + &_link {
+      margin-left: 40px;
+
+      @media only screen and (max-width: 480px) {
+        margin-left: 0;
+      }
+    }
+
+    &_forweb {
+      margin-left: auto;
+      color: var(--dark-black);
+
+      a {
+        text-decoration: none;
+        transition: var(--transition);
+
+        &:hover {
+          color: var(--dark-black);
+        }
+      }
+    }
+  }
+}

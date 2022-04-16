@@ -1,0 +1,272 @@
+@use "../mixins" as mix;
+
+// list-derection
+// ===================================
+.list-direction {
+
+  &__item {
+    $parent: &;
+    padding: 24px 30px;
+    @include mix.interpolate(border-radius, 320px, 1480px, 6px, 10px);
+    background-color: var(--light-white);
+    transition: var(--transition);
+    overflow: hidden;
+    cursor: pointer;
+
+    @media only screen and (max-width: 480px) {
+      padding: 14px 18px;
+    }
+
+    @include mix.hover {
+      &:not(.active) {
+        border-color: var(--brand-blue);
+        background-color: var(--brand-blue);
+
+        #{$parent}_title {
+          color: var(--light-white);
+
+          &::after {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5402 11.29L9.88023 5.64001C9.78726 5.54628 9.67666 5.47188 9.5548 5.42111C9.43294 5.37035 9.30224 5.34421 9.17023 5.34421C9.03821 5.34421 8.90751 5.37035 8.78565 5.42111C8.66379 5.47188 8.55319 5.54628 8.46023 5.64001C8.27398 5.82737 8.16943 6.08082 8.16943 6.34501C8.16943 6.60919 8.27398 6.86264 8.46023 7.05001L13.4102 12.05L8.46023 17C8.27398 17.1874 8.16943 17.4408 8.16943 17.705C8.16943 17.9692 8.27398 18.2226 8.46023 18.41C8.55284 18.5045 8.66329 18.5797 8.78516 18.6312C8.90704 18.6827 9.03792 18.7095 9.17023 18.71C9.30253 18.7095 9.43342 18.6827 9.55529 18.6312C9.67717 18.5797 9.78761 18.5045 9.88023 18.41L15.5402 12.76C15.6417 12.6664 15.7227 12.5527 15.7781 12.4262C15.8336 12.2997 15.8622 12.1631 15.8622 12.025C15.8622 11.8869 15.8336 11.7503 15.7781 11.6238C15.7227 11.4973 15.6417 11.3836 15.5402 11.29V11.29Z' fill='white'/%3E%3C/svg%3E%0A");
+            background-size: 100%;
+          }
+        }
+      }
+    }
+
+    &_title {
+      display: flex;
+      justify-content: space-between;
+      @include mix.interpolate(font-size, 320px, 1480px, 20px, 24px);
+      font-weight: 500;
+      line-height: 1.3;
+      color: var(--dark-05);
+      transition: var(--transition);
+
+      &::after {
+        flex-shrink: 0;
+        position: relative;
+        content: '';
+        top: 0.15em;
+        width: 24px;
+        height: 24px;
+        transform: rotate(90deg);
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5402 11.29L9.88023 5.64001C9.78726 5.54628 9.67666 5.47188 9.5548 5.42111C9.43294 5.37035 9.30224 5.34421 9.17023 5.34421C9.03821 5.34421 8.90751 5.37035 8.78565 5.42111C8.66379 5.47188 8.55319 5.54628 8.46023 5.64001C8.27398 5.82737 8.16943 6.08082 8.16943 6.34501C8.16943 6.60919 8.27398 6.86264 8.46023 7.05001L13.4102 12.05L8.46023 17C8.27398 17.1874 8.16943 17.4408 8.16943 17.705C8.16943 17.9692 8.27398 18.2226 8.46023 18.41C8.55284 18.5045 8.66329 18.5797 8.78516 18.6312C8.90704 18.6827 9.03792 18.7095 9.17023 18.71C9.30253 18.7095 9.43342 18.6827 9.55529 18.6312C9.67717 18.5797 9.78761 18.5045 9.88023 18.41L15.5402 12.76C15.6417 12.6664 15.7227 12.5527 15.7781 12.4262C15.8336 12.2997 15.8622 12.1631 15.8622 12.025C15.8622 11.8869 15.8336 11.7503 15.7781 11.6238C15.7227 11.4973 15.6417 11.3836 15.5402 11.29V11.29Z' fill='%23009CCE'/%3E%3C/svg%3E%0A");
+        background-size: 100%;
+        transition: var(--transition);
+
+        @media only screen and (max-width: 480px) {
+          right: -8px;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .list-service {
+      margin-top: 20px;
+    }
+
+    &.active {
+      box-shadow: 0px 20px 40px rgba(151, 151, 151, 0.12);
+      // cursor: default;
+
+      > #{$parent}_title {
+        color: var(--brand-blue);
+
+        @include mix.hover {
+          color: var(--spec-red);
+          cursor: pointer;
+        }
+
+        &::after {
+          transform: rotate(-90deg);
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5402 11.29L9.88023 5.64001C9.78726 5.54628 9.67666 5.47188 9.5548 5.42111C9.43294 5.37035 9.30224 5.34421 9.17023 5.34421C9.03821 5.34421 8.90751 5.37035 8.78565 5.42111C8.66379 5.47188 8.55319 5.54628 8.46023 5.64001C8.27398 5.82737 8.16943 6.08082 8.16943 6.34501C8.16943 6.60919 8.27398 6.86264 8.46023 7.05001L13.4102 12.05L8.46023 17C8.27398 17.1874 8.16943 17.4408 8.16943 17.705C8.16943 17.9692 8.27398 18.2226 8.46023 18.41C8.55284 18.5045 8.66329 18.5797 8.78516 18.6312C8.90704 18.6827 9.03792 18.7095 9.17023 18.71C9.30253 18.7095 9.43342 18.6827 9.55529 18.6312C9.67717 18.5797 9.78761 18.5045 9.88023 18.41L15.5402 12.76C15.6417 12.6664 15.7227 12.5527 15.7781 12.4262C15.8336 12.2997 15.8622 12.1631 15.8622 12.025C15.8622 11.8869 15.8336 11.7503 15.7781 11.6238C15.7227 11.4973 15.6417 11.3836 15.5402 11.29V11.29Z' fill='%23FB7575'/%3E%3C/svg%3E%0A");
+          background-size: 100%;
+        }
+      }
+    }
+  }
+
+  &__item + &__item {
+    margin-top: 10px;
+  }
+}
+
+// list-service
+// ===================================
+.list-service {
+  display: none;
+
+  &.open {
+    display: block;
+  }
+
+  &__item {
+    $parent: &;
+    padding: 20px;
+    @include mix.interpolate(border-radius, 320px, 1480px, 4px, 8px);
+    border: 1px solid var(--dark-01);
+    background-color: var(--light-01);
+    transition: var(--transition);
+    cursor: pointer;
+    overflow: hidden;
+
+    .table-price {
+      display: none;
+
+      &.open {
+        display: block;
+      }
+    }
+
+    .table-price__header {
+      border-radius: none;
+    }
+
+    @media only screen and (max-width: 480px) {
+      padding: 10px 16px;
+    }
+
+    @include mix.hover {
+      &:not(.active) {
+        border-color: var(--brand-blue);
+        background-color: var(--brand-blue);
+
+        #{$parent}_title {
+          color: var(--light-white);
+
+          &::after {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5402 11.29L9.88023 5.64001C9.78726 5.54628 9.67666 5.47188 9.5548 5.42111C9.43294 5.37035 9.30224 5.34421 9.17023 5.34421C9.03821 5.34421 8.90751 5.37035 8.78565 5.42111C8.66379 5.47188 8.55319 5.54628 8.46023 5.64001C8.27398 5.82737 8.16943 6.08082 8.16943 6.34501C8.16943 6.60919 8.27398 6.86264 8.46023 7.05001L13.4102 12.05L8.46023 17C8.27398 17.1874 8.16943 17.4408 8.16943 17.705C8.16943 17.9692 8.27398 18.2226 8.46023 18.41C8.55284 18.5045 8.66329 18.5797 8.78516 18.6312C8.90704 18.6827 9.03792 18.7095 9.17023 18.71C9.30253 18.7095 9.43342 18.6827 9.55529 18.6312C9.67717 18.5797 9.78761 18.5045 9.88023 18.41L15.5402 12.76C15.6417 12.6664 15.7227 12.5527 15.7781 12.4262C15.8336 12.2997 15.8622 12.1631 15.8622 12.025C15.8622 11.8869 15.8336 11.7503 15.7781 11.6238C15.7227 11.4973 15.6417 11.3836 15.5402 11.29V11.29Z' fill='white'/%3E%3C/svg%3E%0A");
+            background-size: 100%;
+          }
+        }
+      }
+    }
+
+    &_title {
+      @extend .list-direction__item_title;
+      font-size: 18px;
+      transition: var(--transition);
+
+      &::after {
+        top: 0.085em;
+      }
+    }
+
+    &_title + .table-price {
+      margin-top: 16px;
+    }
+
+    &.active {
+      border-color: var(--blue-03);
+      background-color: var(--light-white);
+      cursor: default;
+
+      > #{$parent}_title {
+        color: var(--dark-primary);
+
+        @include mix.hover {
+          color: var(--spec-red);
+          cursor: pointer;
+        }
+
+        &::after {
+          transform: rotate(-90deg);
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5402 11.29L9.88023 5.64001C9.78726 5.54628 9.67666 5.47188 9.5548 5.42111C9.43294 5.37035 9.30224 5.34421 9.17023 5.34421C9.03821 5.34421 8.90751 5.37035 8.78565 5.42111C8.66379 5.47188 8.55319 5.54628 8.46023 5.64001C8.27398 5.82737 8.16943 6.08082 8.16943 6.34501C8.16943 6.60919 8.27398 6.86264 8.46023 7.05001L13.4102 12.05L8.46023 17C8.27398 17.1874 8.16943 17.4408 8.16943 17.705C8.16943 17.9692 8.27398 18.2226 8.46023 18.41C8.55284 18.5045 8.66329 18.5797 8.78516 18.6312C8.90704 18.6827 9.03792 18.7095 9.17023 18.71C9.30253 18.7095 9.43342 18.6827 9.55529 18.6312C9.67717 18.5797 9.78761 18.5045 9.88023 18.41L15.5402 12.76C15.6417 12.6664 15.7227 12.5527 15.7781 12.4262C15.8336 12.2997 15.8622 12.1631 15.8622 12.025C15.8622 11.8869 15.8336 11.7503 15.7781 11.6238C15.7227 11.4973 15.6417 11.3836 15.5402 11.29V11.29Z' fill='%23FB7575'/%3E%3C/svg%3E%0A");
+          background-size: 100%;
+        }
+      }
+    }
+  }
+
+  &__item + &__item {
+    margin-top: 8px;
+  }
+}
+
+// list-icon
+// ===================================
+.list-icon {
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+
+    &_icon {
+      position: relative;
+      flex-shrink: 0;
+      width: 26px;
+      margin-right: 12px;
+
+      @media only screen and (max-width: 480px) {
+        margin-right: 8px;
+        width: 20px;
+      }
+
+      use {
+        fill: var(--brand-green)
+      }
+    }
+
+    &_text {
+      @include mix.interpolate(font-size, 320px, 1480px, 15px, 18px);
+      font-weight: 500;
+      line-height: 1.4;
+
+      @media only screen and (max-width: 480px) {
+        font-weight: 400;
+      }
+    }
+  }
+
+  &__item + &__item {
+    margin-top: 10px;
+
+    @media only screen and (max-width: 480px) {
+      margin-top: 6px;
+    }
+  }
+}
+
+// list-form
+// ===================================
+.list-form {
+
+  &__item {
+    position: relative;
+    padding-left: 20px;
+    @include mix.interpolate(font-size, 320px, 1480px, 13px,15px);
+    line-height: 1.6;
+    color: var(--dark-075);
+
+    @media only screen and (max-width: 480px) {
+      padding-left: 14px;
+      line-height: 1.4;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0.7em;
+      left: 0;
+      width: 12px;
+      height: 2px;
+      background-color: var(--brand-blue);
+
+      @media only screen and (max-width: 480px) {
+        top: 0.6em;
+        width: 8px;
+      }
+    }
+  }
+}
+
+// list-article
+// ===================================
+.list-article {
+  @extend .list-form;
+
+  &__item {
+    @extend .list-form__item;
+  }
+}

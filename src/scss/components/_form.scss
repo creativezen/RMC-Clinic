@@ -1,0 +1,341 @@
+@use "../mixins" as mix;
+
+// Form
+// ===================================
+.form {
+
+  &__header {
+    display: flex;
+  }
+
+  &__close {
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+    margin-right: -10px;
+    margin-bottom: -20px;
+    transition: var(--transition);
+    cursor: pointer;
+
+    &:hover {
+      transform: rotate(90deg);
+    }
+
+    @media only screen and (max-width: 480px) {
+      margin-right: -5px;
+    }
+  }
+
+  &__body,
+  &__footer {
+
+    > * + *:not(.grid-child) {
+      @include mix.interpolate(margin-top, 320px, 1480px, 14px, 18px);
+    }
+  }
+
+  &__legend {
+    margin-bottom: 30px;
+    padding-right: 30px;
+    @include mix.interpolate(font-size, 320px, 1480px, 26px, 36px);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+  }
+
+  &__footer {
+    margin-top: 20px;
+  }
+
+  &__search {
+    position: relative;
+  }
+
+  &__content {
+    @include mix.interpolate(margin-bottom, 320px, 1480px, 20px, 40px);
+
+    &_title {
+      @include mix.interpolate(font-size, 320px, 1480px, 18px, 22px);
+      font-weight: 500;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+    }
+
+    &_text {
+      @include mix.interpolate(font-size, 320px, 1480px, 13px,15px);
+      line-height: 1.6;
+      color: var(--dark-075);
+
+      @media only screen and (max-width: 480px) {
+        line-height: 1.4;
+      }
+    }
+
+    &_title + &_text {
+      @include mix.interpolate(margin-top, 320px, 1480px, 8px, 12px);
+    }
+
+    &_text + &_title {
+      @include mix.interpolate(margin-top, 320px, 1480px, 12px, 20px);
+    }
+  }
+
+  &__badges {
+    .badge {
+      margin-bottom: 8px;
+
+    }
+    &_item {
+      margin-top: 6px;
+    }
+  }
+
+  .grid-child {
+    grid-column: 6 span;
+  }
+}
+
+// Label
+// ===================================
+.label {
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  transition: var(--transition);
+
+  @media only screen and (max-width: 480px) {
+    font-size: 15px;
+    letter-spacing: 0;
+  }
+
+  &--agree {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.1;
+
+    .checkbox {
+      top: -0.3em;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+.label + .input,
+.label + .select-wrapper {
+  margin-top: 12px;
+}
+
+// Input
+// ===================================
+.input {
+  width: 100%;
+  @include mix.interpolate(min-height, 320px, 1480px, 44px, 48px);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--dark-primary);
+  padding: 0.5em 1em;
+  border: 1px solid var(--dark-03);
+  border-radius: 6px;
+
+  &::placeholder {
+    color: var(--dark-05);
+  }
+
+  &:focus {
+    background-color: #fff;
+    outline: transparent;
+    border-color: var(--dark-primary);
+  }
+
+  &:disabled {
+    background-color: var(--light-disabled);
+    border-color: var(--light-disabled);
+    cursor: not-allowed;
+    color: var(--dark-03);
+
+    &::placeholder {
+      color: var(--dark-03);
+    }
+  }
+
+  &.valid {
+    border-color: var(--green-primary);
+  }
+
+  &.is-invalid {
+    border-color: var(--spec-red);
+    color: var(--spec-red);
+  }
+}
+
+.input-search {
+  $parent: &;
+  @extend .input;
+  border-color: var(--blue-03);
+
+  &__submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    height: 100%;
+    width: 48px;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    transition: var(--transition);
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: "";
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.7099 20.29L17.9999 16.61C19.44 14.8144 20.1374 12.5353 19.9487 10.2413C19.76 7.94733 18.6996 5.81281 16.9854 4.27667C15.2713 2.74053 13.0337 1.91954 10.7328 1.9825C8.43194 2.04546 6.24263 2.98759 4.61505 4.61517C2.98747 6.24275 2.04534 8.43207 1.98237 10.7329C1.91941 13.0338 2.74041 15.2714 4.27655 16.9855C5.81269 18.6997 7.94721 19.7601 10.2412 19.9488C12.5352 20.1375 14.8143 19.4401 16.6099 18L20.2899 21.68C20.3829 21.7738 20.4935 21.8481 20.6153 21.8989C20.7372 21.9497 20.8679 21.9758 20.9999 21.9758C21.1319 21.9758 21.2626 21.9497 21.3845 21.8989C21.5063 21.8481 21.6169 21.7738 21.7099 21.68C21.8901 21.4936 21.9909 21.2444 21.9909 20.985C21.9909 20.7257 21.8901 20.4765 21.7099 20.29V20.29ZM10.9999 18C9.61544 18 8.26206 17.5895 7.11091 16.8203C5.95977 16.0511 5.06256 14.9579 4.53275 13.6788C4.00293 12.3997 3.86431 10.9923 4.13441 9.63439C4.4045 8.27653 5.07119 7.02925 6.05016 6.05028C7.02912 5.07131 8.27641 4.40463 9.63427 4.13453C10.9921 3.86443 12.3996 4.00306 13.6787 4.53287C14.9578 5.06268 16.051 5.95989 16.8202 7.11103C17.5894 8.26218 17.9999 9.61556 17.9999 11C17.9999 12.8565 17.2624 14.637 15.9497 15.9498C14.6369 17.2625 12.8564 18 10.9999 18V18Z' fill='%23009CCE'/%3E%3C/svg%3E%0A");
+      background-size: 100%;
+      opacity: 0.3;
+      transition: var(--transition);
+    }
+  }
+
+  &:focus {
+    border-color: var(--brand-blue);
+  }
+
+  &:focus + &__submit {
+    background-color: var(--brand-blue);
+
+    &::after {
+      opacity: 1;
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.7099 20.29L17.9999 16.61C19.44 14.8144 20.1374 12.5353 19.9487 10.2413C19.76 7.9473 18.6996 5.81278 16.9854 4.27664C15.2713 2.7405 13.0337 1.91951 10.7328 1.98247C8.43194 2.04543 6.24263 2.98756 4.61505 4.61514C2.98747 6.24272 2.04534 8.43203 1.98237 10.7329C1.91941 13.0338 2.74041 15.2714 4.27655 16.9855C5.81269 18.6997 7.94721 19.7601 10.2412 19.9488C12.5352 20.1375 14.8143 19.4401 16.6099 18L20.2899 21.68C20.3829 21.7737 20.4935 21.8481 20.6153 21.8989C20.7372 21.9497 20.8679 21.9758 20.9999 21.9758C21.1319 21.9758 21.2626 21.9497 21.3845 21.8989C21.5063 21.8481 21.6169 21.7737 21.7099 21.68C21.8901 21.4935 21.9909 21.2443 21.9909 20.985C21.9909 20.7257 21.8901 20.4765 21.7099 20.29V20.29ZM10.9999 18C9.61544 18 8.26206 17.5895 7.11091 16.8203C5.95977 16.0511 5.06256 14.9579 4.53275 13.6788C4.00293 12.3997 3.86431 10.9922 4.13441 9.63436C4.4045 8.2765 5.07119 7.02922 6.05016 6.05025C7.02912 5.07128 8.27641 4.4046 9.63427 4.1345C10.9921 3.8644 12.3996 4.00303 13.6787 4.53284C14.9578 5.06265 16.051 5.95986 16.8202 7.111C17.5894 8.26215 17.9999 9.61553 17.9999 11C17.9999 12.8565 17.2624 14.637 15.9497 15.9497C14.6369 17.2625 12.8564 18 10.9999 18V18Z' fill='white'/%3E%3C/svg%3E%0A");
+    }
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+// Textarea
+// ===================================
+.textarea {
+  @extend .input;
+  min-height: 80px;
+}
+
+// Error
+// ===================================
+.error {
+  color: var(--spec-red);
+}
+
+// Checkbox
+// ===================================
+.checkbox {
+  flex-shrink: 0;
+  position: relative;
+  top: -0.4em;
+  margin-right: 0.8em;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--dark-05);
+  border-radius: 0.15em;
+  transform: translateY(0.2em);
+
+  @media only screen and (max-width: 480px) {
+    margin-right: 0.6em;
+    width: 18px;
+    height: 18px;
+  }
+
+  @media only screen and (max-width: 320px) {
+    top: -0.3em;
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "";
+    width: 10px;
+    height: 10px;
+    transform: scale(0);
+    background-color:  #fff;
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  }
+
+  &:checked {
+    border-color: var(--green-primary);
+    background-color: var(--green-primary);
+  }
+
+  &:checked + * {
+    color: var(--dark-primary);
+  }
+
+  &:checked::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &:disabled {
+    border-color: var(--light-gray);
+    background-color: var(--light-disabled);
+  }
+}
+
+// Radio
+// ===================================
+.radio {
+  @extend .checkbox;
+  border-radius: 50%;
+
+  &::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    clip-path: none;
+  }
+}
+
+// Radio wrapper
+// ===================================
+.select-wrapper {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    content: "";
+    width: 0.7em;
+    height: 0.4em;
+    background-color: var(--green-primary);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  }
+}
+
+// Select
+// ===================================
+.select {
+  @extend .input;
+  padding-right: 40px;
+  line-height: 2;
+  appearance: none;
+  cursor: pointer;
+  background-color: transparent;
+}

@@ -1,0 +1,492 @@
+<div class="graph-modal js-modal">
+  <!-- Заказать звонок -->
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-call">
+    <div class="graph-modal__content">
+      <form class="form js-form-call">
+        <div class="form__header">
+          <span class="form__close js-close" aria-label="Закрыть модальное окно">
+            <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+          </span>
+        </div>
+        <fieldset class="form__body">
+          <legend class="form__legend">Заказать звонок</legend>
+          <div class="form__body_item">
+            <label class="label" for="name-call">Имя</label>
+            <input class="input input-name" type="text" name="name-call" placeholder="Укажите ваше имя" required>
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="tel-call">Контактный телефон</label>
+            <input class="input input-tel" type="tel" name="tel-call" placeholder="+7(ХХХ) ХХХ-ХХ-ХХ" required>
+          </div>
+        </fieldset>
+        <fieldset class="form__footer">
+          <label class="label label--agree" for="agree-call">
+            <input class="checkbox input-agree" id="agree-call" type="checkbox" required>
+            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#" target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
+          </label>
+          <button type="submit" class="btn block">Отправить</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <!-- Задать вопрос -->
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-question">
+    <div class="graph-modal__content">
+      <form class="form js-form-question">
+        <div class="form__header">
+          <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
+            <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+          </span>
+        </div>
+        <fieldset class="form__body">
+          <legend class="form__legend">Задать вопрос специалисту</legend>
+          <div class="form__body_item">
+            <label class="label" for="name-question">Имя</label>
+            <input class="input input-name" type="text" name="name-question" placeholder="Укажите ваше имя" required>
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="email-question">E-mail</label>
+            <input class="input input-mail" type="email" name="email-question" placeholder="Укажите ваш email" required>
+          </div>
+          <div class="form__body_item">
+            <label class="label">Выберите направление</label>
+            <div class="select-wrapper">
+              <select class="select select-direction">
+                <option value="default" selected="">Не выбрано</option>
+                <option value="">Выбрано 1</option>
+                <option value="">Выбрано 2</option>
+                <option value="">Выбрано 3</option>
+                <option value="">Выбрано 4</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="tel-question">Контактный телефон</label>
+            <input class="input input-tel" type="tel" name="tel-question" placeholder="+7(ХХХ) ХХХ-ХХ-ХХ" required>
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="message-question">Вопрос</label>
+            <textarea class="textarea input-question" name="message-question" placeholder="Ваш текст" required></textarea>
+          </div>
+        </fieldset>
+        <fieldset class="form__footer">
+          <label class="label label--agree" for="agree-question">
+            <input class="checkbox input-agree" id="agree-question" type="checkbox" required>
+            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#" target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
+          </label>
+          <button type="submit" class="btn block">Отправить</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <!-- Записаться на приём -->
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-appointment">
+    <div class="graph-modal__content">
+      <form class="form js-form-appointment">
+        <div class="form__header">
+          <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
+            <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+          </span>
+        </div>
+        <fieldset class="form__body">
+          <legend class="form__legend">Записаться на приём</legend>
+          <div class="form__body_item">
+            <label class="label" for="name-appointment">Имя</label>
+            <input class="input input-name" type="text" name="name-appointment" placeholder="Укажите ваше имя">
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="tel-appointment">Контактный телефон</label>
+            <input class="input input-tel" type="tel" name="tel-appointment" placeholder="+7(ХХХ) ХХХ-ХХ-ХХ">
+          </div>
+          <div class="form__body_item">
+            <label class="label">Выберите направление</label>
+            <div class="select-wrapper">
+              <select class="select select-direction">
+                <option value="default" selected="">Не выбрано</option>
+                <option value="">Выбрано 1</option>
+                <option value="">Выбрано 2</option>
+                <option value="">Выбрано 3</option>
+                <option value="">Выбрано 4</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="date-appointment">Выберите дату</label>
+            <input class="input input-date" type="date" name="date-appointment">
+          </div>
+        </fieldset>
+        <fieldset class="form__footer">
+          <label class="label label--agree" for="agree-appointment">
+            <input class="checkbox input-agree" id="agree-appointment" type="checkbox">
+            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#" target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
+          </label>
+          <button type="submit" class="btn block">Отправить</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <!-- Письмо директору -->
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-director">
+    <div class="graph-modal__content">
+      <form class="form js-form-director">
+        <div class="form__header">
+          <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
+            <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+          </span>
+        </div>
+        <fieldset class="form__body">
+          <legend class="form__legend">Письмо директору</legend>
+          <div class="form__body_item">
+            <label class="label" for="name-director">Имя</label>
+            <input class="input input-name" type="text" name="name-director" placeholder="Укажите ваше имя">
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="email-director">E-mail</label>
+            <input class="input input-mail" type="email" name="email-director" placeholder="Укажите ваш email">
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="tel-director">Контактный телефон</label>
+            <input class="input input-tel" type="tel" name="tel-director" placeholder="+7(ХХХ) ХХХ-ХХ-ХХ">
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="city-director">Населённый пункт</label>
+            <input class="input input-city" type="text" name="city-director" placeholder="Ваш населённый пункт">
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="message-director">Что вы хотите нам сообщить?</label>
+            <textarea class="textarea input-message" name="message-director" placeholder="Ваш текст"></textarea>
+          </div>
+        </fieldset>
+        <fieldset class="form__footer">
+          <label class="label label--agree" for="agree-director">
+            <input class="checkbox input-agree" id="agree-director" type="checkbox">
+            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#" target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
+          </label>
+          <button type="submit" class="btn block">Отправить</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <!-- Документы для ФНС -->
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-fns">
+    <div class="graph-modal__content">
+      <form class="form js-form-fns">
+        <div class="form__header">
+          <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
+            <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+          </span>
+        </div>
+        <fieldset class="form__body">
+          <legend class="form__legend">Запросить документы для ФНС</legend>
+          <div class="form__content">
+            <p class="form__content_title">Возврат 13% НДФЛ за лечение</p>
+            <p class="form__content_text">Справку для оформления возврата Вы можете получить в нашей бухгалтерии в четверг с 9:00 до 17:00, кроме выходных, документы можно подвезти в любое другое удобное для вас время.</p>
+            <p class="form__content_title">Документы, необходимые для выдачи справки:</p>
+            <p class="form__content_text">
+              <ul class="list-form">
+                <li class="list-form__item">Договор с МЦ «RMC».</li>
+                <li class="list-form__item">Дополнительные соглашения к договору с чеками (оригиналы).</li>
+                <li class="list-form__item">ИНН.</li>
+              </ul>
+            </p>
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="name-fns">Имя</label>
+            <input class="input input-name" type="text" name="name-fns" placeholder="Укажите ваше имя">
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="tel-fns">Контактный телефон</label>
+            <input class="input input-tel" type="tel" name="tel-fns" placeholder="+7(ХХХ) ХХХ-ХХ-ХХ">
+          </div>
+        </fieldset>
+        <fieldset class="form__footer">
+          <label class="label label--agree" for="agree-fns">
+            <input class="checkbox input-agree" id="agree-fns" type="checkbox">
+            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#" target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
+          </label>
+          <button type="submit" class="btn block">Отправить</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <!-- Оставить отзыв -->
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-feedback">
+    <div class="graph-modal__content">
+      <form class="form js-form-feedback">
+        <div class="form__header">
+          <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
+            <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+          </span>
+        </div>
+        <fieldset class="form__body">
+          <legend class="form__legend">Оставить отзыв</legend>
+          <div class="form__body_item">
+            <label class="label" for="name-feedback">Имя</label>
+            <input class="input input-name" type="text" name="name-feedback" placeholder="Укажите ваше имя">
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="email-feedback">E-mail</label>
+            <input class="input input-mail" type="email" name="email-feedback" placeholder="Укажите ваш email">
+          </div>
+          <div class="form__body_item">
+            <label class="label">Выберите направление</label>
+            <div class="select-wrapper">
+              <select class="select select-direction">
+                <option value="default" selected="">Не выбрано</option>
+                <option value="">Выбрано 1</option>
+                <option value="">Выбрано 2</option>
+                <option value="">Выбрано 3</option>
+                <option value="">Выбрано 4</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__body_item">
+            <label class="label">Ваша оценка</label>
+            <div class="select-wrapper">
+              <select class="select select-point">
+                <option value="default" selected="">Не выбрано</option>
+                <option value="">Выбрано 1</option>
+                <option value="">Выбрано 2</option>
+                <option value="">Выбрано 3</option>
+                <option value="">Выбрано 4</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="message-feedback">Текст отзыва</label>
+            <textarea class="textarea input-message" name="message-feedback" placeholder="Ваш текст"></textarea>
+          </div>
+        </fieldset>
+        <fieldset class="form__footer">
+          <label class="label label--agree" for="agree-feedback">
+            <input class="checkbox input-agree" id="agree-feedback" type="checkbox">
+            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#" target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
+          </label>
+          <button type="submit" class="btn block">Отправить</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <!-- Связаться с нами -->
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-contact">
+    <div class="graph-modal__content">
+      <form class="form js-form-contact">
+        <div class="form__header">
+          <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
+            <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+          </span>
+        </div>
+        <fieldset class="form__body">
+          <legend class="form__legend">Связаться с нами</legend>
+          <div class="form__body_item">
+            <label class="label" for="name-contact">Имя</label>
+            <input class="input input-name" type="text" name="name-contact" placeholder="Укажите ваше имя">
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="email-contact">E-mail</label>
+            <input class="input input-mail" type="email" name="email-contact" placeholder="Укажите ваш email">
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="tel-contact">Контактный телефон</label>
+            <input class="input input-tel" type="tel" name="tel-contact" placeholder="+7(ХХХ) ХХХ-ХХ-ХХ">
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="city-contact">Населённый пункт</label>
+            <input class="input input-city" type="text" name="city-contact" placeholder="Ваш населённый пункт">
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="message-contact">Что вы хотите нам сообщить?</label>
+            <textarea class="textarea input-message" name="message-contact" placeholder="Ваш текст"></textarea>
+          </div>
+        </fieldset>
+        <fieldset class="form__footer">
+          <label class="label label--agree" for="agree-contact">
+            <input class="checkbox input-agree" id="agree-contact" type="checkbox">
+            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#" target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
+          </label>
+          <button type="submit" class="btn block">Отправить</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <!-- Консульрация онколога -->
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-service">
+    <div class="graph-modal__content">
+      <form class="form js-form-service">
+        <div class="form__header">
+          <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
+            <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+          </span>
+        </div>
+        <fieldset class="form__body">
+          <legend class="form__legend">Запись на консультацию онколога</legend>
+          <div class="form__body_item">
+            <label class="label" for="name-contact">Имя</label>
+            <input class="input input-name" type="text" name="name-contact" placeholder="Укажите ваше имя">
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="email-contact">E-mail</label>
+            <input class="input input-mail" type="email" name="email-contact" placeholder="Укажите ваш email">
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="tel-contact">Контактный телефон</label>
+            <input class="input input-tel" type="tel" name="tel-contact" placeholder="+7(ХХХ) ХХХ-ХХ-ХХ">
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="date-appointment">Выберите дату</label>
+            <input class="input input-date" type="date" name="date-appointment">
+          </div>
+        </fieldset>
+        <fieldset class="form__footer">
+          <label class="label label--agree" for="agree-service">
+            <input class="checkbox input-agree" id="agree-service" type="checkbox">
+            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#" target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
+          </label>
+          <button type="submit" class="btn block">Отправить</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <!-- Мобильный поиск из главной навигации -->
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-search">
+    <div class="graph-modal__content">
+      <form class="form header-search js-form-search">
+        <div class="form__header">
+          <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
+            <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+          </span>
+        </div>
+        <div class="form__legend">Искать на сайте</div>
+        <fieldset class="form__search">
+          <input class="input-search active" type="text" placeholder="Искать на сайте...">
+          <button class="input-search__submit" type="submit"></button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <!-- Записаться на приём к урологу-->
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-appointment-urolog">
+    <div class="graph-modal__content">
+      <form class="form js-form-appointment-urolog">
+        <div class="form__header">
+          <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
+            <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+          </span>
+        </div>
+        <fieldset class="form__body">
+          <legend class="form__legend">Записаться на приём к урологу</legend>
+          <div class="form__body_item">
+            <label class="label" for="name-appointment">Имя</label>
+            <input class="input input-name" type="text" name="name-appointment" placeholder="Укажите ваше имя">
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="tel-appointment">Контактный телефон</label>
+            <input class="input input-tel" type="tel" name="tel-appointment" placeholder="+7(ХХХ) ХХХ-ХХ-ХХ">
+          </div>
+          <div class="form__body_item">
+            <label class="label">Выберите услугу</label>
+            <div class="select-wrapper">
+              <select class="select select-direction">
+                <option value="default" selected="">Не выбрано</option>
+                <option value="">Выбрано 1</option>
+                <option value="">Выбрано 2</option>
+                <option value="">Выбрано 3</option>
+                <option value="">Выбрано 4</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="date-appointment">Выберите дату</label>
+            <input class="input input-date" type="date" name="date-appointment">
+          </div>
+        </fieldset>
+        <fieldset class="form__footer">
+          <label class="label label--agree" for="agree-appointmen-urolog">
+            <input class="checkbox input-agree" id="agree-appointment-urolog" type="checkbox">
+            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#" target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
+          </label>
+          <button type="submit" class="btn block">Отправить</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <!-- Подробнее о вакансии-->
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-vacancia">
+    <div class="graph-modal__content">
+      <form class="form js-form-vacancia">
+        <div class="form__header">
+          <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
+            <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+          </span>
+        </div>
+        <div class="form__body">
+          <div class="form__legend">Какой-нибудь заголовок вакансии в несколько строк</div>
+          <div class="form__badges">
+            <div class="badge form__badges_item">Онкология</div>
+            <div class="badge-date form__badges_item">
+              <div class="badge-date__icon"></div>
+              <span class="badge-date__text">Опыт работы: 1–3 года</span>
+            </div>
+            <div class="badge-time form__badges_item">
+              <div class="badge-time__icon"></div>
+              <span class="badge-time__text">Полная занятость, полный день</span>
+            </div>
+          </div>
+          <div class="form__content">
+            <p class="form__content_title">от 45 000 до 70 000 ₽ до вычета налогов</p>
+            <p class="form__content_text">Ознакомительный какой-нибудь текст о том, кто нужен в нескольких словах, а далее обязанности, требования и условия.</p>
+            <p class="form__content_title">Обязанности:</p>
+            <div class="form__content_text">
+              <ul class="list-form">
+                <li class="list-form__item">Организация медицинской деятельности предприятия</li>
+                <li class="list-form__item">Оказание медицинской помощи, в том числе экстренной</li>
+                <li class="list-form__item">Работа с контрагентами, заказ необходимого оборудования и материалов</li>
+                <li class="list-form__item">Работа с контролирующими органами в рамках медицинской дедеятельности</li>
+                <li class="list-form__item">Ведение блока охраны труда медицинского персонала</li>
+              </ul>
+            </div>
+            <p class="form__content_title">Требования:</p>
+            <div class="form__content_text">
+              <ul class="list-form">
+                <li class="list-form__item">Высшее образование, дополнительная профессиональная поподготовка (интернатура/ординатура) — по одной из спспециальностей: "Терапия", "Неврология, "Гериатрия"</li>
+                <li class="list-form__item">Стрессоустойчивость, доброжелательность</li>
+              </ul>
+            </div>
+            <p class="form__content_title">Условия:</p>
+            <p class="form__content_text">Оформление соглаcно ТК РФ</p>
+          </div>
+        </div>
+        <fieldset class="form__body">
+          <legend class="form__legend">Для отклика заполните форму</legend>
+          <div class="form__body_item">
+            <label class="label" for="name-feedback">Имя</label>
+            <input class="input input-name" type="text" name="name-feedback" placeholder="Укажите ваше имя">
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="email-feedback">E-mail</label>
+            <input class="input input-mail" type="email" name="email-feedback" placeholder="Укажите ваш email">
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="tel-call">Контактный телефон</label>
+            <input class="input input-tel" type="tel" name="tel-call" placeholder="+7(ХХХ) ХХХ-ХХ-ХХ" required>
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="name-url">Ссылка на резюме</label>
+            <input class="input input-name" type="text" name="name-rul" placeholder="Ссылка на резюме">
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="message-vacancia">Сопроводительное письмо</label>
+            <textarea class="textarea input-message" name="message-vacancia" placeholder="Ваш текст"></textarea>
+          </div>
+        </fieldset>
+        <fieldset class="form__footer">
+          <label class="label label--agree" for="agree-vacancia">
+            <input class="checkbox input-agree" id="agree-vacancia" type="checkbox">
+            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#" target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
+          </label>
+          <button type="submit" class="btn block">Отправить</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+  @include('./partials/head.html', {
+  "title": 'Интерфейс | RMC-Clinic'
+  })
+
+  @include('partials/svg-sprite.html')
+
+  <body class="page__body">
+    <!-- @include('partials/header.html') -->
+    <main class="main">
+      <section class="section hero-cover">
+        <picture class="hero-cover__img">
+          <img src="img/hero-img-01.jpg" alt="О клинике" loading="lazy"  width="1920" height="500">
+        </picture>
+        <div class="hero-cover__content container">
+          <h1 class="hero-cover__title">О клинике</h1>
+          <div class="breadcrumb">
+            <ul class="breadcrumb__nav">
+              <li><a href="#" class="link-breadcrumb">Главная</a></li>
+              <li><a href="#" class="link-breadcrumb">О клинике</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section hero-cover">
+        <picture class="hero-cover__img">
+          <img src="img/hero-img-03.jpg" alt="О клинике" loading="lazy"  width="1920" height="500">
+        </picture>
+        <div class="hero-cover__content container">
+          <h1 class="hero-cover__title">Направления</h1>
+          <form class="hero-cover__search form">
+            <fieldset class="form__search">
+              <input class="input-search active" type="text" placeholder="Искать на сайте...">
+              <button class="input-search__submit" type="submit"></button>
+            </fieldset>
+          </form>
+          <div class="breadcrumb">
+            <ul class="breadcrumb__nav">
+              <li><a href="#" class="link-breadcrumb">Главная</a></li>
+              <li><a href="#" class="link-breadcrumb">Направления</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section hero-cover">
+        <picture class="hero-cover__img">
+          <img src="img/hero-img-02.jpg" alt="О клинике" loading="lazy"  width="1920" height="500">
+        </picture>
+        <div class="hero-cover__content container">
+          <h1 class="hero-cover__title">Консультация онколога</h1>
+          <div class="hero-cover__price">
+            <div class="hero-cover__price_content">
+              <a href="#" class="hero-cover__price_btn btn">Запись на приём</a>
+              <p>Цена от 750 ₽</p>
+            </div>
+          </div>
+          <div class="breadcrumb">
+            <ul class="breadcrumb__nav">
+              <li><a href="#" class="link-breadcrumb">Главная</a></li>
+              <li><a href="#" class="link-breadcrumb">Направления</a></li>
+              <li><a href="#" class="link-breadcrumb">Онкология</a></li>
+              <li><a href="#" class="link-breadcrumb">Консультация онколога</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section hero-base">
+        <div class="hero-base__content container">
+          <div class="breadcrumb">
+            <ul class="breadcrumb__nav">
+              <li><a href="#" class="link-breadcrumb">Главная</a></li>
+              <li><a href="#" class="link-breadcrumb">Направления</a></li>
+              <li><a href="#" class="link-breadcrumb">Онкология</a></li>
+              <li><a href="#" class="link-breadcrumb">Консультация онколога</a></li>
+            </ul>
+          </div>
+          <h1 class="hero-base__title">Цены</h1>
+          <p class="hero-base__text">С ценами на услуги вы можете ознакомиться в прайс-листе клиники.</p>
+          <a href="#" class="btn-icon">
+            <span>Скачать прайс-лист</span>
+            <svg class="btn-svg" viewbox="0 0 24 24">
+              <use xlink:href="#icon-arrow-right"></use>
+            </svg>
+          </a>
+        </div>
+      </section>
+      <section class="section hero-post">
+        <div class="hero-post__content container">
+          <div class="breadcrumb">
+            <ul class="breadcrumb__nav">
+              <li><a href="#" class="link-breadcrumb">Главная</a></li>
+              <li><a href="#" class="link-breadcrumb">Акции</a></li>
+              <li><a href="#" class="link-breadcrumb">Заголовок акционного предложения</a></li>
+            </ul>
+          </div>
+          <div class="hero-post__badges">
+            <div class="badge-date">
+              <div class="badge-date__icon"></div>
+              <span class="badge-date__text">Действует до 10 апреля 2022 г.</span>
+            </div>
+            <div class="badge-time">
+              <div class="badge-time__icon"></div>
+              <span class="badge-time__text">10 мин.</span>
+            </div>
+          </div>
+          <h1 class="hero-post__title">Заголовок акционного предложения</h1>
+        </div>
+      </section>
+    </main>
+    <!-- @include('partials/footer.html') -->
+  </body>
+
+</html>

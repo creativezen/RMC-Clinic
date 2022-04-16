@@ -1,1 +1,6 @@
-// @include font-face("Muller", "../fonts/MullerRegular", 400, normal);
+@use "./mixins" as mix;
+
+@include mix.font-face("TT-Hoves", "TTHoves-Bold", 700, normal);
+@include mix.font-face("TT-Hoves", "TTHoves-DemiBold", 600, normal);
+@include mix.font-face("TT-Hoves", "TTHoves-Medium", 500, normal);
+@include mix.font-face("TT-Hoves", "TTHoves-Regular", 400, normal);

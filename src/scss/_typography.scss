@@ -1,0 +1,37 @@
+@use "./mixins" as mix;
+
+/* Multiple properties with same values */
+// h1 {
+// 	@include mix.interpolate((padding-bottom), 20rem, 76rem, 0.6rem, 1.6rem);
+// 	letter-spacing: -0.02em;
+// }
+
+h1 {
+	@include mix.interpolate(font-size, 320px, 1480px, 30px, 40px);
+	font-weight: 600;
+	line-height: 1.4;
+	letter-spacing: -0.02em;
+
+	@media only screen and (max-width: 480px) {
+		line-height: 1.2;
+	}
+}
+
+h3 {
+	@extend h1;
+	@include mix.interpolate(font-size, 320px, 1480px, 26px, 30px);
+}
+
+h4 {
+	@extend h1;
+	@include mix.interpolate(font-size, 320px, 1480px, 22px, 24px);
+}
+
+.title {
+	@extend h1;
+}
+
+.title-home {
+	@extend h1;
+	@include mix.interpolate(font-size, 320px, 1480px, 40px, 56px);
+}

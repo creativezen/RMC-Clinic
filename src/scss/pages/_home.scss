@@ -1,0 +1,102 @@
+@use "../mixins" as mix;
+
+// home direction
+// ===================================
+.home-direction {
+
+  .section-home__body {
+
+    .grid-child {
+      grid-column: 3 span;
+    }
+  }
+}
+
+// home specialist
+// ===================================
+.home-specialist {
+  background-color: var(--light-white);
+}
+
+// home service
+// ===================================
+.home-service {
+  background-color: var(--blue-01);
+
+  .section-home__footer {
+    text-align: center;
+  }
+}
+
+// home feedback
+// ===================================
+.home-feedback {
+  background-color: var(--light-white);
+
+  .section-home__footer {
+    text-align: center;
+  }
+}
+
+// home news
+// ===================================
+.home-news {
+  background-color: var(--light-white);
+}
+
+// home partner
+// ===================================
+.home-partner {
+  background-color: var(--blue-01);
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    border: 1px solid var(--blue-05);
+    @include mix.interpolate(border-radius, 320px, 1480px, 12px, 20px);
+    overflow: hidden;
+
+    li {
+      grid-column: 3 span;
+      position: relative;
+      margin:  1px;
+      width: 100%;
+      height: 130px;
+      border-right: 1px solid var(--blue-03);
+      border-bottom: 1px solid var(--blue-03);
+      background-color: var(--light-white);
+      overflow: hidden;
+
+      img {
+        display: block;
+        position: absolute;
+        padding: 40px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+// home contact
+// ===================================
+.home-contact {
+  background-color: var(--light-white);
+
+  // &__map {
+
+  // }
+
+  &__info {
+    margin-top: 40px;
+
+    .grid-child {
+      grid-column: 3 span;
+
+      > * {
+        height: 100%;
+      }
+    }
+  }
+}

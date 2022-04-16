@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+  @include('./partials/head.html', {
+  "title": 'Часто задаваемые вопросы | RMC-Clinic',
+  })
+
+  @include('partials/svg-sprite.html')
+
+  <body class="page__body">
+    @include('partials/header.html')
+
+    <main class="main">
+      <section class="section hero-cover">
+        <picture class="hero-cover__img">
+          <img src="img/hero-img-13.jpg" alt="Часто задаваемые вопросы" loading="lazy" width="1920" height="500">
+        </picture>
+        <div class="hero-cover__content container">
+          <h1 class="hero-cover__title">Часто задаваемые вопросы</h1>
+          <form class="hero-cover__search form">
+            <fieldset class="form__search">
+              <input class="input-search active" type="text" placeholder="Искать вопрос...">
+              <button class="input-search__submit" type="submit"></button>
+            </fieldset>
+          </form>
+          <div class="breadcrumb">
+            <ul class="breadcrumb__nav">
+              <li><a href="#" class="link-breadcrumb">Главная</a></li>
+              <li><a href="#" class="link-breadcrumb">Часто задаваемые вопросы</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section-sidebar questions-main">
+        <div class="container">
+          <div class="section-sidebar__body">
+            <div class="section-sidebar__main">
+              <div class="card-question js-animation-height" data-state="close">
+                <div class="card-question__header">
+                  <div class="badge badge--question">Вопрос</div>
+                  <div class="badge badge--small">Онкология</div>
+                </div>
+                <div class="card-question__body">
+                  <p class="card-question__body_text">
+                    Добрый день! Подскажите, можно ли записаться на платный приём онколога-офтальмолога без направления.
+                    Есть заключение врача из Екатеринбургского центра МНТК «Микрохирургия глаза». Где написана рекомендация обратиться в ваш центр.
+                  </p>
+                  <div class="card-question__body_info">
+                    <div class="badge-user">
+                      <div class="badge-user__icon"></div>
+                      <span class="badge-user__text">Пользователь</span>
+                    </div>
+                    <div class="badge-date">
+                      <div class="badge-date__icon"></div>
+                      <span class="badge-date__text">15 ноября 2019 г.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-question__answer js-animation-target">
+                  <div class="person-answer">
+                    <div class="person-answer__photo">
+                      <img src="img/person-answer-img-01.jpg" alt="ФИО | Должность">
+                    </div>
+                    <div class="person-answer__info">
+                      <p class="person-answer__info_name">Гладков Олег Александрович</p>
+                      <div class="person-answer__info_badges">
+                        <div class="badge-position">
+                          <div class="badge-position__icon"></div>
+                          <span class="badge-position__text">Врач-эндокринолог</span>
+                        </div>
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">Стаж: более 27 лет</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="card-question__answer_text">
+                    Добрый день, Ангелина. В медицинском центре «RMC» ведет прием врач-эндокринолог Мельникова Виктория Владимировна. Прием осуществляется в среду и пятницу с 16:00 до 19:00. Записаться на консультацию можно по тел: 8 (343) 345 00 00. Сотрудницы колл-центра подберут для вас удобные дату
+                    и время посещения нашего медицинского центра.
+                  </p>
+                </div>
+                <div class="card-question__footer">
+                  <button class="btn-small js-button-show" data-text="Ответ">Читать ответ</button>
+                </div>
+              </div>
+              <div class="card-question js-animation-height" data-state="close">
+                <div class="card-question__header">
+                  <div class="badge badge--question">Вопрос</div>
+                  <div class="badge badge--small">Онкология</div>
+                </div>
+                <div class="card-question__body">
+                  <p class="card-question__body_text">
+                    Здравствуйте,как можно записаться на приём к эндокринологу?
+                  </p>
+                  <div class="card-question__body_info">
+                    <div class="badge-user">
+                      <div class="badge-user__icon"></div>
+                      <span class="badge-user__text">Пользователь</span>
+                    </div>
+                    <div class="badge-date">
+                      <div class="badge-date__icon"></div>
+                      <span class="badge-date__text">15 ноября 2019 г.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-question__answer js-animation-target">
+                  <div class="person-answer">
+                    <div class="person-answer__photo">
+                      <img src="img/person-answer-img-01.jpg" alt="ФИО | Должность">
+                    </div>
+                    <div class="person-answer__info">
+                      <p class="person-answer__info_name">Гладков Олег Александрович</p>
+                      <div class="person-answer__info_badges">
+                        <div class="badge-position">
+                          <div class="badge-position__icon"></div>
+                          <span class="badge-position__text">Врач-эндокринолог</span>
+                        </div>
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">Стаж: более 27 лет</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="card-question__answer_text">
+                    Добрый день, Ангелина. В медицинском центре «RMC» ведет прием врач-эндокринолог Мельникова Виктория Владимировна. Прием осуществляется в среду и пятницу с 16:00 до 19:00. Записаться на консультацию можно по тел: 8 (343) 345 00 00. Сотрудницы колл-центра подберут для вас удобные дату
+                    и время посещения нашего медицинского центра.
+                  </p>
+                </div>
+                <div class="card-question__footer">
+                  <button class="btn-small js-button-show" data-text="Ответ">Читать ответ</button>
+                </div>
+              </div>
+              <div class="card-question js-animation-height" data-state="close">
+                <div class="card-question__header">
+                  <div class="badge badge--question">Вопрос</div>
+                  <div class="badge badge--small">Онкология</div>
+                </div>
+                <div class="card-question__body">
+                  <p class="card-question__body_text">
+                    Добрый день! Я живу в городе Байконур, могут ли меня прооперировать по полису ОМС бесплатно в вашей клинике , диагноз фиброаденома молочной железы?
+                  </p>
+                  <div class="card-question__body_info">
+                    <div class="badge-user">
+                      <div class="badge-user__icon"></div>
+                      <span class="badge-user__text">Пользователь</span>
+                    </div>
+                    <div class="badge-date">
+                      <div class="badge-date__icon"></div>
+                      <span class="badge-date__text">15 ноября 2019 г.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-question__answer js-animation-target">
+                  <div class="person-answer">
+                    <div class="person-answer__photo">
+                      <img src="img/person-answer-img-01.jpg" alt="ФИО | Должность">
+                    </div>
+                    <div class="person-answer__info">
+                      <p class="person-answer__info_name">Гладков Олег Александрович</p>
+                      <div class="person-answer__info_badges">
+                        <div class="badge-position">
+                          <div class="badge-position__icon"></div>
+                          <span class="badge-position__text">Врач-эндокринолог</span>
+                        </div>
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">Стаж: более 27 лет</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="card-question__answer_text">
+                    Добрый день, Ангелина. В медицинском центре «RMC» ведет прием врач-эндокринолог Мельникова Виктория Владимировна. Прием осуществляется в среду и пятницу с 16:00 до 19:00. Записаться на консультацию можно по тел: 8 (343) 345 00 00. Сотрудницы колл-центра подберут для вас удобные дату
+                    и время посещения нашего медицинского центра.
+                  </p>
+                </div>
+                <div class="card-question__footer">
+                  <button class="btn-small js-button-show" data-text="Ответ">Читать ответ</button>
+                </div>
+              </div>
+              <div class="card-question js-animation-height" data-state="close">
+                <div class="card-question__header">
+                  <div class="badge badge--question">Вопрос</div>
+                  <div class="badge badge--small">Онкология</div>
+                </div>
+                <div class="card-question__body">
+                  <p class="card-question__body_text">
+                    Добрый день! Подскажите, можно ли записаться на платный приём онколога-офтальмолога без направления.
+                    Есть заключение врача из Екатеринбургского центра МНТК «Микрохирургия глаза». Где написана рекомендация обратиться в ваш центр.
+                  </p>
+                  <div class="card-question__body_info">
+                    <div class="badge-user">
+                      <div class="badge-user__icon"></div>
+                      <span class="badge-user__text">Пользователь</span>
+                    </div>
+                    <div class="badge-date">
+                      <div class="badge-date__icon"></div>
+                      <span class="badge-date__text">15 ноября 2019 г.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-question__answer js-animation-target">
+                  <div class="person-answer">
+                    <div class="person-answer__photo">
+                      <img src="img/person-answer-img-01.jpg" alt="ФИО | Должность">
+                    </div>
+                    <div class="person-answer__info">
+                      <p class="person-answer__info_name">Гладков Олег Александрович</p>
+                      <div class="person-answer__info_badges">
+                        <div class="badge-position">
+                          <div class="badge-position__icon"></div>
+                          <span class="badge-position__text">Врач-эндокринолог</span>
+                        </div>
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">Стаж: более 27 лет</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="card-question__answer_text">
+                    Добрый день, Ангелина. В медицинском центре «RMC» ведет прием врач-эндокринолог Мельникова Виктория Владимировна. Прием осуществляется в среду и пятницу с 16:00 до 19:00. Записаться на консультацию можно по тел: 8 (343) 345 00 00. Сотрудницы колл-центра подберут для вас удобные дату
+                    и время посещения нашего медицинского центра.
+                  </p>
+                </div>
+                <div class="card-question__footer">
+                  <button class="btn-small js-button-show" data-text="Ответ">Читать ответ</button>
+                </div>
+              </div>
+              <div class="card-question js-animation-height" data-state="close">
+                <div class="card-question__header">
+                  <div class="badge badge--question">Вопрос</div>
+                  <div class="badge badge--small">Онкология</div>
+                </div>
+                <div class="card-question__body">
+                  <p class="card-question__body_text">
+                    Здравствуйте,как можно записаться на приём к эндокринологу?
+                  </p>
+                  <div class="card-question__body_info">
+                    <div class="badge-user">
+                      <div class="badge-user__icon"></div>
+                      <span class="badge-user__text">Пользователь</span>
+                    </div>
+                    <div class="badge-date">
+                      <div class="badge-date__icon"></div>
+                      <span class="badge-date__text">15 ноября 2019 г.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-question__answer js-animation-target">
+                  <div class="person-answer">
+                    <div class="person-answer__photo">
+                      <img src="img/person-answer-img-01.jpg" alt="ФИО | Должность">
+                    </div>
+                    <div class="person-answer__info">
+                      <p class="person-answer__info_name">Гладков Олег Александрович</p>
+                      <div class="person-answer__info_badges">
+                        <div class="badge-position">
+                          <div class="badge-position__icon"></div>
+                          <span class="badge-position__text">Врач-эндокринолог</span>
+                        </div>
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">Стаж: более 27 лет</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="card-question__answer_text">
+                    Добрый день, Ангелина. В медицинском центре «RMC» ведет прием врач-эндокринолог Мельникова Виктория Владимировна. Прием осуществляется в среду и пятницу с 16:00 до 19:00. Записаться на консультацию можно по тел: 8 (343) 345 00 00. Сотрудницы колл-центра подберут для вас удобные дату
+                    и время посещения нашего медицинского центра.
+                  </p>
+                </div>
+                <div class="card-question__footer">
+                  <button class="btn-small js-button-show" data-text="Ответ">Читать ответ</button>
+                </div>
+              </div>
+              <div class="card-question js-animation-height" data-state="close">
+                <div class="card-question__header">
+                  <div class="badge badge--question">Вопрос</div>
+                  <div class="badge badge--small">Онкология</div>
+                </div>
+                <div class="card-question__body">
+                  <p class="card-question__body_text">
+                    Добрый день! Я живу в городе Байконур, могут ли меня прооперировать по полису ОМС бесплатно в вашей клинике , диагноз фиброаденома молочной железы?
+                  </p>
+                  <div class="card-question__body_info">
+                    <div class="badge-user">
+                      <div class="badge-user__icon"></div>
+                      <span class="badge-user__text">Пользователь</span>
+                    </div>
+                    <div class="badge-date">
+                      <div class="badge-date__icon"></div>
+                      <span class="badge-date__text">15 ноября 2019 г.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-question__answer js-animation-target">
+                  <div class="person-answer">
+                    <div class="person-answer__photo">
+                      <img src="img/person-answer-img-01.jpg" alt="ФИО | Должность">
+                    </div>
+                    <div class="person-answer__info">
+                      <p class="person-answer__info_name">Гладков Олег Александрович</p>
+                      <div class="person-answer__info_badges">
+                        <div class="badge-position">
+                          <div class="badge-position__icon"></div>
+                          <span class="badge-position__text">Врач-эндокринолог</span>
+                        </div>
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">Стаж: более 27 лет</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="card-question__answer_text">
+                    Добрый день, Ангелина. В медицинском центре «RMC» ведет прием врач-эндокринолог Мельникова Виктория Владимировна. Прием осуществляется в среду и пятницу с 16:00 до 19:00. Записаться на консультацию можно по тел: 8 (343) 345 00 00. Сотрудницы колл-центра подберут для вас удобные дату
+                    и время посещения нашего медицинского центра.
+                  </p>
+                </div>
+                <div class="card-question__footer">
+                  <button class="btn-small js-button-show" data-text="Ответ">Читать ответ</button>
+                </div>
+              </div>
+              <div class="card-question js-animation-height" data-state="close">
+                <div class="card-question__header">
+                  <div class="badge badge--question">Вопрос</div>
+                  <div class="badge badge--small">Онкология</div>
+                </div>
+                <div class="card-question__body">
+                  <p class="card-question__body_text">
+                    Добрый день! Я живу в городе Байконур, могут ли меня прооперировать по полису ОМС бесплатно в вашей клинике , диагноз фиброаденома молочной железы?
+                  </p>
+                  <div class="card-question__body_info">
+                    <div class="badge-user">
+                      <div class="badge-user__icon"></div>
+                      <span class="badge-user__text">Пользователь</span>
+                    </div>
+                    <div class="badge-date">
+                      <div class="badge-date__icon"></div>
+                      <span class="badge-date__text">15 ноября 2019 г.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-question__answer js-animation-target">
+                  <div class="person-answer">
+                    <div class="person-answer__photo">
+                      <img src="img/person-answer-img-01.jpg" alt="ФИО | Должность">
+                    </div>
+                    <div class="person-answer__info">
+                      <p class="person-answer__info_name">Гладков Олег Александрович</p>
+                      <div class="person-answer__info_badges">
+                        <div class="badge-position">
+                          <div class="badge-position__icon"></div>
+                          <span class="badge-position__text">Врач-эндокринолог</span>
+                        </div>
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">Стаж: более 27 лет</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="card-question__answer_text">
+                    Добрый день, Ангелина. В медицинском центре «RMC» ведет прием врач-эндокринолог Мельникова Виктория Владимировна. Прием осуществляется в среду и пятницу с 16:00 до 19:00. Записаться на консультацию можно по тел: 8 (343) 345 00 00. Сотрудницы колл-центра подберут для вас удобные дату
+                    и время посещения нашего медицинского центра.
+                  </p>
+                </div>
+                <div class="card-question__footer">
+                  <button class="btn-small js-button-show" data-text="Ответ">Читать ответ</button>
+                </div>
+              </div>
+              <div class="card-question js-animation-height" data-state="close">
+                <div class="card-question__header">
+                  <div class="badge badge--question">Вопрос</div>
+                  <div class="badge badge--small">Онкология</div>
+                </div>
+                <div class="card-question__body">
+                  <p class="card-question__body_text">
+                    Добрый день! Я живу в городе Байконур, могут ли меня прооперировать по полису ОМС бесплатно в вашей клинике , диагноз фиброаденома молочной железы?
+                  </p>
+                  <div class="card-question__body_info">
+                    <div class="badge-user">
+                      <div class="badge-user__icon"></div>
+                      <span class="badge-user__text">Пользователь</span>
+                    </div>
+                    <div class="badge-date">
+                      <div class="badge-date__icon"></div>
+                      <span class="badge-date__text">15 ноября 2019 г.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-question__answer js-animation-target">
+                  <div class="person-answer">
+                    <div class="person-answer__photo">
+                      <img src="img/person-answer-img-01.jpg" alt="ФИО | Должность">
+                    </div>
+                    <div class="person-answer__info">
+                      <p class="person-answer__info_name">Гладков Олег Александрович</p>
+                      <div class="person-answer__info_badges">
+                        <div class="badge-position">
+                          <div class="badge-position__icon"></div>
+                          <span class="badge-position__text">Врач-эндокринолог</span>
+                        </div>
+                        <div class="badge-date">
+                          <div class="badge-date__icon"></div>
+                          <span class="badge-date__text">Стаж: более 27 лет</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="card-question__answer_text">
+                    Добрый день, Ангелина. В медицинском центре «RMC» ведет прием врач-эндокринолог Мельникова Виктория Владимировна. Прием осуществляется в среду и пятницу с 16:00 до 19:00. Записаться на консультацию можно по тел: 8 (343) 345 00 00. Сотрудницы колл-центра подберут для вас удобные дату
+                    и время посещения нашего медицинского центра.
+                  </p>
+                </div>
+                <div class="card-question__footer">
+                  <button class="btn-small js-button-show" data-text="Ответ">Читать ответ</button>
+                </div>
+              </div>
+            </div>
+            <div class="section-sidebar__aside">
+              <div class="stiky">
+                <div class="sidebar-filter js-filter aside-item" data-type="filter">
+                  <div class="sidebar-filter__header">
+                    <div class="sidebar-filter__search">
+                      <input class="input-search js-search-in-filter" type="text" placeholder="Поиск направления">
+                      <button class="input-search__submit" type="submit"></button>
+                    </div>
+                  </div>
+                  <div class="sidebar-filter__body">
+                    <ul class="sidebar-filter__list js-sidebar-filter">
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" for="Все направления">
+                          <input class="checkbox" id="Все направления" type="checkbox">
+                          <span>Все направления</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" for="Онкология">
+                          <input class="checkbox" id="Онкология" type="checkbox">
+                          <span>Онкология</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" for="Онкогинекология">
+                          <input class="checkbox" id="Онкогинекология" type="checkbox">
+                          <span>Онкогинекология</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" for="Гинекология">
+                          <input class="checkbox" id="Гинекология" type="checkbox">
+                          <span>Гинекология</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" for="Ультразвук">
+                          <input class="checkbox" id="Ультразвук" type="checkbox">
+                          <span>Ультразвуковое исследование</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" for="Хирургия">
+                          <input class="checkbox" id="Хирургия" type="checkbox">
+                          <span>Хирургия</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" for="Гастроэнтерология">
+                          <input class="checkbox" id="Гастроэнтерология" type="checkbox">
+                          <span>Гастроэнтерология</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" for="Урология">
+                          <input class="checkbox" id="Урология" type="checkbox">
+                          <span>Урология</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" for="Терапия">
+                          <input class="checkbox" id="Терапия" type="checkbox">
+                          <span>Терапия</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" for="Кардиология">
+                          <input class="checkbox" id="Кардиология" type="checkbox">
+                          <span>Кардиология</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" for="Эндоскопия">
+                          <input class="checkbox" id="Эндоскопия" type="checkbox">
+                          <span>Эндоскопия</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" for="Биопсии органов и опухолевых новообразований">
+                          <input class="checkbox" id="Биопсии органов и опухолевых новообразований" type="checkbox">
+                          <span>Биопсии органов и опухолевых новообразований</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" for="Эндокринология">
+                          <input class="checkbox" id="Эндокринология" type="checkbox">
+                          <span>Эндокринология</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sidebar-filter__footer">
+                    <a href="#" class="link-reset">
+                      <span class="link-reset__text">Сбросить фильтры</span>
+                      <svg class="link-reset__icon" viewbox="0 0 24 24">
+                        <use xlink:href="#icon-close"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="card-gradient aside-item">
+                  <div class="card-gradient__header">
+                    <h3 class="card-gradient__header_title">Узнайте больше о лечении пациентов в медицинском центре RMC</h3>
+                  </div>
+                  <div class="card-gradient__footer">
+                    <a href="#" class="btn btn--zero block">Посмотреть видео</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-sidebar__footer">
+            <div class="pagination">
+              <ul class="pagination__nav">
+                <div class="pagination__nav_button prev">
+                  <svg class="btn-svg" viewbox="0 0 24 24">
+                    <use xlink:href="#icon-arrow-simple"></use>
+                  </svg>
+                  <a href="#"></a>
+                </div>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <div class="pagination__nav_button next">
+                  <svg class="btn-svg" viewbox="0 0 24 24">
+                    <use xlink:href="#icon-arrow-simple"></use>
+                  </svg>
+                  <a href="#"></a>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html')
+    @include('partials/modal.html')
+  </body>
+
+</html>

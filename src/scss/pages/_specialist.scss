@@ -1,0 +1,81 @@
+@use "../mixins" as mix;
+
+// specialist main
+// ===================================
+.specialist-main {
+  background-color: var(--light-white);
+
+  .grid-group {
+    @include mix.interpolate(margin-top, 320px, 1480px, 30px, 50px);
+  }
+
+  .grid-child {
+    grid-column: 4 span;
+
+    @media only screen and (max-width: 780px) {
+      grid-column: 6 span;
+    }
+
+    .card-contact {
+      height: 100%;
+    }
+  }
+}
+
+// specialist biography
+// ===================================
+.specialist-biography {
+  background-color: var(--blue-01);
+
+  .title {
+    // Компенсируем верхний оступ из-за высоты строки заголовка
+    @include mix.interpolate(margin-top, 320px, 1480px, -16px, -26px);
+    @include mix.interpolate(margin-bottom, 320px, 1480px, 0px, -5px);
+  }
+
+  .grid-child {
+    grid-column: 6 span;
+  }
+
+  @media only screen and (max-width: 780px) {
+    .grid-child + .grid-child .biography-list {
+      @include mix.interpolate(margin-top, 320px, 1480px, 20px, 40px);
+    }
+  }
+
+  ul {
+    @include mix.interpolate(margin-top, 320px, 1480px, 10px, 40px);
+    list-style-type: none;
+
+    li {
+      @include mix.interpolate(font-size, 320px, 1480px, 16px, 18px);
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+      color: var(--dark-075);
+
+      strong {
+        display: inline-block;
+        margin-right: 10px;
+        font-weight: 500;
+        color: var(--dark-primary);
+      }
+    }
+
+    > * + li {
+      @include mix.interpolate(margin-top, 320px, 1480px, 6px, 10px);
+    }
+  }
+}
+
+// specialist documents
+// ===================================
+.specialist-documents {
+  background-color: var(--light-white);
+
+  .documents-list {
+    > * + .card-document {
+      @include mix.interpolate(margin-top, 320px, 1480px, 20px, 30px);
+    }
+  }
+}

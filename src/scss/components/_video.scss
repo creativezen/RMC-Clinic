@@ -1,0 +1,75 @@
+@use "../mixins" as mix;
+
+// video cover
+// ===================================
+.video-cover {
+  position: relative;
+  width: 100%;
+  @include mix.interpolate(height, 320px, 1480px, 300px, 500px);
+  @include mix.interpolate(border-radius, 320px, 1480px, 12px, 20px);
+  overflow: hidden;
+
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &::after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(4, 44, 56, 0.35);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include mix.interpolate(width, 320px, 1480px, 100px, 180px);
+    @include mix.interpolate(height, 320px, 1480px, 100px, 180px);
+    border-radius: 50%;
+    background-color: rgba(255,255,255, 0.3);
+    transition: var(--transition);
+    cursor: pointer;
+
+    @include mix.hover {
+      background-color: rgba(255,255,255, 1);
+
+      &::after {
+        transform: scale(1.5);
+      }
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include mix.interpolate(margin-top, 320px, 1480px, -30px, -43px);
+      @include mix.interpolate(margin-left, 320px, 1480px, -30px, -43px);
+      content: '';
+      @include mix.interpolate(width, 320px, 1480px, 60px, 86px);
+      @include mix.interpolate(height, 320px, 1480px, 60px, 86px);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("data:image/svg+xml,%3Csvg width='86' height='86' viewBox='0 0 86 86' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='43' cy='43' r='43' fill='%231BD9B6'/%3E%3Cpath d='M35.5 31V55L55 43L35.5 31Z' fill='white' stroke='white' stroke-width='2.25' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      background-size: 100%;
+      transition: var(--transition);
+    }
+  }
+}
