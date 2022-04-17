@@ -7,7 +7,7 @@ const rulesForCall = [
   {
     ruleSelector: '.input-tel',
     tel: true,
-    telError: 'Введите корректный телефон',
+    telError: 'Введите правильный телефон',
     rules: [
       {
         rule: 'required',
