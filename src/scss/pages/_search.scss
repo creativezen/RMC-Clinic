@@ -1,0 +1,50 @@
+@use "../mixins" as mix;
+
+
+// search direction
+// ===================================
+.search-direction {
+  .grid-group {
+    .grid-child {
+      grid-column: 3 span;
+
+      @media only screen and (max-width: 880px) {
+        grid-column: 4 span;
+      }
+
+      @media only screen and (max-width: 780px) {
+        grid-column: 3 span;
+      }
+
+      @media only screen and (max-width: 380px) {
+        grid-column: 6 span;
+      }
+    }
+  }
+}
+
+// search specialist
+// ===================================
+.search-specialist {
+  .grid-group {
+    .grid-child {
+      grid-column: 4 span;
+
+      @media only screen and (max-width: 780px) {
+        grid-column: 3 span;
+      }
+
+      @media only screen and (max-width: 380px) {
+        grid-column: 6 span;
+      }
+    }
+  }
+}
+
+// search question
+// ===================================
+.search-question {
+  .card-question + .card-question {
+    @include mix.interpolate(margin-top, 320px, 1480px, 20px, 30px);
+  }
+}

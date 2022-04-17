@@ -3,7 +3,6 @@
 // section home
 // ===================================
 .section-home {
-  padding: 80px 0 120px;
   @include mix.interpolate(padding-top, 320px, 1480px, 26px, 80px);
   @include mix.interpolate(padding-bottom, 320px, 1480px, 50px, 120px);
   overflow: hidden;
@@ -285,5 +284,15 @@
     .form__footer {
       @include mix.interpolate(margin-top, 320px, 1480px, 20px, 40px);
     }
+  }
+}
+
+// section search
+// ===================================
+.section-search {
+  background-color: var(--light-white);
+
+  .form__content {
+    margin-bottom: 0;
   }
 }

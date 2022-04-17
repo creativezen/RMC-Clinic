@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+  @include('./partials/head.html', {
+  "title": 'Имя Фамилия | RMC-Clinic',
+  })
+
+  @include('partials/svg-sprite.html')
+
+  <body class="page__body">
+    @include('partials/header.html')
+
+    <main class="main">
+      <section class="section section-search hero-post">
+        <div class="hero-post__content container">
+          <div class="breadcrumb">
+            <ul class="breadcrumb__nav">
+              <li><a href="#" class="link-breadcrumb">Главная</a></li>
+              <li><a href="#" class="link-breadcrumb">Направления</a></li>
+              <li><a href="#" class="link-breadcrumb">Результаты поиска</a></li>
+            </ul>
+          </div>
+          <div class="hero-post__badges">
+            <div class="badge">Поиск направления</div>
+          </div>
+          <h1 class="hero-post__title">Результаты поиска вопроса</h1>
+          <form class="hero-cover__search form">
+            <div class="form__content">
+              <p class="form__content_title">Искать ещё раз</p>
+              <fieldset class="form__search">
+                <input class="input-search active" type="text" placeholder="Искать направление...">
+                <button class="input-search__submit" type="submit"></button>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="section-default section-search search-direction">
+        <div class="container">
+          <div class="section-default__body">
+            <div class="grid-group">
+              <div class="grid-child">
+                <div class="card-direction">
+                  <a href="#" class="link-absolute"></a>
+                  <div class="card-direction__gradient"></div>
+                  <div class="card-direction__header">
+                    <h3 class="card-direction__header_title">Онкология</h3>
+                  </div>
+                  <div class="card-direction__footer">
+                    <div class="card-direction__button">
+                      <svg class="card-direction__button_icon" viewbox="0 0 24 24">
+                        <use xlink:href="#icon-arrow-right"></use>
+                      </svg>
+                    </div>
+                    <div class="card-direction__svg">
+                      <svg viewbox="0 0 104 104">
+                        <use xlink:href="#icon-direction-01"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-child">
+                <div class="card-direction">
+                  <a href="#" class="link-absolute"></a>
+                  <div class="card-direction__gradient"></div>
+                  <div class="card-direction__header">
+                    <h3 class="card-direction__header_title">Онкогинекология</h3>
+                  </div>
+                  <div class="card-direction__footer">
+                    <div class="card-direction__button">
+                      <svg class="card-direction__button_icon" viewbox="0 0 24 24">
+                        <use xlink:href="#icon-arrow-right"></use>
+                      </svg>
+                    </div>
+                    <div class="card-direction__svg">
+                      <svg viewbox="0 0 104 104">
+                        <use xlink:href="#icon-direction-02"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-child">
+                <div class="card-direction">
+                  <a href="#" class="link-absolute"></a>
+                  <div class="card-direction__gradient"></div>
+                  <div class="card-direction__header">
+                    <h3 class="card-direction__header_title">Гинекология</h3>
+                  </div>
+                  <div class="card-direction__footer">
+                    <div class="card-direction__button">
+                      <svg class="card-direction__button_icon" viewbox="0 0 24 24">
+                        <use xlink:href="#icon-arrow-right"></use>
+                      </svg>
+                    </div>
+                    <div class="card-direction__svg">
+                      <svg viewbox="0 0 104 104">
+                        <use xlink:href="#icon-direction-03"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-child">
+                <div class="card-direction">
+                  <a href="#" class="link-absolute"></a>
+                  <div class="card-direction__gradient"></div>
+                  <div class="card-direction__header">
+                    <h3 class="card-direction__header_title">Ультразвуковое исследование</h3>
+                  </div>
+                  <div class="card-direction__footer">
+                    <div class="card-direction__button">
+                      <svg class="card-direction__button_icon" viewbox="0 0 24 24">
+                        <use xlink:href="#icon-arrow-right"></use>
+                      </svg>
+                    </div>
+                    <div class="card-direction__svg">
+                      <svg viewbox="0 0 104 104">
+                        <use xlink:href="#icon-direction-04"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-default section-search search-specialist">
+        <div class="container">
+          <div class="section-default__body">
+            <div class="grid-group">
+              <div class="grid-child">
+                <div class="card-specialist">
+                  <a href="#" class="link-absolute"></a>
+                  <div class="card-specialist__header">
+                    <div class="person-card">
+                      <picture class="person-card__photo">
+                        <img loading="lazy" src="img/card-specialist-img-01.jpg" alt="ФИО | Должность">
+                      </picture>
+                      <div class="person-card__badge">
+                        <div class="badge">Эндокринология</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-specialist__body">
+                    <div class="card-specialist__body_badges">
+                      <div class="badge-date">
+                        <div class="badge-date__icon"></div>
+                        <span class="badge-date__text">Стаж: более 27 лет</span>
+                      </div>
+                    </div>
+                    <h3 class="card-specialist__body_name">Мельникова Виктория Владимировна</h3>
+                    <p class="card-specialist__body_text">Врач-эндокринолог. Заместитель директора по медицинским вопросам.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-child">
+                <div class="card-specialist">
+                  <a href="#" class="link-absolute"></a>
+                  <div class="card-specialist__header">
+                    <div class="person-card">
+                      <picture class="person-card__photo">
+                        <img loading="lazy" src="img/card-specialist-img-01.jpg" alt="ФИО | Должность">
+                      </picture>
+                      <div class="person-card__badge">
+                        <div class="badge">Эндокринология</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-specialist__body">
+                    <div class="card-specialist__body_badges">
+                      <div class="badge-date">
+                        <div class="badge-date__icon"></div>
+                        <span class="badge-date__text">Стаж: более 27 лет</span>
+                      </div>
+                    </div>
+                    <h3 class="card-specialist__body_name">Мельникова Виктория Владимировна</h3>
+                    <p class="card-specialist__body_text">Врач-эндокринолог. Заместитель директора по медицинским вопросам.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-child">
+                <div class="card-specialist">
+                  <a href="#" class="link-absolute"></a>
+                  <div class="card-specialist__header">
+                    <div class="person-card">
+                      <picture class="person-card__photo">
+                        <img loading="lazy" src="img/card-specialist-img-01.jpg" alt="ФИО | Должность">
+                      </picture>
+                      <div class="person-card__badge">
+                        <div class="badge">Эндокринология</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-specialist__body">
+                    <div class="card-specialist__body_badges">
+                      <div class="badge-date">
+                        <div class="badge-date__icon"></div>
+                        <span class="badge-date__text">Стаж: более 27 лет</span>
+                      </div>
+                    </div>
+                    <h3 class="card-specialist__body_name">Мельникова Виктория Владимировна</h3>
+                    <p class="card-specialist__body_text">Врач-эндокринолог. Заместитель директора по медицинским вопросам.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-child">
+                <div class="card-specialist">
+                  <a href="#" class="link-absolute"></a>
+                  <div class="card-specialist__header">
+                    <div class="person-card">
+                      <picture class="person-card__photo">
+                        <img loading="lazy" src="img/card-specialist-img-01.jpg" alt="ФИО | Должность">
+                      </picture>
+                      <div class="person-card__badge">
+                        <div class="badge">Эндокринология</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-specialist__body">
+                    <div class="card-specialist__body_badges">
+                      <div class="badge-date">
+                        <div class="badge-date__icon"></div>
+                        <span class="badge-date__text">Стаж: более 27 лет</span>
+                      </div>
+                    </div>
+                    <h3 class="card-specialist__body_name">Мельникова Виктория Владимировна</h3>
+                    <p class="card-specialist__body_text">Врач-эндокринолог. Заместитель директора по медицинским вопросам.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-default section-search search-question">
+        <div class="container">
+          <div class="section-default__body">
+            <div class="card-question js-animation-height" data-state="close">
+              <div class="card-question__header">
+                <div class="badge badge--question">Вопрос</div>
+                <div class="badge badge--small">Онкология</div>
+              </div>
+              <div class="card-question__body">
+                <p class="card-question__body_text">
+                  Добрый день! Подскажите, можно ли записаться на платный приём онколога-офтальмолога без направления.
+                  Есть заключение врача из Екатеринбургского центра МНТК «Микрохирургия глаза». Где написана рекомендация обратиться в ваш центр.
+                </p>
+                <div class="card-question__body_info">
+                  <div class="badge-user">
+                    <div class="badge-user__icon"></div>
+                    <span class="badge-user__text">Пользователь</span>
+                  </div>
+                  <div class="badge-date">
+                    <div class="badge-date__icon"></div>
+                    <span class="badge-date__text">15 ноября 2019 г.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-question__answer js-animation-target">
+                <div class="person-answer">
+                  <div class="person-answer__photo">
+                    <img src="img/person-answer-img-01.jpg" alt="ФИО | Должность">
+                  </div>
+                  <div class="person-answer__info">
+                    <p class="person-answer__info_name">Гладков Олег Александрович</p>
+                    <div class="person-answer__info_badges">
+                      <div class="badge-position">
+                        <div class="badge-position__icon"></div>
+                        <span class="badge-position__text">Врач-эндокринолог</span>
+                      </div>
+                      <div class="badge-date">
+                        <div class="badge-date__icon"></div>
+                        <span class="badge-date__text">Стаж: более 27 лет</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="card-question__answer_text">
+                  Добрый день, Ангелина. В медицинском центре «RMC» ведет прием врач-эндокринолог Мельникова Виктория Владимировна. Прием осуществляется в среду и пятницу с 16:00 до 19:00. Записаться на консультацию можно по тел: 8 (343) 345 00 00. Сотрудницы колл-центра подберут для вас удобные дату
+                  и время посещения нашего медицинского центра.
+                </p>
+              </div>
+              <div class="card-question__footer">
+                <button class="btn-small js-button-show" data-text="Ответ">Читать ответ</button>
+              </div>
+            </div>
+            <div class="card-question js-animation-height" data-state="close">
+              <div class="card-question__header">
+                <div class="badge badge--question">Вопрос</div>
+                <div class="badge badge--small">Онкология</div>
+              </div>
+              <div class="card-question__body">
+                <p class="card-question__body_text">
+                  Здравствуйте,как можно записаться на приём к эндокринологу?
+                </p>
+                <div class="card-question__body_info">
+                  <div class="badge-user">
+                    <div class="badge-user__icon"></div>
+                    <span class="badge-user__text">Пользователь</span>
+                  </div>
+                  <div class="badge-date">
+                    <div class="badge-date__icon"></div>
+                    <span class="badge-date__text">15 ноября 2019 г.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-question__answer js-animation-target">
+                <div class="person-answer">
+                  <div class="person-answer__photo">
+                    <img src="img/person-answer-img-01.jpg" alt="ФИО | Должность">
+                  </div>
+                  <div class="person-answer__info">
+                    <p class="person-answer__info_name">Гладков Олег Александрович</p>
+                    <div class="person-answer__info_badges">
+                      <div class="badge-position">
+                        <div class="badge-position__icon"></div>
+                        <span class="badge-position__text">Врач-эндокринолог</span>
+                      </div>
+                      <div class="badge-date">
+                        <div class="badge-date__icon"></div>
+                        <span class="badge-date__text">Стаж: более 27 лет</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="card-question__answer_text">
+                  Добрый день, Ангелина. В медицинском центре «RMC» ведет прием врач-эндокринолог Мельникова Виктория Владимировна. Прием осуществляется в среду и пятницу с 16:00 до 19:00. Записаться на консультацию можно по тел: 8 (343) 345 00 00. Сотрудницы колл-центра подберут для вас удобные дату
+                  и время посещения нашего медицинского центра.
+                </p>
+              </div>
+              <div class="card-question__footer">
+                <button class="btn-small js-button-show" data-text="Ответ">Читать ответ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html')
+    @include('partials/modal.html')
+  </body>
+
+</html>

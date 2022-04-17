@@ -1,5 +1,8 @@
 @use "./mixins" as mix;
 
+html, p, a, span {
+  text-align: justify !important;
+}
 
 img {
   height: auto;

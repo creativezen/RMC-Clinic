@@ -3,6 +3,7 @@
 // Form
 // ===================================
 .form {
+  $parent: &;
 
   &__header {
     display: flex;
@@ -69,6 +70,10 @@
       @media only screen and (max-width: 480px) {
         line-height: 1.4;
       }
+    }
+
+    &_title + #{$parent}__search {
+      @include mix.interpolate(margin-top, 320px, 1480px, 10px, 20px);
     }
 
     &_title + &_text {
