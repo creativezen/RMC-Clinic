@@ -48,19 +48,25 @@ export const validateForms = (selector, rules, afterSend) => {
   validation.onSuccess((ev) => {
     let formData = new FormData(ev.target);
     let xhr = new XMLHttpRequest();
+    formData.append("web_form_submit", "Y")
 
     xhr.onreadystatechange = function () {
+      // let responseData
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
+          // responseData = JSON.parse(xhr.responseText)
+          // console.log(responseData)
           if (afterSend) {
             afterSend();
           }
-          console.log('Отправлено');
+          console.log('Успешно отправлено!');
         }
       }
     }
 
-    xhr.open('POST', 'mail.php', true);
+    xhr.open('POST', '/local/form/ajax.php', true);
+    // xhr.open('POST', 'mail.php', true);
+    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
     xhr.send(formData);
     ev.target.reset();
   })

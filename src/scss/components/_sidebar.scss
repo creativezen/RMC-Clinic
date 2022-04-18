@@ -154,6 +154,7 @@
   }
 
   &__item {
+    $parent: &;
     position: relative;
     padding: 10px 30px;
     cursor: pointer;
@@ -178,6 +179,19 @@
 
     &:hover {
       background-color: var(--blue-01);
+
+      &::before {
+        opacity: 1;
+      }
+
+      a {
+        color: var(--brand-blue);
+      }
+    }
+
+    &.active {
+      background-color: var(--blue-01);
+      pointer-events: none;
 
       &::before {
         opacity: 1;
