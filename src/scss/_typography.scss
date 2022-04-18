@@ -17,12 +17,12 @@ h1 {
 	}
 }
 
-h3 {
+h3:not([class]) {
 	@extend h1;
 	@include mix.interpolate(font-size, 320px, 1480px, 26px, 30px);
 }
 
-h4 {
+h4:not([class]) {
 	@extend h1;
 	@include mix.interpolate(font-size, 320px, 1480px, 22px, 24px);
 }
