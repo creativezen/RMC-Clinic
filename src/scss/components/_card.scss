@@ -93,6 +93,10 @@
   @extend .card-proto;
   min-height: 310px;
 
+  @include mix.hover {
+    border-color: var(--dark-01) !important;
+  }
+
   @media only screen and (max-width: 780px) {
     min-height: 260px;
   }
@@ -1041,6 +1045,10 @@
         font-weight: 400;
         line-height: 1.4;
         letter-spacing: -0.01em;
+      }
+
+      > .text + * {
+        @include mix.interpolate(margin-top, 320px, 1480px, 10px, 20px);
       }
     }
 

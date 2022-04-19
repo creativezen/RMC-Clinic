@@ -6,6 +6,14 @@
 // ===================================
 .article {
 
+  p,li,span,b,strong {
+    text-align: justify;
+
+    @media only screen and (max-width: 480px) {
+      text-align: left;
+    }
+  }
+
   h1, h2 {
     @extend .title;
   }

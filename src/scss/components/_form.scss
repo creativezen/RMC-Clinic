@@ -319,6 +319,7 @@ input[type="radio"] {
 // Radio wrapper
 // ===================================
 .select-wrapper {
+  $parent: &;
   position: relative;
 
   &::after {
