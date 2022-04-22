@@ -33,7 +33,133 @@
       </section>
       <section class="section-sidebar specialists-main">
         <div class="container">
-          <div class="section-sidebar__body">
+          <div class="section-sidebar__body sidebar-reverse">
+            <div class="section-sidebar__aside">
+              <div class="stiky">
+                <div class="sidebar-filter aside-item" data-type="gender">
+                  <div class="sidebar-filter__header">
+                    <label class="label" for="Любой пол врача">
+                      <input class="radio" id="Любой пол врача" type="radio" checked>
+                      <span>Любой пол врача</span>
+                    </label>
+                  </div>
+                  <div class="sidebar-filter__body">
+                    <ul class="sidebar-filter__list">
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" for="Врач мужчина">
+                          <input class="checkbox" id="Врач мужчина" type="checkbox">
+                          <span>Врач мужчина</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" for="Врач женщина">
+                          <input class="checkbox" id="Врач женщина" type="checkbox">
+                          <span>Врач женщина</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="sidebar-filter js-filter aside-item" data-type="filter">
+                  <div class="sidebar-filter__header">
+                    <div class="sidebar-filter__search">
+                      <input class="input-search js-search-in-filter" type="text" placeholder="Поиск направления">
+                      <button class="input-search__submit" type="submit"></button>
+                    </div>
+                  </div>
+                  <div class="sidebar-filter__body">
+                    <ul class="sidebar-filter__list js-sidebar-filter">
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" fast-search-value="Все направления">
+                          <input class="checkbox" id="Все направления" type="checkbox">
+                          <span>Все направления</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" fast-search-value="Онкология">
+                          <input class="checkbox" id="Онкология" type="checkbox">
+                          <span>Онкология</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" fast-search-value="Онкогинекология">
+                          <input class="checkbox" id="Онкогинекология" type="checkbox">
+                          <span>Онкогинекология</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" fast-search-value="Гинекология">
+                          <input class="checkbox" id="Гинекология" type="checkbox">
+                          <span>Гинекология</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" fast-search-value="Ультразвук">
+                          <input class="checkbox" id="Ультразвук" type="checkbox">
+                          <span>Ультразвуковое исследование</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" fast-search-value="Хирургия">
+                          <input class="checkbox" id="Хирургия" type="checkbox">
+                          <span>Хирургия</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" fast-search-value="Гастроэнтерология">
+                          <input class="checkbox" id="Гастроэнтерология" type="checkbox">
+                          <span>Гастроэнтерология</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" fast-search-value="Урология">
+                          <input class="checkbox" id="Урология" type="checkbox">
+                          <span>Урология</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" fast-search-value="Терапия">
+                          <input class="checkbox" id="Терапия" type="checkbox">
+                          <span>Терапия</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" fast-search-value="Кардиология">
+                          <input class="checkbox" id="Кардиология" type="checkbox">
+                          <span>Кардиология</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" fast-search-value="Эндоскопия">
+                          <input class="checkbox" id="Эндоскопия" type="checkbox">
+                          <span>Эндоскопия</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" fast-search-value="Биопсии органов и опухолевых новообразований">
+                          <input class="checkbox" id="Биопсии органов и опухолевых новообразований" type="checkbox">
+                          <span>Биопсии органов и опухолевых новообразований</span>
+                        </label>
+                      </li>
+                      <li class="sidebar-filter__list_item">
+                        <label class="label" fast-search-value="Эндокринология">
+                          <input class="checkbox" id="Эндокринология" type="checkbox">
+                          <span>Эндокринология</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sidebar-filter__footer">
+                    <a href="#" class="link-reset">
+                      <span class="link-reset__text">Сбросить фильтры</span>
+                      <svg class="link-reset__icon" viewbox="0 0 24 24">
+                        <use xlink:href="#icon-close"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="section-sidebar__main">
               <div class="grid-group">
                 <div class="grid-child">
@@ -434,132 +560,6 @@
                       <h3 class="card-specialist__body_name">Мельникова Виктория Владимировна</h3>
                       <p class="card-specialist__body_text">Врач-эндокринолог. Заместитель директора помедицинским вопросам.</p>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="section-sidebar__aside">
-              <div class="stiky">
-                <div class="sidebar-filter aside-item" data-type="gender">
-                  <div class="sidebar-filter__header">
-                    <label class="label" for="Любой пол врача">
-                      <input class="radio" id="Любой пол врача" type="radio" checked>
-                      <span>Любой пол врача</span>
-                    </label>
-                  </div>
-                  <div class="sidebar-filter__body">
-                    <ul class="sidebar-filter__list">
-                      <li class="sidebar-filter__list_item">
-                        <label class="label" for="Врач мужчина">
-                          <input class="checkbox" id="Врач мужчина" type="checkbox">
-                          <span>Врач мужчина</span>
-                        </label>
-                      </li>
-                      <li class="sidebar-filter__list_item">
-                        <label class="label" for="Врач женщина">
-                          <input class="checkbox" id="Врач женщина" type="checkbox">
-                          <span>Врач женщина</span>
-                        </label>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="sidebar-filter js-filter aside-item" data-type="filter">
-                  <div class="sidebar-filter__header">
-                    <div class="sidebar-filter__search">
-                      <input class="input-search js-search-in-filter" type="text" placeholder="Поиск направления">
-                      <button class="input-search__submit" type="submit"></button>
-                    </div>
-                  </div>
-                  <div class="sidebar-filter__body">
-                    <ul class="sidebar-filter__list js-sidebar-filter">
-                      <li class="sidebar-filter__list_item">
-                        <label class="label" for="Все направления">
-                          <input class="checkbox" id="Все направления" type="checkbox">
-                          <span>Все направления</span>
-                        </label>
-                      </li>
-                      <li class="sidebar-filter__list_item">
-                        <label class="label" for="Онкология">
-                          <input class="checkbox" id="Онкология" type="checkbox">
-                          <span>Онкология</span>
-                        </label>
-                      </li>
-                      <li class="sidebar-filter__list_item">
-                        <label class="label" for="Онкогинекология">
-                          <input class="checkbox" id="Онкогинекология" type="checkbox">
-                          <span>Онкогинекология</span>
-                        </label>
-                      </li>
-                      <li class="sidebar-filter__list_item">
-                        <label class="label" for="Гинекология">
-                          <input class="checkbox" id="Гинекология" type="checkbox">
-                          <span>Гинекология</span>
-                        </label>
-                      </li>
-                      <li class="sidebar-filter__list_item">
-                        <label class="label" for="Ультразвук">
-                          <input class="checkbox" id="Ультразвук" type="checkbox">
-                          <span>Ультразвуковое исследование</span>
-                        </label>
-                      </li>
-                      <li class="sidebar-filter__list_item">
-                        <label class="label" for="Хирургия">
-                          <input class="checkbox" id="Хирургия" type="checkbox">
-                          <span>Хирургия</span>
-                        </label>
-                      </li>
-                      <li class="sidebar-filter__list_item">
-                        <label class="label" for="Гастроэнтерология">
-                          <input class="checkbox" id="Гастроэнтерология" type="checkbox">
-                          <span>Гастроэнтерология</span>
-                        </label>
-                      </li>
-                      <li class="sidebar-filter__list_item">
-                        <label class="label" for="Урология">
-                          <input class="checkbox" id="Урология" type="checkbox">
-                          <span>Урология</span>
-                        </label>
-                      </li>
-                      <li class="sidebar-filter__list_item">
-                        <label class="label" for="Терапия">
-                          <input class="checkbox" id="Терапия" type="checkbox">
-                          <span>Терапия</span>
-                        </label>
-                      </li>
-                      <li class="sidebar-filter__list_item">
-                        <label class="label" for="Кардиология">
-                          <input class="checkbox" id="Кардиология" type="checkbox">
-                          <span>Кардиология</span>
-                        </label>
-                      </li>
-                      <li class="sidebar-filter__list_item">
-                        <label class="label" for="Эндоскопия">
-                          <input class="checkbox" id="Эндоскопия" type="checkbox">
-                          <span>Эндоскопия</span>
-                        </label>
-                      </li>
-                      <li class="sidebar-filter__list_item">
-                        <label class="label" for="Биопсии органов и опухолевых новообразований">
-                          <input class="checkbox" id="Биопсии органов и опухолевых новообразований" type="checkbox">
-                          <span>Биопсии органов и опухолевых новообразований</span>
-                        </label>
-                      </li>
-                      <li class="sidebar-filter__list_item">
-                        <label class="label" for="Эндокринология">
-                          <input class="checkbox" id="Эндокринология" type="checkbox">
-                          <span>Эндокринология</span>
-                        </label>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="sidebar-filter__footer">
-                    <a href="#" class="link-reset">
-                      <span class="link-reset__text">Сбросить фильтры</span>
-                      <svg class="link-reset__icon" viewbox="0 0 24 24">
-                        <use xlink:href="#icon-close"></use>
-                      </svg>
-                    </a>
                   </div>
                 </div>
               </div>

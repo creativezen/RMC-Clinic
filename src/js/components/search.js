@@ -13,7 +13,7 @@ function searchFilter(filter) {
 
     filtersArray.forEach(item => {
       let currentLabel = item.querySelector('label')
-      let labelValue = currentLabel.attributes.for.value.toUpperCase()
+      let labelValue = currentLabel.getAttribute('fast-search-value').toUpperCase()
       labelValue.toUpperCase().indexOf(filterValue) !== -1
         ? item.style.display = 'flex'
         : item.style.display = 'none'

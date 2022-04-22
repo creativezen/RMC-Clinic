@@ -127,6 +127,18 @@
 
     @media only screen and (max-width: 780px) {
       flex-direction: column-reverse;
+
+      +&.sidebar-reverse {
+        flex-direction: column;
+      }
+    }
+
+    &.sidebar-reverse {
+      flex-direction: row-reverse;
+
+      @media only screen and (max-width: 780px) {
+        flex-direction: column;
+      }
     }
   }
 
@@ -185,6 +197,12 @@
 
     .btn {
       width: 100%;
+    }
+  }
+
+  &__aside + &__main {
+    @media only screen and (max-width: 780px) {
+      @include mix.interpolate(margin-top, 320px, 1480px, 15px, 50px);
     }
   }
 
