@@ -7,7 +7,6 @@ if (stage) initShowHidden(stage)
 if (stageChild) initShowHiddenChild(stageChild)
 
 function initShowHidden(mainStage) {
-
   mainStage.forEach(stage => {
 
     stage.addEventListener('click', function(event) {
@@ -20,6 +19,7 @@ function initShowHidden(mainStage) {
         let openButton = stage.querySelector('.js-button-show')
         let openButtonType = openButton.dataset.type
         let textButton = openButton
+        let animateHeight = new AnimationHeight(element)
 
         openButtonType !== 'block'
           ? openButton.classList.toggle('button--close')
@@ -31,25 +31,14 @@ function initShowHidden(mainStage) {
           : `Читать ${textButton.dataset.text}`
         }
 
-        const animateHeight = new AnimationHeight(element)
-
-        closeButton?.addEventListener('click', function(event) {
-          animateHeight.close()
-          openButton.classList.remove('button--close')
-          stage.classList.remove('active')
-          currentStage.dataset.state = 'close'
-
-          if (textButton) {
-            textButton.textContent = `Показать ${textButton.dataset.text}`
-          }
-        })
+        closeButton?.addEventListener('click',
+          buttonCloseChange.call(this, openButton, stage, currentStage, textButton))
       }
     })
   })
 }
 
 function initShowHiddenChild(mainStage) {
-
   mainStage.forEach(stage => {
 
     stage.addEventListener('click', function(event) {
@@ -62,8 +51,7 @@ function initShowHiddenChild(mainStage) {
         let openButton = stage.querySelector('.js-button-child-show')
         let openButtonType = openButton.dataset.type
         let textButton = openButton
-
-        const animateHeight = new AnimationHeight(element)
+        let animateHeight = new AnimationHeight(element)
 
         openButtonType !== 'block'
           ? openButton.classList.toggle('button--close')
@@ -76,30 +64,20 @@ function initShowHiddenChild(mainStage) {
           : `Читать ${textButton.dataset.text}`
         }
 
-        closeButton?.addEventListener('click', function(event) {
-          animateHeight.close()
-          openButton.classList.remove('button--close')
-          stage.classList.remove('active')
-          currentStage.dataset.state = 'close'
-
-          if (textButton) {
-            textButton.textContent = `Показать ${textButton.dataset.text}`
-          }
-        })
+        closeButton?.addEventListener('click',
+          buttonCloseChange.call(this, openButton, stage, currentStage, textButton))
       }
     })
   })
 }
 
-function buttonCloseChange(buttonClose) {
-  buttonClose.addEventListener('click', function(event) {
-    animateHeight.close()
-    openButton.classList.remove('button--close')
-    stage.classList.remove('active')
-    currentStage.dataset.state = 'close'
+function buttonCloseChange(openButton, stage, currentStage, textButton) {
+  this.animateHeight.close()
+  openButton.classList.remove('button--close')
+  stage.classList.remove('active')
+  currentStage.dataset.state = 'close'
 
-    if (textButton) {
-      textButton.textContent = `Показать ${textButton.dataset.text}`
-    }
-  })
+  if (textButton) {
+    textButton.textContent = `Показать ${textButton.dataset.text}`
+  }
 }

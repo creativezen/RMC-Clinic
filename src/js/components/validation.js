@@ -8,10 +8,12 @@ const showError = () => console.log('Произошла ошибка...')
 const success = document.querySelector('.js-modal-success')
 
 const showSuccess = () => {
+
   success.classList.add('graph-modal-open')
   modal.modalContainer.classList.remove('animate-open');
   modal.modalContainer.classList.remove('fade');
   modal.modalContainer.classList.remove('graph-modal-open')
+
   document.addEventListener('click', function (e) {
     if (e.target.classList.contains('graph-modal') && e.target.classList.contains("is-open")) {
       success.classList.remove('graph-modal-open')
