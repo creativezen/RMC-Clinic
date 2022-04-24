@@ -92,14 +92,14 @@
   @extend .sidebar-filter;
 
   &__block {
-    padding: 20px 30px;
+    padding: 15px 30px;
 
     @media only screen and (max-width: 680px) {
       padding: 15px 20px;
     }
 
     &_letter {
-      margin-bottom: 10px;
+      margin-bottom: 5px;
       font-size: 24px;
       font-weight: 600;
       line-height: 1;
@@ -110,19 +110,24 @@
     &_link {
       display: block;
       font-size: 16px;
-      font-weight: 400;
+      font-weight: 500;
       line-height: 1.5;
-      color: var(--dark-primary);
+      color: var(--dark-05);
       text-decoration: none;
       transition: var(--transition);
+      cursor: pointer;
 
       &:hover {
+        color: var(--dark-primary);
+      }
+
+      &.active {
         color: var(--brand-blue);
       }
     }
 
-    &_link + &_link {
-      margin-top: 8px;
+    .btn-small {
+      width: 100%;
     }
   }
 

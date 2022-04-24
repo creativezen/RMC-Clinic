@@ -25,7 +25,6 @@ function initShowHidden(mainStage) {
           ? openButton.classList.toggle('button--close')
           : openButton.classList.toggle('visible')
 
-
         if (textButton && !openButtonType) {
           textButton.textContent = thisState === 'open'
           ? `Скрыть ${textButton.dataset.text}`
@@ -64,6 +63,8 @@ function initShowHiddenChild(mainStage) {
         let openButtonType = openButton.dataset.type
         let textButton = openButton
 
+        const animateHeight = new AnimationHeight(element)
+
         openButtonType !== 'block'
           ? openButton.classList.toggle('button--close')
           : openButton.classList.toggle('visible')
@@ -74,8 +75,6 @@ function initShowHiddenChild(mainStage) {
           ? `Скрыть ${textButton.dataset.text}`
           : `Читать ${textButton.dataset.text}`
         }
-
-        const animateHeight = new AnimationHeight(element)
 
         closeButton?.addEventListener('click', function(event) {
           animateHeight.close()
@@ -89,5 +88,18 @@ function initShowHiddenChild(mainStage) {
         })
       }
     })
+  })
+}
+
+function buttonCloseChange(buttonClose) {
+  buttonClose.addEventListener('click', function(event) {
+    animateHeight.close()
+    openButton.classList.remove('button--close')
+    stage.classList.remove('active')
+    currentStage.dataset.state = 'close'
+
+    if (textButton) {
+      textButton.textContent = `Показать ${textButton.dataset.text}`
+    }
   })
 }

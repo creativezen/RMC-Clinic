@@ -1,10 +1,26 @@
 import { validateForms } from '../functions/validate-forms'
-
+import { modal } from './modal'
 
 // Колбэки после успешной валидации
 // =======================================
 const showError = () => console.log('Произошла ошибка...')
-const showSuccess = () => console.log('Успешно отправлено')
+
+const success = document.querySelector('.js-modal-success')
+
+const showSuccess = () => {
+  success.classList.add('graph-modal-open')
+  modal.modalContainer.classList.remove('animate-open');
+  modal.modalContainer.classList.remove('fade');
+  modal.modalContainer.classList.remove('graph-modal-open')
+  document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('graph-modal') && e.target.classList.contains("is-open")) {
+      success.classList.remove('graph-modal-open')
+    }
+    if (e.target.closest('.js-close')) {
+      success.classList.remove('graph-modal-open')
+    }
+  })
+}
 
 // Параметры валидации для Заказать звонок
 // =======================================
@@ -578,40 +594,40 @@ const rulesVacancia = [
 
 // Заказ звонка
 // ==========================================
-validateForms('.js-form-call', [...rulesForCall], showError, showSuccess)
+validateForms('.js-form-call', [...rulesForCall], showSuccess)
 
 // Задать вопрос
 // ==========================================
-validateForms('.js-form-question', [...rulesForQuestion], showError, showSuccess)
+validateForms('.js-form-question', [...rulesForQuestion], showSuccess)
 
 // Письмо директору
 // ==========================================
-validateForms('.js-form-director', [...rulesForDirector], showError, showSuccess)
+validateForms('.js-form-director', [...rulesForDirector], showSuccess)
 
 // Записаться на приём
 // ==========================================
-validateForms('.js-form-appointment', [...rulesForАppointment], showError, showSuccess)
+validateForms('.js-form-appointment', [...rulesForАppointment], showSuccess)
 
 // Оставить отзыв
 // ==========================================
-validateForms('.js-form-feedback', [...rulesForFeedback], showError, showSuccess)
+validateForms('.js-form-feedback', [...rulesForFeedback], showSuccess)
 
 // Связаться с нами
 // ==========================================
-validateForms('.js-form-contact', [...rulesForContact], showError, showSuccess)
+validateForms('.js-form-contact', [...rulesForContact], showSuccess)
 
 // Запросить документы для ФНС
 // ==========================================
-validateForms('.js-form-fns', [...rulesForFns], showError, showSuccess)
+validateForms('.js-form-fns', [...rulesForFns], showSuccess)
 
 // Запись на консультацию к онкологу
 // ==========================================
-validateForms('.js-form-service', [...rulesService], showError, showSuccess)
+validateForms('.js-form-service', [...rulesService], showSuccess)
 
 // Запись на приём к онкологу
 // ==========================================
-validateForms('.js-form-appointment-urolog', [...rulesUrolog], showError, showSuccess)
+validateForms('.js-form-appointment-urolog', [...rulesUrolog], showSuccess)
 
 // Отклик на вакансию
 // ==========================================
-validateForms('.js-form-vacancia', [...rulesVacancia], showError, showSuccess)
+validateForms('.js-form-vacancia', [...rulesVacancia], showSuccess)

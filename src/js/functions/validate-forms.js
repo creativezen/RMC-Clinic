@@ -6,7 +6,7 @@ const validationConfig = {
   lockForm: true,
 }
 
-export const validateForms = (selector, rules, showError, showSuccess) => {
+export const validateForms = (selector, rules, showSuccess) => {
   const form = document?.querySelector(selector);
   const telSelector = form?.querySelector('input[type="tel"]');
 
@@ -32,7 +32,7 @@ export const validateForms = (selector, rules, showError, showSuccess) => {
             const phone = telSelector.inputmask.unmaskedvalue();
             return phone.length === 10;
           },
-          errorMessage: item.telError
+          errorMessage: 'Заполните телефон!'
         });
       }
     }
@@ -46,26 +46,27 @@ export const validateForms = (selector, rules, showError, showSuccess) => {
   }
 
   validation.onSuccess((ev) => {
-    let formData = new FormData(ev.target);
-    let xhr = new XMLHttpRequest();
+    let formData = new FormData(ev.target)
+    let xhr = new XMLHttpRequest()
+
     formData.append("web_form_submit", "Y")
 
     xhr.onreadystatechange = function () {
+
       if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
 
-          let resURL = JSON.parse(xhr.responseURL)
+        if (xhr.status === 200 && xhr.responseURL.indexOf('formresult=addok') !== -1) {
 
-          resURL.indexOf('formresult=addok') !== -1
-          ? showError()
-          : showSuccess()
+          showSuccess()
+          console.log('Строка с ответом: ', xhr)
+          console.log('Успешно отправлено')
         }
       }
     }
 
-    xhr.open('POST', '/local/form/ajax.php', true);
+    xhr.open('POST', '/local/form/ajax.php', true)
     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
-    xhr.send(formData);
-    ev.target.reset();
+    xhr.send(formData)
+    ev.target.reset()
   })
 };

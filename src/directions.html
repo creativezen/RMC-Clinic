@@ -35,8 +35,8 @@
         <div class="container">
           <div class="section-sidebar__body">
             <div class="section-sidebar__main">
-              <div class="grid-group">
-                <div class="grid-child">
+              <div class="grid-group js-list-direction">
+                <div class="grid-child js-list-item" data-item="Онкология">
                   <div class="card-direction">
                     <a href="#" class="link-absolute"></a>
                     <div class="card-direction__gradient"></div>
@@ -57,7 +57,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="grid-child">
+                <div class="grid-child js-list-item" data-item="Онкогинекология">
                   <div class="card-direction">
                     <a href="#" class="link-absolute"></a>
                     <div class="card-direction__gradient"></div>
@@ -78,7 +78,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="grid-child">
+                <div class="grid-child js-list-item" data-item="Гинекология">
                   <div class="card-direction">
                     <a href="#" class="link-absolute"></a>
                     <div class="card-direction__gradient"></div>
@@ -99,7 +99,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="grid-child">
+                <div class="grid-child js-list-item" data-item="Ультразвуковое исследование">
                   <div class="card-direction">
                     <a href="#" class="link-absolute"></a>
                     <div class="card-direction__gradient"></div>
@@ -120,7 +120,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="grid-child">
+                <div class="grid-child js-list-item" data-item="Хирургия">
                   <div class="card-direction">
                     <a href="#" class="link-absolute"></a>
                     <div class="card-direction__gradient"></div>
@@ -141,7 +141,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="grid-child">
+                <div class="grid-child js-list-item" data-item="Гастроэнтерология">
                   <div class="card-direction">
                     <a href="#" class="link-absolute"></a>
                     <div class="card-direction__gradient"></div>
@@ -162,7 +162,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="grid-child">
+                <div class="grid-child js-list-item" data-item="Урология">
                   <div class="card-direction">
                     <a href="#" class="link-absolute"></a>
                     <div class="card-direction__gradient"></div>
@@ -183,7 +183,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="grid-child">
+                <div class="grid-child js-list-item" data-item="Терапия">
                   <div class="card-direction">
                     <a href="#" class="link-absolute"></a>
                     <div class="card-direction__gradient"></div>
@@ -204,7 +204,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="grid-child">
+                <div class="grid-child js-list-item" data-item="Кардиология">
                   <div class="card-direction">
                     <a href="#" class="link-absolute"></a>
                     <div class="card-direction__gradient"></div>
@@ -225,7 +225,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="grid-child">
+                <div class="grid-child js-list-item" data-item="Эндоскопия">
                   <div class="card-direction">
                     <a href="#" class="link-absolute"></a>
                     <div class="card-direction__gradient"></div>
@@ -246,7 +246,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="grid-child">
+                <div class="grid-child js-list-item" data-item="Биопсии органов и опухолевых новообразований">
                   <div class="card-direction">
                     <a href="#" class="link-absolute"></a>
                     <div class="card-direction__gradient"></div>
@@ -267,7 +267,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="grid-child">
+                <div class="grid-child js-list-item" data-item="Эндокринология">
                   <div class="card-direction">
                     <a href="#" class="link-absolute"></a>
                     <div class="card-direction__gradient"></div>
@@ -291,16 +291,23 @@
               </div>
             </div>
             <div class="section-sidebar__aside">
-              <ul class="sidebar-alphabet stiky">
+              <ul class="sidebar-alphabet stiky js-filter-list" data-state="disabled">
                 <li class="sidebar-alphabet__block">
-                  <p class="sidebar-alphabet__block_letter">Б</p>
-                  <a class="sidebar-alphabet__block_link" href="">Биопсии органов и опухолевых новообразований</a>
+                  <p class="sidebar-alphabet__block_letter">О</p>
+                  <span class="sidebar-alphabet__block_link js-filter-list-item" data-filter="Онкология">Онкология</span>
+                  <span class="sidebar-alphabet__block_link js-filter-list-item" data-filter="Онкогинекология">Онкогинекология</span>
                 </li>
                 <li class="sidebar-alphabet__block">
-                  <p class="sidebar-alphabet__block_letter">Э</p>
-                  <a class="sidebar-alphabet__block_link" href="">Эндокринология</a>
-                  <a class="sidebar-alphabet__block_link" href="">Эндоскопия</a>
+                  <p class="sidebar-alphabet__block_letter">Г</p>
+                  <span class="sidebar-alphabet__block_link js-filter-list-item" data-filter="Гинекология">Гинекология</span>
+                  <span class="sidebar-alphabet__block_link js-filter-list-item" data-filter="Гастроэнтерология">Гастроэнтерология</span>
                 </li>
+                <li class="sidebar-alphabet__block">
+                  <p class="sidebar-alphabet__block_letter">У</p>
+                  <span class="sidebar-alphabet__block_link js-filter-list-item" data-filter="Ультразвуковое исследование">Ультразвуковое исследование</span>
+                  <span class="sidebar-alphabet__block_link js-filter-list-item" data-filter="Урология">Урология</span>
+                </li>
+                <li class="sidebar-alphabet__block js-filter-list-reset visually-hidden"><button class="btn-small" type="button">Показывать все</button></li>
               </ul>
             </div>
           </div>
