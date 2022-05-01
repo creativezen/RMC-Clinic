@@ -96,6 +96,11 @@
     }
   }
 
+  picture {
+    display: block;
+    @include mix.interpolate(margin-top, 320px, 1480px, 16px, 30px);
+  }
+
   .video-cover {
     @include mix.interpolate(margin-top, 320px, 1480px, 20px, 40px);
   }
