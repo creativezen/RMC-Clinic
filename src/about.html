@@ -13,15 +13,11 @@
     <main class="main">
       <section class="section hero-cover">
         <picture class="hero-cover__img">
-          <!-- <source src="" type=""> -->
-          <!-- <img src="img/hero-img-12.jpg" alt="О клинике" width="1920" height="500"> -->
-          <img
-            srcset="img/hero-img-1.jpg 320w, img/hero-img-12.jpg 768w"
-            sizes="(max-width: 320px) 320px, 1920px"
-            src="img/hero-img-12.jpg"
-            alt="О клинике | RMC-Clinic"
-          >
+          <source media="(max-width: 799px)" data-srcset="img/Маммология/hero-mammology-480.jpg">
+          <source media="(min-width: 800px)" data-srcset="img/Маммология/hero-mammology-1920.jpg">
+          <img class="lazyload" data-src="img/Маммология/hero-mammology-1920.jpg" alt="О клинике | RMC-Clinic">
         </picture>
+
         <div class="hero-cover__content container">
           <h1 class="hero-cover__title">О клинике</h1>
           <div class="breadcrumb">
