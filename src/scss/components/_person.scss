@@ -52,10 +52,16 @@
 // ===================================
 .person-card {
   position: relative;
+  height: 100%;
+  max-height: 380px;
+  overflow: hidden;
 
   &__photo {
     display: block;
-    max-height: 380px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
     overflow: hidden;
 

@@ -51,6 +51,8 @@ export const validateForms = (selector, rules, showSuccess) => {
 
     formData.append("web_form_submit", "Y")
 
+    console.log(typeof formData)
+
     xhr.onreadystatechange = function () {
 
       if (xhr.readyState === 4) {
