@@ -414,12 +414,13 @@
   <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-vacancia">
     <div class="graph-modal__content">
       <form class="form js-form-vacancia">
+        <input id="sessid" type="hidden" value="session09352346">
         <div class="form__header">
           <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
             <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
           </span>
         </div>
-        <div class="form__body">
+        <div class="form__body" id="vacancia-form-body">
           <div class="form__legend">Какой-нибудь заголовок вакансии в несколько строк</div>
           <div class="form__badges">
             <div class="badge form__badges_item">Онкология</div>
@@ -457,6 +458,7 @@
           </div>
         </div>
         <fieldset class="form__body">
+          <input type="hidden" name="form_hidden_30" id="form_hidden_30" value="">
           <legend class="form__legend">Для отклика заполните форму</legend>
           <div class="form__body_item">
             <label class="label" for="name-vacancia">Имя</label>

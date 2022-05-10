@@ -11,22 +11,23 @@ document.querySelectorAll('.graph-modal__container').forEach(item => {
 })
 
 const vacanciaList = document.querySelector('.js-vacancias-list')
-const vacanciaTitle = document.querySelector('.js-form-vacancia .form__legend')
+const vacanciaFormBody = document.getElementById('vacancia-form-body')
+const vacanciaInputName = document.getElementById('form_hidden_30')
+const vacanciaSession = document.querySelector('#sessid')
 
 vacanciaList?.addEventListener('click', function(e) {
 
   if (e.target.closest('.js-vacancias-button')) {
 
     let vacanciaButton = e.target.closest('.js-vacancias-button')
+    let session = vacanciaSession.value
+    let DATA = new FormData()
+
+    DATA.append('ELEMENT_ID', vacanciaButton.dataset.id);
+    DATA.append('sessid', session);
 
     // Поменяли название вакансии в окне формы
-    vacanciaTitle.textContent = vacanciaButton.dataset.title
-
-    // Формируем пакет данных
-    let DATA = {
-      ELEMENT_ID: vacanciaButton.dataset.id,
-      NAME: '#sessid'
-    }
+    vacanciaInputName.value = vacanciaButton.dataset.title
 
     // Создали запрос
     let xhr = new XMLHttpRequest()
@@ -35,11 +36,14 @@ vacanciaList?.addEventListener('click', function(e) {
       // Если отработает запрос, посмотрим на ответ
       if (xhr.readyState === 4) {
         console.log(xhr.response)
+        console.log(DATA)
+
+        vacanciaFormBody.innerHTML = xhr.response
       }
     }
 
     // Постучались
-    xhr.open('GET', '/local/content/ajax.php', true)
+    xhr.open('POST', '/local/content/ajax.php', true)
 
     // Прописали заголовок (хз. нужно ли...)
     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
