@@ -10,7 +10,7 @@ if (document.querySelector('#map-rmc')) {
 
     let pin = new ymaps.Placemark([56.78334080170144,60.545243873506465], {}, {
       iconLayout: 'default#image',
-      iconImageHref: '../../img/map-pin.svg',
+      iconImageHref: '/local/templates/clinic/img/map-pin.svg',
       iconImageSize: [84, 98],
       iconOffset: [-35, -55]
     })
