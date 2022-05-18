@@ -687,6 +687,10 @@
 
   &__body {
     @extend .card-proto__body;
+
+    > * {
+      margin-bottom: 20px;
+    }
   }
 
   &__footer {
