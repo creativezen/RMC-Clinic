@@ -11,131 +11,189 @@ document.querySelectorAll('.graph-modal__container').forEach(item => {
 })
 
 // Текущая сессия. Служит для отправки запросов к серверу
+let currentSession = document.querySelector('#sessid')
+
+// Создали запрос
+let xhr = new XMLHttpRequest()
+
+// Создали структуру запроса
 // ==================================================================
-const currentSession = document.querySelector('#sessid')
+function appointmentRequest(appendData, callback, url) {
 
-// Меняем содержимое вакансии при вызове модального окна с описанием
-// ==================================================================
-const vacanciaList = document.querySelector('.js-vacancias-list')
-const vacanciaFormBody = document.getElementById('vacancia-form-body')
-const vacanciaInputName = document.getElementById('form_hidden_30')
+  // Создали объект типа FormData для пакета данных
+  let DATA = new FormData()
 
-// vacanciaList?.addEventListener('click', function(e) {
+  // Добавили в пакет данные
+  appendData.forEach(item => DATA.append(item.name, item.content))
 
-//   if (e.target.closest('.js-vacancias-button')) {
+  // Добавили в пакет данные сессии
+  DATA.append('sessid', currentSession.value)
 
-//     let vacanciaButton = e.target.closest('.js-vacancias-button')
-//     let session = currentSession.value
-//     let DATA = new FormData()
+  xhr.onreadystatechange = () => {
+    if (xhr.readyState === 4) {
+      callback(xhr.response)
+    }
+  }
 
-//     DATA.append('ELEMENT_ID', vacanciaButton.dataset.id);
-//     DATA.append('sessid', session);
+  // Постучались
+  xhr.open('POST', url, true)
+  // Прописали заголовок (хз. нужно ли...)
+  xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
+  // Отправили наш пакет
+  xhr.send(DATA)
+}
 
-//     // Поменяли название вакансии в окне формы
-//     vacanciaInputName.value = vacanciaButton.dataset.title
+// class Request {
+//   appendData
+//   callback
+//   url
+//   session
+//   xhr
 
-//     // Создали запрос
-//     let xhr = new XMLHttpRequest()
+//   constructor(appendData, callback, url, sessid, xhr) {
+//     this.DATA = new FormData()
+//     this.package = appendData
+//     this.callback = callback
+//     this.url = url
+//     this.session = sessid
+//     this.xhr = xhr
+//   }
 
-//     xhr.onreadystatechange = function() {
-//       // Если отработает запрос, посмотрим на ответ
-//       if (xhr.readyState === 4) {
-//         console.log(xhr.response)
-//         console.log(DATA)
+//   init() {
+//     this.append()
+//     this.onready()
+//     this.send()
+//   }
 
-//         vacanciaFormBody.innerHTML = xhr.response
+//   append() {
+//     // Добавили в пакет данные
+//     this.appendData.forEach(item => this.DATA.append(item.name, item.content))
+//     // Добавили в пакет данные сессии
+//     this.DATA.append('sessid', this.session)
+//   }
+
+//   onready() {
+//     this.xhr.onreadystatechange = () => {
+//       if (this.xhr.readyState === 4) {
+//         this.callback(this.xhr.response)
 //       }
 //     }
-
-//     // Постучались
-//     xhr.open('POST', '/local/content/ajax.php', true)
-
-//     // Прописали заголовок (хз. нужно ли...)
-//     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
-
-//     // Отправили наш пакет
-//     xhr.send(DATA)
 //   }
-// })
 
-let buttonАppointment = document.getElementById('js-button-appointment')
-let buttonAppointmentArray = Array.from(document.querySelectorAll('.js-button-appointment'))
-let selectAppointmentDirection = document.querySelector('.js-select-appointment[data-select="direction"]')
-let optionAppointmentDirection = Array.from(selectAppointmentDirection.querySelectorAll('option'))
-let selectAppointmentService = document.querySelector('.js-select-appointment[data-select="service"]')
+//   send() {
+//     // Постучались
+//     this.xhr.open('POST', url, true)
+//     // Прописали заголовок (хз. нужно ли...)
+//     this.xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
+//     // Отправили наш пакет
+//     this.xhr.send(DATA)
+//   }
+// }
 
-buttonAppointmentArray.forEach(button => button.dataset.idDirection = buttonАppointment?.dataset.idDirection)
+const vacanciaModal = () => {
+  // Меняем содержимое вакансии при вызове модального окна с описанием
+  // ==================================================================
+  const vacanciaList = document.querySelector('.js-vacancias-list')
+  const vacanciaFormBody = document.getElementById('vacancia-form-body')
+  const vacanciaInputName = document.getElementById('form_hidden_30')
 
-buttonAppointmentArray.forEach(function(button) {
-  button.addEventListener('click', function(e) {
-    selectAppointmentGet(this.dataset.idDirection)
-  })
-})
+  vacanciaList?.addEventListener('click', function(e) {
 
-optionAppointmentDirection.forEach(option => {
+    if (e.target.closest('.js-vacancias-button')) {
 
-  if (option.dataset.id == buttonАppointment?.dataset.idDirection) {
+      let vacanciaButton = e.target.closest('.js-vacancias-button')
+      let session = currentSession.value
 
-    option.selected = true
+      // Поменяли название вакансии в окне формы
+      vacanciaInputName.value = vacanciaButton.dataset.title
 
-    let DATA = new FormData()
+      // let sendRequest = new Request(
+      //   [{name: 'ELEMENT_ID', content: vacanciaButton.dataset.id}],
+      //   actionResponce,
+      //   '/local/content/ajax.php',
+      //   currentSession.value,
+      //   xhr
+      // )
 
-    DATA.append('DIRECTION', option.dataset.id)
-    DATA.append('sessid', currentSession.value);
+      // sendRequest.init()
 
-    // Создали запрос
-    let xhr = new XMLHttpRequest()
+      appointmentRequest([{name: 'ELEMENT_ID', content: vacanciaButton.dataset.id}], actionResponce, '/local/content/ajax.php')
 
-    xhr.onreadystatechange = () => {
-      // Если отработает запрос, посмотрим на ответ
-      if (xhr.readyState === 4) {
-        console.log(xhr.response)
-        selectAppointmentService.disabled = false
-        selectAppointmentService.innerHTML = xhr.response
+      function actionResponce(responce) {
+        vacanciaFormBody.innerHTML = responce
       }
     }
 
-    // Постучались
-    xhr.open('POST', '/local/content/services/getlist.php', true)
-
-    // Прописали заголовок (хз. нужно ли...)
-    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
-
-    // Отправили наш пакет
-    xhr.send(DATA)
-  }
-})
-
-const selectAppointmentGet = () => {
-
-  selectAppointmentDirection.addEventListener('change', e => {
-
-    let optionID = e.target.options[e.target.selectedIndex].dataset.id
-    let session = currentSession.value
-    let DATA = new FormData()
-
-    DATA.append('DIRECTION', optionID)
-    DATA.append('sessid', session);
-
-    // Создали запрос
-    let xhr = new XMLHttpRequest()
-
-    xhr.onreadystatechange = () => {
-      // Если отработает запрос, посмотрим на ответ
-      if (xhr.readyState === 4) {
-        console.log(xhr.response)
-        selectAppointmentService.disabled = false
-        selectAppointmentService.innerHTML = xhr.response
-      }
-    }
-
-    // Постучались
-    xhr.open('POST', '/local/content/services/getlist.php', true)
-
-    // Прописали заголовок (хз. нужно ли...)
-    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
-
-    // Отправили наш пакет
-    xhr.send(DATA)
   })
 }
+
+vacanciaModal()
+
+const appointmentModal = () => {
+  let buttonАppointment = document.getElementById('js-button-appointment')
+  let buttonAppointmentArray = Array.from(document.querySelectorAll('.js-button-appointment'))
+  let selectAppointmentDirection = document.querySelector('.js-select-appointment[data-select="direction"]')
+  let optionAppointmentDirection = Array.from(selectAppointmentDirection.querySelectorAll('option'))
+  let selectAppointmentService = document.querySelector('.js-select-appointment[data-select="service"]')
+
+  buttonAppointmentArray?.forEach(button => button.dataset.idDirection = buttonАppointment?.dataset.idDirection)
+
+  buttonAppointmentArray?.forEach(function(button) {
+    button.addEventListener('click', function(e) {
+      selectAppointmentGet(this.dataset.idDirection)
+    })
+  })
+
+  optionAppointmentDirection?.forEach(option => {
+
+    if (option.dataset.id == buttonАppointment?.dataset.idDirection) {
+
+      option.selected = true
+
+      // let sendRequest = new Request(
+      //   [{name: 'DIRECTION', content: option.dataset.id}],
+      //   actionResponce,
+      //   '/local/content/services/getlist.php',
+      //   currentSession.value,
+      //   xhr
+      // )
+
+      // sendRequest.init()
+
+      appointmentRequest([{name: 'DIRECTION', content: option.dataset.id}], actionResponce, '/local/content/services/getlist.php')
+
+      function actionResponce(responce) {
+        selectAppointmentService.disabled = false
+        selectAppointmentService.innerHTML = responce
+      }
+
+    }
+  })
+
+  const selectAppointmentGet = () => {
+
+    selectAppointmentDirection?.addEventListener('change', e => {
+
+      let optionID = e.target.options[e.target.selectedIndex].dataset.id
+
+      // let sendRequest = new Request(
+      //   [{name: 'DIRECTION', content: optionID}],
+      //   actionResponce,
+      //   '/local/content/services/getlist.php',
+      //   currentSession.value,
+      //   xhr
+      // )
+
+      // sendRequest.init()
+
+      appointmentRequest([{name: 'DIRECTION', content: optionID}], actionResponce, '/local/content/services/getlist.php')
+
+      function actionResponce(responce) {
+        selectAppointmentService.disabled = false
+        selectAppointmentService.innerHTML = responce
+      }
+    })
+  }
+}
+
+appointmentModal()
