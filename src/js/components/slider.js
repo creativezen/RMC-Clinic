@@ -3,6 +3,7 @@ import Swiper, { Pagination, Navigation, Autoplay, Thumbs, EffectFade, FreeMode 
 Swiper.use([ Pagination, Navigation, Autoplay, Thumbs, EffectFade, FreeMode ])
 
 const swiperThumbs = new Swiper('.js-swiper-thumbs', {
+  autoHeight: true,
   spaceBetween: 0,
   slidesPerView: 4,
   freeMode: true,
@@ -44,6 +45,7 @@ while (sliders.length) {
   let sliderSelector = `.js-swiper-${sliderItem.name}`
 
   new Swiper(sliderSelector, {
+    autoHeight: true,
     slidesPerView: "auto",
     spaceBetween: 10,
     pagination: {

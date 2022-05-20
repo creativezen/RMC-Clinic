@@ -219,15 +219,15 @@
 .card-service {
   $parent: &;
   @extend .card-proto;
-  min-height: 340px;
+  max-height: 320px;
   border: 1px solid var(--light-white);
 
   @media only screen and (max-width: 780px) {
-    min-height: 260px;
+    max-height: 260px;
   }
 
   @media only screen and (max-width: 480px) {
-    min-height: 220px;
+    max-height: 220px;
   }
 
   &:hover {
@@ -306,6 +306,10 @@
 
     .link-arrow {
       margin-left: auto;
+
+      &__text {
+        // font-size: 16px;
+      }
     }
   }
 }
@@ -561,6 +565,7 @@
   &__header {
     @extend .card-specialist__header;
     max-height: 246px;
+    overflow: hidden;
   }
 
   &__cover {
@@ -857,21 +862,14 @@
     border-left: 1px solid var(--dark-01);
     text-align: center;
     flex-shrink: 0;
-    max-width: 270px;
+    width: 270px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     @media only screen and (max-width: 680px) {
-      text-align: left;
-      max-width: none;
-    }
-
-    @media only screen and (max-width: 480px) {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
+      width: 100%;
+      display: block;
     }
 
     .link-download {
@@ -1115,9 +1113,10 @@
 
   &__header {
     @extend .card-specialist__header;
+    max-height: 160px;
 
     .person-card {
-      max-height: 160px;
+      height: 100%;
     }
   }
 

@@ -259,3 +259,12 @@
 .swiper-slide > [class*="card"] {
   max-width: 98%;
 }
+
+.swiper-slide > [class*="card"] {
+  height: 100%;
+}
+
+.swiper-autoheight,
+.swiper-autoheight .swiper-slide {
+  height: 100%;
+}
