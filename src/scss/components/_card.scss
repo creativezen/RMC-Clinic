@@ -515,6 +515,7 @@
 
   &__header {
     height: 100%;
+    max-height: 380px;
     padding: 20px 20px 0;
 
     @media only screen and (max-width: 480px) {
@@ -527,7 +528,7 @@
   }
 
   &__body {
-    margin-top: auto;
+    // margin-top: auto;
     padding: 15px 20px 0;
 
     @media only screen and (max-width: 480px) {
@@ -559,12 +560,12 @@
 
   &__header {
     @extend .card-specialist__header;
+    max-height: 246px;
   }
 
   &__cover {
     @extend .person-card;
     height: 100%;
-    max-height: 246px;
 
     &_photo {
       @extend .person-card__photo;

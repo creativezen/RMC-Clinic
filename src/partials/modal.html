@@ -82,7 +82,7 @@
   <!-- Записаться на приём -->
   <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-appointment">
     <div class="graph-modal__content">
-      <form class="form js-form-appointment">
+      <form class="form js-form-appointment" data-form="appointment">
         <div class="form__header">
           <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
             <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
@@ -101,12 +101,36 @@
           <div class="form__body_item">
             <label class="label">Выберите направление</label>
             <div class="select-wrapper">
-              <select class="select select-direction">
-                <option value="" selected disabled>Не выбрано</option>
-                <option value="Выбрано 1">Выбрано 1</option>
-                <option value="Выбрано 2">Выбрано 2</option>
-                <option value="Выбрано 3">Выбрано 3</option>
-                <option value="Выбрано 4">Выбрано 4</option>
+              <select class="select select-direction js-select-appointment" data-select="direction" name="">
+                <option value="">Не выбрано</option>
+                <option data-id="80" value="Акушерство и гинекология">Акушерство и гинекология</option>
+                <option data-id="81" value="Аллергология и иммунология">Аллергология и иммунология</option>
+                <option data-id="82" value="Анестезиология и реаниматология">Анестезиология и реаниматология</option>
+                <option data-id="88" value="Вакцинация">Вакцинация</option>
+                <option data-id="83" value="Дерматовенерология">Дерматовенерология</option>
+                <option data-id="85" value="Лабораторные исследования Инвитро">Лабораторные исследования Инвитро</option>
+                <option data-id="41" value="Маммология">Маммология</option>
+                <option data-id="86" value="Общая">Общая</option>
+                <option data-id="18" value="Онкология">Онкология</option>
+                <option data-id="40" value="Офтальмология">Офтальмология</option>
+                <option data-id="87" value="Педиатрия">Педиатрия</option>
+                <option data-id="2124" value="Терапия">Терапия</option>
+                <option data-id="84" value="Ультразвуковая диагностика">Ультразвуковая диагностика</option>
+                <option data-id="39" value="Эндокринология">Эндокринология</option>
+                <option data-id="42" value="Эндоскопия">Эндоскопия</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__body_item">
+            <label class="label">Выберите услугу</label>
+            <div class="select-wrapper">
+              <select class="select select-direction js-select-appointment" data-select="service" name="" disabled>
+                <option value="">Не выбрано</option>
+                <option value="Акушерство и гинекология">Акушерство и гинекология</option>
+                <option value="Аллергология и иммунология">Аллергология и иммунология</option>
+                <option value="Анестезиология и реаниматология">Анестезиология и реаниматология</option>
+                <option value="Вакцинация">Вакцинация</option>
+                <option value="Дерматовенерология">Дерматовенерология</option>
               </select>
             </div>
           </div>
@@ -325,10 +349,6 @@
             <input class="input input-name" type="text" name="name-contact" placeholder="Укажите ваше имя">
           </div>
           <div class="form__body_item">
-            <label class="label" for="email-contact">E-mail</label>
-            <input class="input input-mail" type="email" name="email-contact" placeholder="Укажите ваш email">
-          </div>
-          <div class="form__body_item">
             <label class="label" for="tel-contact">Контактный телефон</label>
             <input class="input input-tel" type="tel" name="tel-contact" placeholder="+7(ХХХ) ХХХ-ХХ-ХХ">
           </div>
@@ -434,27 +454,23 @@
             </div>
           </div>
           <div class="form__content">
-            <p class="form__content_title">от 45 000 до 70 000 ₽ до вычета налогов</p>
-            <p class="form__content_text">Ознакомительный какой-нибудь текст о том, кто нужен в нескольких словах, а далее обязанности, требования и условия.</p>
-            <p class="form__content_title">Обязанности:</p>
-            <div class="form__content_text">
-              <ul class="list-form">
-                <li class="list-form__item">Организация медицинской деятельности предприятия</li>
-                <li class="list-form__item">Оказание медицинской помощи, в том числе экстренной</li>
-                <li class="list-form__item">Работа с контрагентами, заказ необходимого оборудования и материалов</li>
-                <li class="list-form__item">Работа с контролирующими органами в рамках медицинской дедеятельности</li>
-                <li class="list-form__item">Ведение блока охраны труда медицинского персонала</li>
-              </ul>
-            </div>
-            <p class="form__content_title">Требования:</p>
-            <div class="form__content_text">
-              <ul class="list-form">
-                <li class="list-form__item">Высшее образование, дополнительная профессиональная поподготовка (интернатура/ординатура) — по одной из спспециальностей: "Терапия", "Неврология, "Гериатрия"</li>
-                <li class="list-form__item">Стрессоустойчивость, доброжелательность</li>
-              </ul>
-            </div>
-            <p class="form__content_title">Условия:</p>
-            <p class="form__content_text">Оформление соглаcно ТК РФ</p>
+            <h4>от 45 000 до 70 000 ₽ до вычета налогов</h4>
+            <p>Ознакомительный какой-нибудь текст о том, кто нужен в нескольких словах, а далее обязанности, требования и условия.</p>
+            <h4>Обязанности:</h4>
+            <ul>
+              <li>Организация медицинской деятельности предприятия</li>
+              <li>Оказание медицинской помощи, в том числе экстренной</li>
+              <li>Работа с контрагентами, заказ необходимого оборудования и материалов</li>
+              <li>Работа с контролирующими органами в рамках медицинской дедеятельности</li>
+              <li>Ведение блока охраны труда медицинского персонала</li>
+            </ul>
+            <h5>Требования:</h5>
+            <ul>
+              <li>Высшее образование, дополнительная профессиональная поподготовка (интернатура/ординатура) — по одной из спспециальностей: "Терапия", "Неврология, "Гериатрия"</li>
+              <li>Стрессоустойчивость, доброжелательность</li>
+            </ul>
+            <h5>Условия:</h5>
+            <p>Оформление соглаcно ТК РФ</p>
           </div>
         </div>
         <fieldset class="form__body">

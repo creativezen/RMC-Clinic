@@ -1,4 +1,5 @@
 @use "../mixins" as mix;
+@use "./list";
 
 // Form
 // ===================================
@@ -55,7 +56,7 @@
   &__content {
     @include mix.interpolate(margin-bottom, 320px, 1480px, 20px, 40px);
 
-    &_title {
+    &_title, h3, h4, h5 {
       @include mix.interpolate(font-size, 320px, 1480px, 18px, 22px);
       font-weight: 500;
       line-height: 1.3;
@@ -72,16 +73,26 @@
       }
     }
 
-    &_title + #{$parent}__search {
+    &_title, h3, h4, h5 + #{$parent}__search {
       @include mix.interpolate(margin-top, 320px, 1480px, 10px, 20px);
     }
 
-    &_title + &_text {
+    &_title, h3, h4, h5 + &_text {
       @include mix.interpolate(margin-top, 320px, 1480px, 8px, 12px);
     }
 
-    &_text + &_title {
+    &_text + h3, h4, h5, &_title {
       @include mix.interpolate(margin-top, 320px, 1480px, 12px, 20px);
+    }
+
+    > * + * {
+      @include mix.interpolate(margin-top, 320px, 1480px, 8px, 12px);
+    }
+
+    ul {
+      li {
+        @extend .list-form__item;
+      }
     }
   }
 

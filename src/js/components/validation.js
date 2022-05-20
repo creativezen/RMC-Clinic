@@ -429,16 +429,6 @@ const rulesService = [
     ]
   },
   {
-    ruleSelector: '.input-mail',
-    rules: [
-      {
-        rule: 'required',
-        value: true,
-        errorMessage: 'Заполните email'
-      }
-    ]
-  },
-  {
     ruleSelector: '.input-tel',
     tel: true,
     rules: [

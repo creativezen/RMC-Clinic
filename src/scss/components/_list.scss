@@ -86,6 +86,10 @@
         }
       }
     }
+
+    &.hide {
+      display: none;
+    }
   }
 
   &__item + &__item {
@@ -98,6 +102,7 @@
 .list-service {
   display: none;
   padding: 0 20px 20px 20px;
+
   &.open {
     display: block;
   }
@@ -110,18 +115,6 @@
     transition: var(--transition);
     cursor: pointer;
     overflow: hidden;
-
-    .table-price {
-      display: none;
-
-      &.open {
-        display: block;
-      }
-    }
-
-    .table-price__header {
-      border-radius: none;
-    }
 
     @include mix.hover {
       &:not(.active) {
@@ -137,6 +130,18 @@
           }
         }
       }
+    }
+
+    .table-price {
+      display: none;
+
+      &.open {
+        display: block;
+      }
+    }
+
+    .table-price__header {
+      border-radius: none;
     }
 
     &_title {

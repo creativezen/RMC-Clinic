@@ -27,6 +27,11 @@ h4:not([class]) {
 	@include mix.interpolate(font-size, 320px, 1480px, 22px, 24px);
 }
 
+h5:not([class]) {
+	@extend h1;
+	@include mix.interpolate(font-size, 320px, 1480px, 18px, 20px);
+}
+
 .title {
 	@extend h1;
 }

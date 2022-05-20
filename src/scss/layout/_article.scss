@@ -6,11 +6,23 @@
 // ===================================
 .article {
 
-  p,li,span,b,strong {
+  * {
     text-align: justify;
 
     @media only screen and (max-width: 480px) {
       text-align: left;
+    }
+  }
+
+  b, strong {
+    display: inline-block;
+    font-weight: 600;
+    color: black;
+  }
+
+  p {
+    b, strong {
+      display: inline
     }
   }
 
@@ -29,11 +41,15 @@
   }
 
   h3 + * {
-    @include mix.interpolate(margin-top, 320px, 1480px, 14px, 20px);
+    @include mix.interpolate(margin-top, 320px, 1480px, 14px, 22px);
   }
 
   h4 + * {
-    @include mix.interpolate(margin-top, 320px, 1480px, 10px, 22px);
+    @include mix.interpolate(margin-top, 320px, 1480px, 10px, 20px);
+  }
+
+  h5 + * {
+    @include mix.interpolate(margin-top, 320px, 1480px, 8px, 16px);
   }
 
   > * + h3 {
@@ -44,6 +60,10 @@
     @include mix.interpolate(margin-top, 320px, 1480px, 18px, 30px);
   }
 
+  > * + h5 {
+    @include mix.interpolate(margin-top, 320px, 1480px, 12px, 26px);
+  }
+
   p {
     @include mix.interpolate(font-size, 320px, 1480px, 16px, 18px);
     font-weight: 400;
@@ -52,10 +72,11 @@
     color: var(--dark-075);
   }
 
-  p + p,
-  p + strong,
-  ul + strong,
-  ul + p{
+  > * + p,
+  > * + strong,
+  > * + b,
+  > * + ul,
+  > * ol {
     @include mix.interpolate(margin-top, 320px, 1480px, 14px, 20px);
   }
 
@@ -88,6 +109,25 @@
         @media only screen and (max-width: 480px) {
           top: 0.7em;
         }
+      }
+    }
+
+    > * + li {
+      @include mix.interpolate(margin-top, 320px, 1480px, 6px, 10px);
+    }
+  }
+
+  ol {
+    @extend .list-article;
+    @include mix.interpolate(padding-left, 320px, 1480px, 10px, 20px);
+
+    li {
+      @extend .list-article__item;
+      @include mix.interpolate(font-size, 320px, 1480px, 16px, 18px);
+      padding-left: 0;
+
+      &::before {
+        display: none
       }
     }
 
