@@ -54,7 +54,6 @@ function appointmentRequest(session) {
   })
 
   optionAppointmentDirection?.forEach(option => {
-
     if (option.dataset.id == buttonАppointment?.dataset.idDirection) {
 
       option.selected = true
@@ -70,12 +69,10 @@ function appointmentRequest(session) {
         selectAppointmentService.disabled = false
         selectAppointmentService.innerHTML = responce
       }
-
     }
   })
 
   const selectAppointmentGet = () => {
-
     selectAppointmentDirection?.addEventListener('change', e => {
 
       let optionID = e.target.options[e.target.selectedIndex].dataset.id

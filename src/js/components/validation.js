@@ -227,6 +227,16 @@ const rulesForАppointment = [
     ]
   },
   {
+    ruleSelector: '.select-service',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Должна быть выбрана услуга'
+      }
+    ]
+  },
+  {
     ruleSelector: '.input-date',
     rules: [
       {
