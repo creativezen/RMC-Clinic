@@ -1,9 +1,11 @@
 export default class GraphModal {
+
   constructor(options) {
     let defaultOptions = {
       isOpen: () => {},
       isClose: () => {},
     }
+
     this.options = Object.assign(defaultOptions, options);
     this.modal = document.querySelector('.graph-modal');
     this.speed = 300;
@@ -43,7 +45,7 @@ export default class GraphModal {
           return;
         }
 
-        if (e.target.closest('.graph-modal__close')) {
+        if (e.target.closest('.js-close')) {
           this.close();
           return;
         }
