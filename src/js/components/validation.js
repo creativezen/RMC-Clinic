@@ -258,6 +258,62 @@ const rulesForАppointment = [
   }
 ]
 
+// Параметры валидации для Записаться на приём из нижнего блока
+// ===========================================
+const rulesForАppointmentBlock = [
+  {
+    ruleSelector: '.input-name',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните имя'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.input-tel',
+    tel: true,
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните телефон!'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.select-direction',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Должно быть указано направление'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.input-date',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Выберите дату'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.input-agree',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Вы не дали согласине на обработку персональных данных'
+      }
+    ]
+  }
+]
+
 // Параметры валидации для Оставить отзыв
 // =======================================
 const rulesForFeedback = [
@@ -425,6 +481,73 @@ const rulesForFns = [
   }
 ]
 
+// Параметры валидации для Отклика на вакансию
+// =============================================
+const rulesVacancia = [
+  {
+    ruleSelector: '.input-name',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните имя'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.input-mail',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните email'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.input-tel',
+    tel: true,
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните телефон!'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.input-url',
+    tel: true,
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Укажите ссылку на ваше резюме'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.input-message',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Напишите ваше сообщение'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.input-agree',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Вы не дали согласине на обработку персональных данных'
+      }
+    ]
+  }
+]
+
 // Параметры валидации для Консультация онколога
 // ===============================================
 const rulesService = [
@@ -527,72 +650,10 @@ const rulesUrolog = [
   }
 ]
 
-// Параметры валидации для Отклика на вакансию
-// =============================================
-const rulesVacancia = [
-  {
-    ruleSelector: '.input-name',
-    rules: [
-      {
-        rule: 'required',
-        value: true,
-        errorMessage: 'Заполните имя'
-      }
-    ]
-  },
-  {
-    ruleSelector: '.input-mail',
-    rules: [
-      {
-        rule: 'required',
-        value: true,
-        errorMessage: 'Заполните email'
-      }
-    ]
-  },
-  {
-    ruleSelector: '.input-tel',
-    tel: true,
-    rules: [
-      {
-        rule: 'required',
-        value: true,
-        errorMessage: 'Заполните телефон!'
-      }
-    ]
-  },
-  {
-    ruleSelector: '.input-url',
-    tel: true,
-    rules: [
-      {
-        rule: 'required',
-        value: true,
-        errorMessage: 'Укажите ссылку на ваше резюме'
-      }
-    ]
-  },
-  {
-    ruleSelector: '.input-message',
-    rules: [
-      {
-        rule: 'required',
-        value: true,
-        errorMessage: 'Напишите ваше сообщение'
-      }
-    ]
-  },
-  {
-    ruleSelector: '.input-agree',
-    rules: [
-      {
-        rule: 'required',
-        value: true,
-        errorMessage: 'Вы не дали согласине на обработку персональных данных'
-      }
-    ]
-  }
-]
+let formAppointmentBlock = document.querySelector('.js-form-appointment-block')
+let formContact = document.querySelector('.js-form-contact')
+let formVacancia = document.querySelector('.js-form-vacancia')
+let formFeedback = document.querySelector('.js-form-feedback')
 
 // Заказ звонка
 // ==========================================
@@ -610,26 +671,56 @@ validateForms('.js-form-director', [...rulesForDirector], showSuccess)
 // ==========================================
 validateForms('.js-form-appointment', [...rulesForАppointment], showSuccess)
 
-// Оставить отзыв
-// ==========================================
-validateForms('.js-form-feedback', [...rulesForFeedback], showSuccess)
-
-// Связаться с нами
-// ==========================================
-validateForms('.js-form-contact', [...rulesForContact], showSuccess)
-
 // Запросить документы для ФНС
 // ==========================================
 validateForms('.js-form-fns', [...rulesForFns], showSuccess)
 
-// Запись на консультацию к онкологу
-// ==========================================
-validateForms('.js-form-service', [...rulesService], showSuccess)
 
-// Запись на приём к онкологу
+
+// Записаться на приём
 // ==========================================
-validateForms('.js-form-appointment-urolog', [...rulesUrolog], showSuccess)
+if (formAppointmentBlock) {
+  validateForms('.js-form-appointment-block', [...rulesForАppointmentBlock], showSuccess)
+}
+
+// Связаться с нами
+// ==========================================
+if (formContact) {
+  validateForms('.js-form-contact', [...rulesForContact], showSuccess)
+}
 
 // Отклик на вакансию
 // ==========================================
-validateForms('.js-form-vacancia', [...rulesVacancia], showSuccess)
+if (formVacancia) {
+  validateForms('.js-form-vacancia', [...rulesVacancia], showSuccess)
+}
+
+// Оставить отзыв
+// ==========================================
+if (formFeedback) {
+  validateForms('.js-form-feedback', [...rulesForFeedback], showSuccess)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Запись на консультацию к онкологу
+// ==========================================
+// validateForms('.js-form-service', [...rulesService], showSuccess)
+
+// Запись на приём к онкологу
+// ==========================================
+// validateForms('.js-form-appointment-urolog', [...rulesUrolog], showSuccess)

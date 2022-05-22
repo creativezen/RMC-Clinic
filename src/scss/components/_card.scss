@@ -219,7 +219,7 @@
 .card-service {
   $parent: &;
   @extend .card-proto;
-  max-height: 320px;
+  min-height: 280px;
   border: 1px solid var(--light-white);
 
   @media only screen and (max-width: 780px) {
