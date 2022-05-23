@@ -87,12 +87,12 @@
 
 .swiper-hero {
 
-  .slider-pagination {
+  .swiper-pagination-bullets {
     display: none;
-    bottom: 30px;
 
     @media only screen and (max-width: 640px) {
-      display: block;
+      display: block !important;
+      bottom: 40px !important;
     }
 
     .swiper-pagination-bullet {
@@ -105,6 +105,7 @@
     }
   }
 }
+
 
 // swiper-slide-active
 //============================
@@ -262,11 +263,16 @@
   max-width: 98%;
 }
 
-.swiper-slide > [class*="card"] {
-  height: 100%;
-}
+.swiper-slide {
+  > .card-specialist {
+    @include mix.interpolate(height, 320px, 1480px, 450px, 540px);
+  }
 
-.swiper-autoheight,
-.swiper-autoheight .swiper-slide {
-  height: 100%;
+  > .card-news {
+    @include mix.interpolate(height, 320px, 1480px, 390px, 420px);
+  }
+
+  > .card-partner {
+    @include mix.interpolate(height, 320px, 1480px, 240px, 260px);
+  }
 }

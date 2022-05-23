@@ -8,6 +8,10 @@
       @media only screen and (max-width: 780px) {
         grid-column: 3 span;
       }
+
+      @media only screen and (max-width: 480px) {
+        grid-column: 6 span;
+      }
     }
 
     .card-service {

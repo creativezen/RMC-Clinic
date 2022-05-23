@@ -45,16 +45,20 @@ function appointmentRequest(session) {
   let optionAppointmentDirection = Array.from(selectAppointmentDirection.querySelectorAll('option'))
   let selectAppointmentService = document.querySelector('.js-select-appointment[data-select="service"]')
 
+  // Пробежались по всем кнопкам Запись на приём и раздали им текущее значение idDirection
   buttonAppointmentArray?.forEach(button => button.dataset.idDirection = buttonАppointment?.dataset.idDirection)
 
   buttonAppointmentArray?.forEach(function(button) {
+    // Слушаем событие клик на кнопках Запись на прём
     button.addEventListener('click', function(e) {
+      // Вызываем метод формирования запроса, передаём payload
       selectAppointmentGet(this.dataset.idDirection)
     })
   })
 
+
   optionAppointmentDirection?.forEach(option => {
-    if (option.dataset.id == buttonАppointment?.dataset.idDirection) {
+    if (option.dataset.id && option.dataset.id == buttonАppointment?.dataset.idDirection) {
 
       option.selected = true
 
@@ -77,16 +81,21 @@ function appointmentRequest(session) {
 
       let optionID = e.target.options[e.target.selectedIndex].dataset.id
 
-      let sendRequest = new Request(
-        [{name: 'DIRECTION', content: optionID}],
-        actionResponce,
-        '/local/content/services/getlist.php',
-        session.value
-      ).init()
+      if (e.target.options[e.target.selectedIndex].value !== 'Не выбрано') {
+        let sendRequest = new Request(
+          [{name: 'DIRECTION', content: optionID}],
+          actionResponce,
+          '/local/content/services/getlist.php',
+          session.value
+        ).init()
 
-      function actionResponce(responce) {
-        selectAppointmentService.disabled = false
-        selectAppointmentService.innerHTML = responce
+        function actionResponce(responce) {
+          selectAppointmentService.disabled = false
+          selectAppointmentService.innerHTML = responce
+        }
+      }
+      else {
+        selectAppointmentService.disabled = true
       }
     })
   }

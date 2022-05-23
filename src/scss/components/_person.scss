@@ -1,3 +1,5 @@
+@use "../mixins" as mix;
+
 // Person answer
 // ===================================
 .person-answer {
@@ -51,22 +53,21 @@
 // Person card
 // ===================================
 .person-card {
+  @include mix.interpolate(height, 780px, 1480px, 330px, 380px);
   position: relative;
-  height: 100%;
-  max-height: 380px;
   overflow: hidden;
 
   &__photo {
+    @include mix.interpolate(height, 780px, 1480px, 330px, 380px);
     display: block;
-    height: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     overflow: hidden;
 
-    @media only screen and (max-width: 380px) {
-      max-height: 220px;
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
 

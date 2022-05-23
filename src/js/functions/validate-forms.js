@@ -46,19 +46,21 @@ export const validateForms = (selector, rules, showSuccess) => {
   }
 
   validation.onSuccess((ev) => {
+    let ibBlock = ev.target.querySelector('input[name="IBLOCK_ID"]')
     let formData = new FormData(ev.target)
     let xhr = new XMLHttpRequest()
 
     formData.append("web_form_submit", "Y")
 
-    console.log(typeof formData)
-
     xhr.onreadystatechange = function () {
 
       if (xhr.readyState === 4) {
-
+        if (xhr.status === 200 && ibBlock) {
+          showSuccess()
+          console.log('Строка с ответом: ', xhr)
+          console.log('Успешно отправлено')
+        }
         if (xhr.status === 200 && xhr.responseURL.indexOf('formresult=addok') !== -1) {
-
           showSuccess()
           console.log('Строка с ответом: ', xhr)
           console.log('Успешно отправлено')

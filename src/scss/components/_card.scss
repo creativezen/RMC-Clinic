@@ -93,12 +93,8 @@
   @extend .card-proto;
   min-height: 310px;
 
-  @include mix.hover {
-    border-color: var(--dark-01) !important;
-  }
-
   @media only screen and (max-width: 780px) {
-    min-height: 260px;
+    min-height: 230px;
   }
 
   @media only screen and (max-width: 380px) {
@@ -106,7 +102,7 @@
   }
 
   @include mix.hover {
-    border-color: var(--brand-green);
+    border-color: var(--dark-01);
 
     #{$parent}__gradient {
       opacity: 1;
@@ -219,7 +215,7 @@
 .card-service {
   $parent: &;
   @extend .card-proto;
-  min-height: 280px;
+  max-height: 300px;
   border: 1px solid var(--light-white);
 
   @media only screen and (max-width: 780px) {
@@ -230,7 +226,7 @@
     max-height: 220px;
   }
 
-  &:hover {
+  @include mix.hover {
     border: 1px solid var(--blue-05);
 
     #{$parent}__header {
@@ -270,8 +266,27 @@
     }
   }
 
+  &__header + &__body {
+    @include mix.interpolate(margin-top, 320px, 1480px, 16px, 20px);
+  }
+
   &__body {
     @extend .card-proto__body;
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 80px;
+      width: 100%;
+      content: "";
+      background: linear-gradient(to top, rgba(255,255,255, 1) 20%, rgba(255,255,255, 0) 80%);
+      pointer-events: none;
+    }
 
     @media only screen and (max-width: 780px) {
       padding: 0 20px;
@@ -283,10 +298,6 @@
       line-height: 1.4;
       letter-spacing: -0.01em;
       color: var(--dark-black);
-
-      @media only screen and (max-width: 480px) {
-        font-size: 17px;
-      }
     }
   }
 
@@ -389,6 +400,7 @@
       content: '';
       position: absolute;
       bottom: 0;
+      left: 0;
       height: 100px;
       width: 100%;
       content: "";
@@ -516,23 +528,33 @@
 .card-specialist {
   @extend .card-proto;
   padding-bottom: 30px;
+  @include mix.interpolate(max-height, 320px, 1480px, 560px, 600px);
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include mix.interpolate(height, 320px, 1480px, 60px, 80px);
+    width: 100%;
+    content: "";
+    background: linear-gradient(to top, rgba(255,255,255, 1) 20%, rgba(255,255,255, 0) 80%);
+    pointer-events: none;
+  }
 
   &__header {
-    height: 100%;
-    max-height: 380px;
+    @include mix.interpolate(height, 780px, 1480px, 330px, 380px);
+    flex-shrink: 0;
     padding: 20px 20px 0;
+    box-sizing: content-box;
+    overflow: hidden;
 
     @media only screen and (max-width: 480px) {
       padding: 20px 20px 0;
     }
-
-    .person-card {
-      height: 100%;
-    }
   }
 
   &__body {
-    // margin-top: auto;
     padding: 15px 20px 0;
 
     @media only screen and (max-width: 480px) {
@@ -540,11 +562,13 @@
     }
 
     &_name {
+      position: relative;
       margin-top: 8px;
       @include mix.interpolate(font-size, 320px, 1480px, 20px, 24px);
       font-weight: 600;
-      line-height: 1.3;
+      line-height: 1.2;
       letter-spacing: -0.01em;
+      overflow: hidden;
 
       @media only screen and (max-width: 320px) {
         margin-top: 8px;
@@ -561,28 +585,38 @@
 // ===================================
 .card-news {
   @extend .card-specialist;
+  @include mix.interpolate(max-height, 320px, 1480px, 420px, 460px);
 
   &__header {
     @extend .card-specialist__header;
-    max-height: 246px;
-    overflow: hidden;
+    height: 240px;
+    max-height: none;
   }
 
   &__cover {
     @extend .person-card;
-    height: 100%;
+    max-height: none;
+    height: 240px;
 
     &_photo {
       @extend .person-card__photo;
-      height: 100%;
+      height: 240px;
       display: flex;
       justify-content: center;
       align-items: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     &_badge {
-      @extend .person-card__photo;
-      height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -1037,6 +1071,7 @@
 
     @media only screen and (max-width: 480px) {
       margin-left: 0;
+      margin-right: 0;
       margin-top: 20px;
     }
 
@@ -1106,17 +1141,26 @@
 // ===================================
 .card-partner {
   @extend .card-specialist;
+  max-height: 290px;
 
-  &:hover {
+  &::after {
+    height: 60px;
+  }
+
+  @include mix.hover {
     border-color: var(--blue-05);
   }
 
   &__header {
     @extend .card-specialist__header;
-    max-height: 160px;
+    height: 160px;
 
     .person-card {
-      height: 100%;
+      height: 160px;
+
+      &__photo {
+        height: 160px;
+      }
     }
   }
 

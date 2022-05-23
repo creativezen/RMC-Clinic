@@ -71,7 +71,7 @@ function filterDirectoin() {
 
 function filterPrices() {
   let priceStage = Array.from(document.querySelectorAll('.js-prices > li'))
-  let filterStage = Array.from(document.querySelectorAll('input[type="checkbox"]'))
+  let filterStage = Array.from(document.querySelectorAll('input[type="checkbox"]:not(.input-agree)'))
   let filterReset = document.querySelector('.js-filter-reset')
 
   let checkedCheckboxArray

@@ -1,4 +1,5 @@
 <div class="graph-modal js-modal">
+
   <!-- Заказать звонок -->
   <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-call">
     <div class="graph-modal__content">
@@ -29,10 +30,12 @@
       </form>
     </div>
   </div>
+
   <!-- Задать вопрос -->
   <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-question">
     <div class="graph-modal__content">
       <form class="form js-form-question">
+        <input type="hidden" name="IBLOCK_ID" value="">
         <div class="form__header">
           <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
             <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
@@ -79,6 +82,7 @@
       </form>
     </div>
   </div>
+
   <!-- Записаться на приём -->
   <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-appointment">
     <div class="graph-modal__content">
@@ -102,7 +106,7 @@
             <label class="label">Выберите направление</label>
             <div class="select-wrapper">
               <select class="select select-direction js-select-appointment" data-select="direction" name="">
-                <option value="">Не выбрано</option>
+                <option value="Не выбрано">Не выбрано</option>
                 <option data-id="80" value="Акушерство и гинекология">Акушерство и гинекология</option>
                 <option data-id="81" value="Аллергология и иммунология">Аллергология и иммунология</option>
                 <option data-id="82" value="Анестезиология и реаниматология">Анестезиология и реаниматология</option>
@@ -149,6 +153,7 @@
       </form>
     </div>
   </div>
+
   <!-- Письмо директору -->
   <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-director">
     <div class="graph-modal__content">
@@ -191,6 +196,7 @@
       </form>
     </div>
   </div>
+
   <!-- Документы для ФНС -->
   <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-fns">
     <div class="graph-modal__content">
@@ -233,10 +239,12 @@
       </form>
     </div>
   </div>
+
   <!-- Оставить отзыв -->
   <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-feedback">
     <div class="graph-modal__content">
       <form class="form js-form-feedback">
+        <input type="hidden" name="IBLOCK_ID" value="">
         <div class="form__header">
           <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
             <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
@@ -291,6 +299,7 @@
       </form>
     </div>
   </div>
+
   <!-- Связаться с нами -->
   <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-contact">
     <div class="graph-modal__content">
@@ -333,40 +342,7 @@
       </form>
     </div>
   </div>
-  <!-- Консульрация онколога -->
-  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-service">
-    <div class="graph-modal__content">
-      <form class="form js-form-service">
-        <div class="form__header">
-          <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
-            <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
-          </span>
-        </div>
-        <fieldset class="form__body">
-          <legend class="form__legend">Запись на консультацию онколога</legend>
-          <div class="form__body_item">
-            <label class="label" for="name-contact">Имя</label>
-            <input class="input input-name" type="text" name="name-contact" placeholder="Укажите ваше имя">
-          </div>
-          <div class="form__body_item">
-            <label class="label" for="tel-contact">Контактный телефон</label>
-            <input class="input input-tel" type="tel" name="tel-contact" placeholder="+7(ХХХ) ХХХ-ХХ-ХХ">
-          </div>
-          <div class="form__body_item">
-            <label class="label" for="date-appointment">Выберите дату</label>
-            <input class="input input-date" type="date" name="date-appointment">
-          </div>
-        </fieldset>
-        <fieldset class="form__footer">
-          <label class="label label--agree" for="agree-service">
-            <input class="checkbox input-agree" id="agree-service" type="checkbox">
-            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#" target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
-          </label>
-          <button type="submit" class="btn block">Отправить</button>
-        </fieldset>
-      </form>
-    </div>
-  </div>
+
   <!-- Мобильный поиск из главной навигации -->
   <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-search">
     <div class="graph-modal__content">
@@ -384,52 +360,7 @@
       </form>
     </div>
   </div>
-  <!-- Записаться на приём к урологу-->
-  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-appointment-urolog">
-    <div class="graph-modal__content">
-      <form class="form js-form-appointment-urolog">
-        <div class="form__header">
-          <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
-            <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
-          </span>
-        </div>
-        <fieldset class="form__body">
-          <legend class="form__legend">Записаться на приём к урологу</legend>
-          <div class="form__body_item">
-            <label class="label" for="name-appointment">Имя</label>
-            <input class="input input-name" type="text" name="name-appointment" placeholder="Укажите ваше имя">
-          </div>
-          <div class="form__body_item">
-            <label class="label" for="tel-appointment">Контактный телефон</label>
-            <input class="input input-tel" type="tel" name="tel-appointment" placeholder="+7(ХХХ) ХХХ-ХХ-ХХ">
-          </div>
-          <div class="form__body_item">
-            <label class="label">Выберите услугу</label>
-            <div class="select-wrapper">
-              <select class="select select-direction">
-                <option value="" selected disabled>Услуга не выбрана</option>
-                <option value="Выбрано 1">Выбрано 1</option>
-                <option value="Выбрано 2">Выбрано 2</option>
-                <option value="Выбрано 3">Выбрано 3</option>
-                <option value="Выбрано 4">Выбрано 4</option>
-              </select>
-            </div>
-          </div>
-          <div class="form__body_item">
-            <label class="label" for="date-appointment">Выберите дату</label>
-            <input class="input input-date" type="date" name="date-appointment">
-          </div>
-        </fieldset>
-        <fieldset class="form__footer">
-          <label class="label label--agree" for="agree-appointmen-urolog">
-            <input class="checkbox input-agree" id="agree-appointment-urolog" type="checkbox">
-            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#" target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
-          </label>
-          <button type="submit" class="btn block">Отправить</button>
-        </fieldset>
-      </form>
-    </div>
-  </div>
+
   <!-- Подробнее о вакансии-->
   <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-vacancia">
     <div class="graph-modal__content">
@@ -507,6 +438,7 @@
       </form>
     </div>
   </div>
+
   <!-- Успешно отправлено -->
   <div class="graph-modal__container js-modal-success">
     <div class="graph-modal__content">
@@ -525,5 +457,6 @@
       </div>
     </div>
   </div>
+
 </div>
 
