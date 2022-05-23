@@ -14,14 +14,9 @@ const showSuccess = () => {
   modal.modalContainer.classList.remove('fade');
   modal.modalContainer.classList.remove('graph-modal-open')
 
-  modal.modal.addEventListener('click', function(e) {
-    this.classList.remove('is-open')
-    success.classList.remove('graph-modal-open')
-  })
-
-  document.addEventListener('click', function (e) {
-    if (e.target.closest('.js-close')) {
-      modal.modal.classList.remove('is-open')
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('.graph-modal')) {
+      let modal = e.target.closest('.graph-modal')
       success.classList.remove('graph-modal-open')
     }
   })
