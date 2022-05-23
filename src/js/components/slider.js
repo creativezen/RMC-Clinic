@@ -45,7 +45,6 @@ while (sliders.length) {
   let sliderSelector = `.js-swiper-${sliderItem.name}`
 
   new Swiper(sliderSelector, {
-    autoHeight: true,
     slidesPerView: "auto",
     spaceBetween: 10,
     pagination: {
