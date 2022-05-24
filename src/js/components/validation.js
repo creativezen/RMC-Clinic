@@ -7,16 +7,19 @@ const showError = () => console.log('Произошла ошибка...')
 
 const success = document.querySelector('.js-modal-success')
 
-const showSuccess = () => {
-
-  success.classList.add('graph-modal-open')
-  modal.modalContainer.classList.remove('animate-open');
-  modal.modalContainer.classList.remove('fade');
-  modal.modalContainer.classList.remove('graph-modal-open')
-
+const showSuccess = (form) => {
+  if (form.classList.contains('js-form-appointment-block')) {
+    console.log(form)
+    modal.open('modal-success')
+  }
+  else {
+    success.classList.add('graph-modal-open')
+    modal.modalContainer.classList.remove('animate-open');
+    modal.modalContainer.classList.remove('fade');
+    modal.modalContainer.classList.remove('graph-modal-open')
+  }
   document.addEventListener('click', (e) => {
     if (e.target.closest('.graph-modal')) {
-      let modal = e.target.closest('.graph-modal')
       success.classList.remove('graph-modal-open')
     }
   })
@@ -281,7 +284,7 @@ const rulesForАppointmentBlock = [
     ]
   },
   {
-    ruleSelector: '.select-direction',
+    ruleSelector: '.select-service',
     rules: [
       {
         rule: 'required',
@@ -546,107 +549,6 @@ const rulesVacancia = [
   }
 ]
 
-// Параметры валидации для Консультация онколога
-// ===============================================
-const rulesService = [
-  {
-    ruleSelector: '.input-name',
-    rules: [
-      {
-        rule: 'required',
-        value: true,
-        errorMessage: 'Заполните имя'
-      }
-    ]
-  },
-  {
-    ruleSelector: '.input-tel',
-    tel: true,
-    rules: [
-      {
-        rule: 'required',
-        value: true,
-        errorMessage: 'Заполните телефон!'
-      }
-    ]
-  },
-  {
-    ruleSelector: '.input-date',
-    rules: [
-      {
-        rule: 'required',
-        value: true,
-        errorMessage: 'Выберите дату'
-      }
-    ]
-  },
-  {
-    ruleSelector: '.input-agree',
-    rules: [
-      {
-        rule: 'required',
-        value: true,
-        errorMessage: 'Вы не дали согласине на обработку персональных данных'
-      }
-    ]
-  }
-]
-
-// Параметры валидации для Запись на приём к Урологу
-// =============================================
-const rulesUrolog = [
-  {
-    ruleSelector: '.input-name',
-    rules: [
-      {
-        rule: 'required',
-        value: true,
-        errorMessage: 'Заполните имя'
-      }
-    ]
-  },
-  {
-    ruleSelector: '.input-tel',
-    tel: true,
-    rules: [
-      {
-        rule: 'required',
-        value: true,
-        errorMessage: 'Заполните телефон!'
-      }
-    ]
-  },
-  {
-    ruleSelector: '.select-direction',
-    rules: [
-      {
-        rule: 'required',
-        value: true,
-        errorMessage: 'Должна быть выбрана услуга'
-      }
-    ]
-  },
-  {
-    ruleSelector: '.input-date',
-    rules: [
-      {
-        rule: 'required',
-        value: true,
-        errorMessage: 'Выберите дату'
-      }
-    ]
-  },
-  {
-    ruleSelector: '.input-agree',
-    rules: [
-      {
-        rule: 'required',
-        value: true,
-        errorMessage: 'Вы не дали согласине на обработку персональных данных'
-      }
-    ]
-  }
-]
 
 let formAppointmentBlock = document.querySelector('.js-form-appointment-block')
 let formContact = document.querySelector('.js-form-contact')
@@ -711,6 +613,107 @@ if (formFeedback) {
 
 
 
+// // Параметры валидации для Консультация онколога
+// // ===============================================
+// const rulesService = [
+//   {
+//     ruleSelector: '.input-name',
+//     rules: [
+//       {
+//         rule: 'required',
+//         value: true,
+//         errorMessage: 'Заполните имя'
+//       }
+//     ]
+//   },
+//   {
+//     ruleSelector: '.input-tel',
+//     tel: true,
+//     rules: [
+//       {
+//         rule: 'required',
+//         value: true,
+//         errorMessage: 'Заполните телефон!'
+//       }
+//     ]
+//   },
+//   {
+//     ruleSelector: '.input-date',
+//     rules: [
+//       {
+//         rule: 'required',
+//         value: true,
+//         errorMessage: 'Выберите дату'
+//       }
+//     ]
+//   },
+//   {
+//     ruleSelector: '.input-agree',
+//     rules: [
+//       {
+//         rule: 'required',
+//         value: true,
+//         errorMessage: 'Вы не дали согласине на обработку персональных данных'
+//       }
+//     ]
+//   }
+// ]
+
+// // Параметры валидации для Запись на приём к Урологу
+// // =============================================
+// const rulesUrolog = [
+//   {
+//     ruleSelector: '.input-name',
+//     rules: [
+//       {
+//         rule: 'required',
+//         value: true,
+//         errorMessage: 'Заполните имя'
+//       }
+//     ]
+//   },
+//   {
+//     ruleSelector: '.input-tel',
+//     tel: true,
+//     rules: [
+//       {
+//         rule: 'required',
+//         value: true,
+//         errorMessage: 'Заполните телефон!'
+//       }
+//     ]
+//   },
+//   {
+//     ruleSelector: '.select-direction',
+//     rules: [
+//       {
+//         rule: 'required',
+//         value: true,
+//         errorMessage: 'Должна быть выбрана услуга'
+//       }
+//     ]
+//   },
+//   {
+//     ruleSelector: '.input-date',
+//     rules: [
+//       {
+//         rule: 'required',
+//         value: true,
+//         errorMessage: 'Выберите дату'
+//       }
+//     ]
+//   },
+//   {
+//     ruleSelector: '.input-agree',
+//     rules: [
+//       {
+//         rule: 'required',
+//         value: true,
+//         errorMessage: 'Вы не дали согласине на обработку персональных данных'
+//       }
+//     ]
+//   }
+// ]
 
 
 

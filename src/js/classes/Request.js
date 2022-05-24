@@ -29,6 +29,15 @@ export default class Request {
     this.XHR.onreadystatechange = () => {
       if (this.XHR.readyState === 4) {
         this.callback(this.XHR.response)
+        // Для отладки кода
+        // this.callback('<option value="default">Не выбрано</option>'+
+        // '<option data-id="89" value="Первичный прием гинеколога">Первичный прием гинеколога</option>'+
+        // '<option data-id="95" value="Первичный прием гинеколога эндокринолога">Первичный прием гинеколога эндокринолога</option>'+
+        // '<option data-id="90" value="Повторный приём гинеколога">Повторный приём гинеколога</option>'+
+        // '<option data-id="96" value="Повторный прием гинеколога эндокринолога">Повторный прием гинеколога эндокринолога</option>'+
+        // '<option data-id="2248" value="Прием по результатам анализов">Прием по результатам анализов</option>'+
+        // '<option data-id="97" value="УЗИ органов малого таза">УЗИ органов малого таза</option>'+
+        // '<option data-id="2080" value="УЗИ органов малого таза (установление срока беременности)">УЗИ органов малого таза (установление срока беременности)</option>')
       }
     }
   }
@@ -39,3 +48,4 @@ export default class Request {
     this.XHR.send(this.DATA)
   }
 }
+

@@ -56,12 +56,12 @@ export const validateForms = (selector, rules, showSuccess) => {
 
       if (xhr.readyState === 4) {
         if (xhr.status === 200 && ibBlock) {
-          showSuccess()
+          showSuccess(ev.target)
           console.log('Строка с ответом: ', xhr)
           console.log('Успешно отправлено')
         }
         if (xhr.status === 200 && xhr.responseURL.indexOf('formresult=addok') !== -1) {
-          showSuccess()
+          showSuccess(ev.target)
           console.log('Строка с ответом: ', xhr)
           console.log('Успешно отправлено')
         }
