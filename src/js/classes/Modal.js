@@ -1,13 +1,28 @@
 export default class GraphModal {
+  options
+  modal
+  form
+  modalSuccess
+  speed
+  animation
+  _reOpen
+  _nextContainer
+  modalContainer
+  modalContent
+  isOpen
+  previousActiveElement
+  _focusElements
+  _fixBlocks
 
   constructor(options) {
     let defaultOptions = {
       isOpen: () => {},
       isClose: () => {},
     }
-
     this.options = Object.assign(defaultOptions, options);
     this.modal = document.querySelector('.graph-modal');
+    this.form = document.querySelectorAll('.form')
+    this.modalSuccess = document.querySelector('.js-modal-success')
     this.speed = 300;
     this.animation = 'fade';
     this._reOpen = false;
@@ -68,7 +83,6 @@ export default class GraphModal {
         }
       }.bind(this));
     }
-
   }
 
   open(selector) {
@@ -127,6 +141,11 @@ export default class GraphModal {
         this.open();
       }
     }
+  }
+
+  success() {
+    this._nextContainer = document.querySelector('.js-modal-success')
+    this.open('modal-success')
   }
 
   focusCatch(e) {

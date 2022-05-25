@@ -45,6 +45,12 @@
 
   &__footer {
     margin-top: 10px;
+
+    @media only screen and (max-width: 880px) {
+      .btn-small {
+        width: 100%;
+      }
+    }
   }
 
   &__row {
@@ -100,8 +106,8 @@
       flex: 1 0 160px;
       max-width: 160px;
 
-      @media only screen and (max-width: 780px) {
-        max-width: 140px;
+      @media only screen and (max-width: 880px) {
+        max-width: 130px;
       }
 
       @media only screen and (max-width: 480px) {

@@ -231,7 +231,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      // justify-content: center;
 
       opacity: 0;
       visibility: hidden;
@@ -244,12 +243,19 @@
         top: -1000%;
         opacity: 1;
         visibility: visible;
-        pointer-events: auto;
+        pointer-events: none;
       }
 
       .btn {
         width: 90%;
         margin-top: auto;
+      }
+
+      &.menu--active {
+        .btn,
+        .button-burger-close {
+          pointer-events: auto;
+        }
       }
     }
 

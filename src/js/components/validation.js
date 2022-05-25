@@ -5,24 +5,11 @@ import { modal } from './modal'
 // =======================================
 const showError = () => console.log('Произошла ошибка...')
 
-const success = document.querySelector('.js-modal-success')
-
 const showSuccess = (form) => {
-  if (form.classList.contains('js-form-appointment-block')) {
-    console.log(form)
-    modal.open('modal-success')
-  }
-  else {
-    success.classList.add('graph-modal-open')
-    modal.modalContainer.classList.remove('animate-open');
-    modal.modalContainer.classList.remove('fade');
-    modal.modalContainer.classList.remove('graph-modal-open')
-  }
-  document.addEventListener('click', (e) => {
-    if (e.target.closest('.graph-modal')) {
-      success.classList.remove('graph-modal-open')
-    }
-  })
+  // Вызываем метод включения сообщения об отправке
+  modal.success()
+  // После скрытия формы, бежим по инпутам и убираем класс валидного состояния
+  Array.from(form.getElementsByTagName('input')).forEach(input => input.classList.remove('just-validate-success-field'))
 }
 
 // Параметры валидации для Заказать звонок

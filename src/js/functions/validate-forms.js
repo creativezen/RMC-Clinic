@@ -53,7 +53,6 @@ export const validateForms = (selector, rules, showSuccess) => {
     formData.append("web_form_submit", "Y")
 
     xhr.onreadystatechange = function () {
-
       if (xhr.readyState === 4) {
         if (xhr.status === 200 && ibBlock) {
           showSuccess(ev.target)
