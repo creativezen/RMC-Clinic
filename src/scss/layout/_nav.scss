@@ -44,8 +44,6 @@
       }
 
       &.active {
-        pointer-events: none;
-
         a {
           color: var(--brand-green);
         }

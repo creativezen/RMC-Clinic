@@ -557,6 +557,57 @@
           </div>
         </div>
       </section>
+      <section class="section-default questions-form">
+        <div class="container">
+          <div class="section-default__header">
+            <h1 class="title">Задать вопрос</h1>
+          </div>
+          <div class="section-default__body">
+            <div class="card-form">
+              <form class="form js-form-question-block">
+                <input type="hidden" name="IBLOCK_ID" value="">
+                <fieldset class="form__body grid-group">
+                  <div class="form__body_item grid-child">
+                    <label class="label" for="name-question-block">Имя</label>
+                    <input class="input input-name" type="text" name="name-question-block" placeholder="Укажите ваше имя" required>
+                  </div>
+                  <div class="form__body_item grid-child">
+                    <label class="label" for="email-question-block">E-mail</label>
+                    <input class="input input-mail" type="email" name="email-question-block" placeholder="Укажите ваш email" required>
+                  </div>
+                  <div class="form__body_item grid-child">
+                    <label class="label">Выберите направление</label>
+                    <div class="select-wrapper">
+                      <select class="select select-direction">
+                        <option value="" selected disabled>Не выбрано</option>
+                        <option value="Выбрано 1">Выбрано 1</option>
+                        <option value="Выбрано 2">Выбрано 2</option>
+                        <option value="Выбрано 3">Выбрано 3</option>
+                        <option value="Выбрано 4">Выбрано 4</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form__body_item grid-child">
+                    <label class="label" for="tel-question-block">Контактный телефон</label>
+                    <input class="input input-tel" type="tel" name="tel-question-block" placeholder="+7(ХХХ) ХХХ-ХХ-ХХ" required>
+                  </div>
+                  <div class="form__body_item grid-child" data-grid="12">
+                    <label class="label" for="message-question-block">Вопрос</label>
+                    <textarea class="textarea input-question" name="message-question-block" placeholder="Ваш текст" required></textarea>
+                  </div>
+                </fieldset>
+                <fieldset class="form__footer">
+                  <label class="label label--agree" for="agree-question-block">
+                    <input class="checkbox input-agree" id="agree-question-block" type="checkbox" required>
+                    <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#" target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
+                  </label>
+                  <button type="submit" class="btn block">Отправить</button>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     @include('partials/footer.html')

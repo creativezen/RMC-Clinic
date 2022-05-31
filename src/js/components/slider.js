@@ -46,6 +46,7 @@ while (sliders.length) {
 
   new Swiper(sliderSelector, {
     slidesPerView: "auto",
+    freeMode: true,
     spaceBetween: 10,
     pagination: {
       el: ".swiper-pagination",
