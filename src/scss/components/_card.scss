@@ -151,8 +151,9 @@
 
     &_title {
       @extend .card-proto__header_title;
-      word-break: break-word;
+      @include mix.interpolate(font-size, 320px, 1480px, 18px, 19px);
       font-weight: 500;
+      word-break: break-word;
       transition: var(--transition);
       color: var(--dark-black);
     }
