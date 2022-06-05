@@ -11,6 +11,12 @@
       @include mix.interpolate(margin-bottom, 320px, 1480px, 20px, 30px);
     }
   }
+
+  .article {
+    .table-price {
+      padding: 0;
+    }
+  }
 }
 
 // service specialists

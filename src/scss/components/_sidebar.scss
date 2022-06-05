@@ -161,13 +161,17 @@
   li {
     $parent: &;
     position: relative;
-    padding: 10px 30px;
     cursor: pointer;
     background-color: transparent;
     transition: var(--transition);
 
-    @media only screen and (max-width: 880px) {
-      padding: 5px 20px;
+    > * {
+      display: block;
+      padding: 10px 30px;
+
+      @media only screen and (max-width: 880px) {
+        padding: 5px 20px;
+      }
     }
 
     &::before {

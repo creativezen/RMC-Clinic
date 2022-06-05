@@ -114,6 +114,72 @@ const rulesForQuestion = [
   }
 ]
 
+// Параметры валидации для Задать вопрос
+// =====================================
+const rulesForQuestionBlock = [
+  {
+    ruleSelector: '.input-tel',
+    tel: true,
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните телефон!'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.input-name',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните имя'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.input-mail',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните email'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.select-direction',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Должно быть выбрано направление'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.input-question',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Напишите свой вопрос'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.input-agree',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Вы не дали согласине на обработку персональных данных'
+      }
+    ]
+  }
+]
+
 // Параметры валидации для Письмо директору
 // =======================================
 const rulesForDirector = [
@@ -567,7 +633,7 @@ validateForms('.js-form-fns', [...rulesForFns], showSuccess)
 // Задать вопрос
 // ==========================================
 if (formQuestionBlock) {
-  validateForms('.js-form-question-block', [...rulesForQuestion], showSuccess)
+  validateForms('.js-form-question-block', [...rulesForQuestionBlock], showSuccess)
 }
 
 // Записаться на приём

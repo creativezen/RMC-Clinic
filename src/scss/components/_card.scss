@@ -151,6 +151,7 @@
 
     &_title {
       @extend .card-proto__header_title;
+      word-break: break-word;
       font-weight: 500;
       transition: var(--transition);
       color: var(--dark-black);
