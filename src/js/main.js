@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('mousewheel', function (event) {
     if (event.ctrlKey == true || event.metaKey == true) {
-      alert('Масштабирование окна отключено');
+      console.log('Масштабирование окна отключено');
       event.preventDefault();
     }
   }, { passive: false });
