@@ -1,9 +1,42 @@
-@use "../mixins" as mix;
+@use '../mixins' as mix;
+
+// list-default
+// ===================================
+.list-default {
+  li {
+    position: relative;
+    @include mix.interpolate(padding-left, 320px, 1480px, 8px, 16px);
+    line-height: 1.2;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0.54em;
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: var(--brand-blue);
+    }
+  }
+
+  > li + * {
+    @include mix.interpolate(margin-top, 320px, 1480px, 4px, 8px);
+  }
+}
+
+.list-numeric {
+  @include mix.interpolate(padding-left, 320px, 1480px, 8px, 16px);
+  line-height: 1.2;
+
+  > li + * {
+    @include mix.interpolate(margin-top, 320px, 1480px, 4px, 8px);
+  }
+}
 
 // list-derection
 // ===================================
 .list-direction {
-
   &__item {
     $parent: &;
     // padding: 24px 30px;
@@ -188,7 +221,6 @@
 // list-icon
 // ===================================
 .list-icon {
-
   &__item {
     display: flex;
     align-items: flex-start;
@@ -205,7 +237,7 @@
       }
 
       use {
-        fill: var(--brand-green)
+        fill: var(--brand-green);
       }
     }
 
@@ -232,11 +264,10 @@
 // list-form
 // ===================================
 .list-form {
-
   &__item {
     position: relative;
     padding-left: 20px;
-    @include mix.interpolate(font-size, 320px, 1480px, 13px,15px);
+    @include mix.interpolate(font-size, 320px, 1480px, 13px, 15px);
     line-height: 1.6;
     color: var(--dark-075);
 

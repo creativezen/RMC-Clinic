@@ -1,4 +1,5 @@
-@use "../mixins" as mix;
+@use '../mixins' as mix;
+@use '../components/list';
 
 // specialist main
 // ===================================
@@ -19,6 +20,18 @@
     .card-contact {
       height: 100%;
     }
+  }
+
+  .card-person__content {
+    align-items: flex-start;
+  }
+
+  ul:not(.list-icon) {
+    @extend .list-default;
+  }
+
+  ol:not(.list-icon) {
+    @extend .list-numeric;
   }
 }
 
@@ -54,7 +67,8 @@
       letter-spacing: -0.01em;
       color: var(--dark-075);
 
-      strong, b {
+      strong,
+      b {
         display: inline-block;
         margin-right: 10px;
         font-weight: 500;

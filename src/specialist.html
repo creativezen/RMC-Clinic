@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
-
-  @include('./partials/head.html', {
-  "title": 'Директор центра ООО «RMC» | RMC-Clinic',
-  })
-
-  @include('partials/svg-sprite.html')
+  @include('./partials/head.html', { "title": 'Директор центра ООО «RMC» | RMC-Clinic', }) @include('partials/svg-sprite.html')
 
   <body class="page__body">
     @include('partials/header.html')
@@ -29,14 +24,30 @@
           <div class="section-default__body">
             <div class="card-person__content">
               <picture class="card-person__photo">
-                <img loading="lazy" src="img/card-person-img-01.jpg" alt="Гладков Олег Александрович">
+                <img loading="lazy" src="img/card-person-img-01.jpg" alt="Гладков Олег Александрович" />
               </picture>
               <div class="card-person__info">
                 <div class="card-person__info_header">
                   <h2 class="title">Гладков Олег Александрович</h2>
                 </div>
                 <div class="card-person__info_body">
-                  <p class="text">Онколог. Директор медицинского центра ООО «RMC». Доктор медицинских наук.</p>
+                  <p>Обеспечивает безболезненное и комфортное проведение диагностических вмешательств и обследований при помощи седации.</p>
+                  <ol>
+                    <li>Выполняет осмотр пациента перед планируемым вмешательством;</li>
+                    <li>Осуществляет подбор препарата и дозы для комфортного и безопасного состояния пациента во время процедуры;</li>
+                    <li>
+                      Контролирует показатели сердечно-сосудистой системы, дыхательной системы, поступление кислорода в ткани во время
+                      проведения диагностических процедур таких как:
+                    </li>
+                  </ol>
+                  <ul>
+                    <li>гастроскопия;</li>
+                    <li>колоносокопия;</li>
+                    <li>сигмоскопия;</li>
+                    <li>удаления образований кожи;</li>
+                    <li>удаления образований мягких тканей;</li>
+                    <li>гинекологические диагностические исследования.</li>
+                  </ul>
                   <ul class="list-icon">
                     <li class="list-icon__item">
                       <svg class="list-icon__item_icon" viewbox="0 0 24 24">
@@ -61,7 +72,7 @@
               <div class="grid-child">
                 <div class="card-contact">
                   <div class="card-contact__icon">
-                    <img src="img/svg/specialist/book.svg" alt="">
+                    <img src="img/svg/specialist/book.svg" alt="" />
                   </div>
                   <div class="card-contact__text">Доктор медицинских наук</div>
                   <small class="card-contact__small">Квалифицикация</small>
@@ -70,7 +81,7 @@
               <div class="grid-child">
                 <div class="card-contact">
                   <div class="card-contact__icon">
-                    <img src="img/svg/specialist/badge.svg" alt="">
+                    <img src="img/svg/specialist/badge.svg" alt="" />
                   </div>
                   <div class="card-contact__text">Заслуженный врач Российской Федерации</div>
                   <small class="card-contact__small">Заслуги, звания</small>
@@ -79,7 +90,7 @@
               <div class="grid-child">
                 <div class="card-contact">
                   <div class="card-contact__icon">
-                    <img src="img/svg/specialist/calendar.svg" alt="">
+                    <img src="img/svg/specialist/calendar.svg" alt="" />
                   </div>
                   <div class="card-contact__text">Более 27 лет</div>
                   <small class="card-contact__small">Стаж работы</small>
@@ -127,7 +138,7 @@
               <div class="card-document">
                 <div class="card-document__cover">
                   <div class="card-document__cover_icon">
-                    <img src="img/svg/card-document-icon.svg" alt="">
+                    <img src="img/svg/card-document-icon.svg" alt="" />
                   </div>
                   <p class="card-document__cover_text">Сертификат</p>
                 </div>
@@ -149,7 +160,7 @@
               <div class="card-document">
                 <div class="card-document__cover">
                   <div class="card-document__cover_icon">
-                    <img src="img/svg/card-document-icon.svg" alt="">
+                    <img src="img/svg/card-document-icon.svg" alt="" />
                   </div>
                   <p class="card-document__cover_text">Диплом</p>
                 </div>
@@ -198,7 +209,9 @@
                     </div>
                     <div class="card-feedback__body">
                       <p class="card-feedback__body_text">
-                        Добрый день! Хочу выразить огромную благодарность всему коллективу клиники за профессиональный подход к каждому человеку. Моей маме в Ставрополе поставили диагноз рак лёгких 4 степени и уже назначили химиотерапию. Я со всеми анализами обратился к Гладкову Олегу Александровичу. Он сказал срочно везти ее в Челябинск.
+                        Добрый день! Хочу выразить огромную благодарность всему коллективу клиники за профессиональный подход к каждому
+                        человеку. Моей маме в Ставрополе поставили диагноз рак лёгких 4 степени и уже назначили химиотерапию. Я со всеми
+                        анализами обратился к Гладкову Олегу Александровичу. Он сказал срочно везти ее в Челябинск.
                       </p>
                     </div>
                     <div class="card-feedback__footer">
@@ -229,7 +242,9 @@
                     </div>
                     <div class="card-feedback__body">
                       <p class="card-feedback__body_text">
-                        Добрый день! Хочу выразить огромную благодарность всему коллективу клиники за профессиональный подход к каждому человеку. Моей маме в Ставрополе поставили диагноз рак лёгких 4 степени и уже назначили химиотерапию. Я со всеми анализами обратился к Гладкову Олегу Александровичу. Он сказал срочно везти ее в Челябинск.
+                        Добрый день! Хочу выразить огромную благодарность всему коллективу клиники за профессиональный подход к каждому
+                        человеку. Моей маме в Ставрополе поставили диагноз рак лёгких 4 степени и уже назначили химиотерапию. Я со всеми
+                        анализами обратился к Гладкову Олегу Александровичу. Он сказал срочно везти ее в Челябинск.
                       </p>
                     </div>
                     <div class="card-feedback__footer">
@@ -260,7 +275,9 @@
                     </div>
                     <div class="card-feedback__body">
                       <p class="card-feedback__body_text">
-                        Добрый день! Хочу выразить огромную благодарность всему коллективу клиники за профессиональный подход к каждому человеку. Моей маме в Ставрополе поставили диагноз рак лёгких 4 степени и уже назначили химиотерапию. Я со всеми анализами обратился к Гладкову Олегу Александровичу. Он сказал срочно везти ее в Челябинск.
+                        Добрый день! Хочу выразить огромную благодарность всему коллективу клиники за профессиональный подход к каждому
+                        человеку. Моей маме в Ставрополе поставили диагноз рак лёгких 4 степени и уже назначили химиотерапию. Я со всеми
+                        анализами обратился к Гладкову Олегу Александровичу. Он сказал срочно везти ее в Челябинск.
                       </p>
                     </div>
                     <div class="card-feedback__footer">
@@ -286,8 +303,6 @@
         </div>
       </section>
     </main>
-    @include('partials/footer.html')
-    @include('partials/modal.html')
+    @include('partials/footer.html') @include('partials/modal.html')
   </body>
-
 </html>
