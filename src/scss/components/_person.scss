@@ -1,91 +1,91 @@
-@use "../mixins" as mix;
+@use '../mixins' as mix;
 
 // Person answer
 // ===================================
 .person-answer {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 
-  @media only screen and (max-width: 480px) {
-    flex-wrap: wrap;
-  }
+	@media only screen and (max-width: 480px) {
+		flex-wrap: wrap;
+	}
 
-  &__photo {
-    margin-right: 20px;
-    flex-shrink: 0;
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    overflow: hidden;
-  }
+	&__photo {
+		margin-right: 20px;
+		flex-shrink: 0;
+		width: 72px;
+		height: 72px;
+		border-radius: 50%;
+		overflow: hidden;
+	}
 
-  &__info {
-    flex: auto;
+	&__info {
+		flex: auto;
 
-    @media only screen and (max-width: 480px) {
-      margin-top: 8px;
-    }
+		@media only screen and (max-width: 480px) {
+			margin-top: 8px;
+		}
 
-    &_name {
-      font-size: 17px;
-      font-weight: 600;
-      line-height: 1.6;
-      letter-spacing: 0.01em;
-    }
+		&_name {
+			font-size: 17px;
+			font-weight: 600;
+			line-height: 1.6;
+			letter-spacing: 0.01em;
+		}
 
-    &_badges {
-      margin-top: 6px;
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
+		&_badges {
+			margin-top: 6px;
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
 
-      > * + * {
-        margin-left: 14px;
+			> * + * {
+				margin-left: 14px;
 
-        @media only screen and (max-width: 320px) {
-          margin-left: 0;
-        }
-      }
-    }
-  }
+				@media only screen and (max-width: 320px) {
+					margin-left: 0;
+				}
+			}
+		}
+	}
 }
 
 // Person card
 // ===================================
 .person-card {
-  @include mix.interpolate(height, 780px, 1480px, 330px, 380px);
-  position: relative;
-  overflow: hidden;
+	@include mix.interpolate(height, 780px, 1480px, 330px, 380px);
+	position: relative;
+	overflow: hidden;
 
-  &__photo {
-    @include mix.interpolate(height, 780px, 1480px, 330px, 380px);
-    display: block;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    overflow: hidden;
+	&__photo {
+		@include mix.interpolate(height, 780px, 1480px, 330px, 380px);
+		display: block;
+		justify-content: center;
+		align-items: center;
+		border-radius: 10px;
+		overflow: hidden;
 
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
+		img {
+			width: 100%;
+			// height: 100%;
+		}
+	}
 
-  &__badge {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    padding-right: 20px;
+	&__badge {
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		padding-right: 20px;
 
-    @media only screen and (max-width: 480px) {
-      bottom: 10px;
-      left: 10px;
-      padding-right: 10px;
-    }
+		@media only screen and (max-width: 480px) {
+			bottom: 10px;
+			left: 10px;
+			padding-right: 10px;
+		}
 
-    .badge {
-      margin-right: 8px;
-      margin-top: 6px;
-    }
-  }
+		.badge {
+			margin-right: 8px;
+			margin-top: 6px;
+		}
+	}
 }
