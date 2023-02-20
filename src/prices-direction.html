@@ -1,413 +1,446 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
 
-  @include('./partials/head.html', {
-  "title": 'Урология | RMC-Clinic',
-  })
+@include('./partials/head.html', {
+"title": 'Урология | RMC-Clinic',
+})
 
-  @include('partials/svg-sprite.html')
+@include('partials/svg-sprite.html')
 
-  <body class="page__body">
-    @include('partials/header.html')
+<body class="page__body">
+  @include('partials/header.html')
 
-    <main class="main">
-      <section class="section hero-base">
-        <div class="hero-base__content container">
-          <div class="breadcrumb">
-            <ul class="breadcrumb__nav">
-              <li><a href="#" class="link-breadcrumb">Главная</a></li>
-              <li><a href="#" class="link-breadcrumb">Цены</a></li>
-              <li><a href="#" class="link-breadcrumb">Урология</a></li>
+  <main class="main">
+    <section class="section hero-base">
+      <div class="hero-base__content container">
+        <div class="breadcrumb">
+          <ul class="breadcrumb__nav">
+            <li><a href="#" class="link-breadcrumb">Главная</a></li>
+            <li><a href="#" class="link-breadcrumb">Цены</a></li>
+            <li><a href="#" class="link-breadcrumb">Урология</a></li>
+          </ul>
+        </div>
+        <h1 class="hero-base__title">Урология</h1>
+        <p class="hero-base__text">С ценами на услуги вы можете ознакомиться в прайс-листе клиники.</p>
+        <a href="#" class="btn-icon" target="_blank">
+          <span>Скачать прайс-лист</span>
+          <svg class="btn-svg" viewbox="0 0 24 24">
+            <use xlink:href="#icon-arrow-right"></use>
+          </svg>
+        </a>
+      </div>
+    </section>
+    <section class="section-sidebar prices-direction-main">
+      <div class="container">
+        <div class="section-sidebar__header">
+          <h2 class="title">Цены на услуги в урологии</h2>
+        </div>
+        <div class="section-sidebar__body">
+          <div class="section-sidebar__main">
+            <ul class="list-service open">
+              <li class="list-service__item js-animation-child" data-state="close">
+                <div class="list-service__item_title js-button-child-show" data-type="block">Услуга уролога</div>
+                <div class="table-price js-animation-child-target">
+                  <div class="table-price__header">
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code">Код услуги</div>
+                      <div class="table-price__cell cell-auto">Наименование</div>
+                      <div class="table-price__cell cell-price">Цена, ₽</div>
+                    </div>
+                  </div>
+                  <div class="table-price__body">
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-service__item js-animation-child" data-state="close">
+                <div class="list-service__item_title js-button-child-show" data-type="block">Услуга уролога</div>
+                <div class="table-price js-animation-child-target">
+                  <div class="table-price__header">
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code">Код услуги</div>
+                      <div class="table-price__cell cell-auto">Наименование</div>
+                      <div class="table-price__cell cell-price">Цена, ₽</div>
+                    </div>
+                  </div>
+                  <div class="table-price__body">
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-service__item js-animation-child" data-state="close">
+                <div class="list-service__item_title js-button-child-show" data-type="block">Услуга уролога</div>
+                <div class="table-price js-animation-child-target">
+                  <div class="table-price__header">
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code">Код услуги</div>
+                      <div class="table-price__cell cell-auto">Наименование</div>
+                      <div class="table-price__cell cell-price">Цена, ₽</div>
+                    </div>
+                  </div>
+                  <div class="table-price__body">
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-service__item js-animation-child" data-state="close">
+                <div class="list-service__item_title js-button-child-show" data-type="block">Услуга уролога</div>
+                <div class="table-price js-animation-child-target">
+                  <div class="table-price__header">
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code">Код услуги</div>
+                      <div class="table-price__cell cell-auto">Наименование</div>
+                      <div class="table-price__cell cell-price">Цена, ₽</div>
+                    </div>
+                  </div>
+                  <div class="table-price__body">
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-service__item js-animation-child" data-state="close">
+                <div class="list-service__item_title js-button-child-show" data-type="block">Услуга уролога</div>
+                <div class="table-price js-animation-child-target">
+                  <div class="table-price__header">
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code">Код услуги</div>
+                      <div class="table-price__cell cell-auto">Наименование</div>
+                      <div class="table-price__cell cell-price">Цена, ₽</div>
+                    </div>
+                  </div>
+                  <div class="table-price__body">
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-service__item js-animation-child" data-state="close">
+                <div class="list-service__item_title js-button-child-show" data-type="block">Услуга уролога</div>
+                <div class="table-price js-animation-child-target">
+                  <div class="table-price__header">
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code">Код услуги</div>
+                      <div class="table-price__cell cell-auto">Наименование</div>
+                      <div class="table-price__cell cell-price">Цена, ₽</div>
+                    </div>
+                  </div>
+                  <div class="table-price__body">
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                    <div class="table-price__row">
+                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация
+                        онколога-маммолога</div>
+                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                    </div>
+                  </div>
+                </div>
+              </li>
             </ul>
           </div>
-          <h1 class="hero-base__title">Урология</h1>
-          <p class="hero-base__text">С ценами на услуги вы можете ознакомиться в прайс-листе клиники.</p>
-          <a href="#" class="btn-icon" target="_blank">
-            <span>Скачать прайс-лист</span>
-            <svg class="btn-svg" viewbox="0 0 24 24">
-              <use xlink:href="#icon-arrow-right"></use>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="section-sidebar prices-direction-main">
-        <div class="container">
-          <div class="section-sidebar__header">
-            <h2 class="title">Цены на услуги в урологии</h2>
-          </div>
-          <div class="section-sidebar__body">
-            <div class="section-sidebar__main">
-              <ul class="list-service open">
-                <li class="list-service__item js-animation-child" data-state="close">
-                  <div class="list-service__item_title js-button-child-show" data-type="block">Услуга уролога</div>
-                  <div class="table-price js-animation-child-target">
-                    <div class="table-price__header">
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code">Код услуги</div>
-                        <div class="table-price__cell cell-auto">Наименование</div>
-                        <div class="table-price__cell cell-price">Цена, ₽</div>
-                      </div>
-                    </div>
-                    <div class="table-price__body">
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-service__item js-animation-child" data-state="close">
-                  <div class="list-service__item_title js-button-child-show" data-type="block">Услуга уролога</div>
-                  <div class="table-price js-animation-child-target">
-                    <div class="table-price__header">
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code">Код услуги</div>
-                        <div class="table-price__cell cell-auto">Наименование</div>
-                        <div class="table-price__cell cell-price">Цена, ₽</div>
-                      </div>
-                    </div>
-                    <div class="table-price__body">
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-service__item js-animation-child" data-state="close">
-                  <div class="list-service__item_title js-button-child-show" data-type="block">Услуга уролога</div>
-                  <div class="table-price js-animation-child-target">
-                    <div class="table-price__header">
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code">Код услуги</div>
-                        <div class="table-price__cell cell-auto">Наименование</div>
-                        <div class="table-price__cell cell-price">Цена, ₽</div>
-                      </div>
-                    </div>
-                    <div class="table-price__body">
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-service__item js-animation-child" data-state="close">
-                  <div class="list-service__item_title js-button-child-show" data-type="block">Услуга уролога</div>
-                  <div class="table-price js-animation-child-target">
-                    <div class="table-price__header">
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code">Код услуги</div>
-                        <div class="table-price__cell cell-auto">Наименование</div>
-                        <div class="table-price__cell cell-price">Цена, ₽</div>
-                      </div>
-                    </div>
-                    <div class="table-price__body">
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-service__item js-animation-child" data-state="close">
-                  <div class="list-service__item_title js-button-child-show" data-type="block">Услуга уролога</div>
-                  <div class="table-price js-animation-child-target">
-                    <div class="table-price__header">
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code">Код услуги</div>
-                        <div class="table-price__cell cell-auto">Наименование</div>
-                        <div class="table-price__cell cell-price">Цена, ₽</div>
-                      </div>
-                    </div>
-                    <div class="table-price__body">
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-service__item js-animation-child" data-state="close">
-                  <div class="list-service__item_title js-button-child-show" data-type="block">Услуга уролога</div>
-                  <div class="table-price js-animation-child-target">
-                    <div class="table-price__header">
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code">Код услуги</div>
-                        <div class="table-price__cell cell-auto">Наименование</div>
-                        <div class="table-price__cell cell-price">Цена, ₽</div>
-                      </div>
-                    </div>
-                    <div class="table-price__body">
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                      <div class="table-price__row">
-                        <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                        <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                        <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="section-sidebar__aside">
-              <div class="stiky">
-                <div class="card-gradient-icon">
-                  <div class="card-gradient-icon__header">
-                    <h3 class="card-gradient-icon__header_title">Запись на приём к урологу</h3>
-                  </div>
-                  <div class="card-gradient-icon__footer">
-                    <span class="link-arrow" role="button" aria-label="Запись на приём к урологу" data-graph-path="modal-appointment-urolog">
-                      <span class="link-arrow__text">Записаться</span>
-                      <svg class="link-arrow__icon" viewbox="0 0 24 24">
-                        <use xlink:href="#icon-arrow-simple"></use>
-                      </svg>
-                    </span>
-                    <div class="card-gradient-icon__img">
-                      <caption>
-                        <img loading="lazy" src="img/svg/direction/direction-07.svg" alt="Онкология">
-                      </caption>
-                    </div>
+          <div class="section-sidebar__aside">
+            <div class="stiky">
+              <div class="card-gradient-icon">
+                <div class="card-gradient-icon__header">
+                  <h3 class="card-gradient-icon__header_title">Запись на приём к урологу</h3>
+                </div>
+                <div class="card-gradient-icon__footer">
+                  <span class="link-arrow" role="button" aria-label="Запись на приём к урологу"
+                    data-graph-path="modal-appointment-urolog">
+                    <span class="link-arrow__text">Записаться</span>
+                    <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                      <use xlink:href="#icon-arrow-simple"></use>
+                    </svg>
+                  </span>
+                  <div class="card-gradient-icon__img">
+                    <caption>
+                      <img loading="lazy" src="img/svg/direction/direction-07.svg" alt="Онкология">
+                    </caption>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="section-default prices-direction-specialists">
-        <div class="container">
-          <div class="section-default__header">
-            <h1 class="title">Приём ведут специалисты</h1>
-          </div>
-          <div class="section-default__body">
-            <div class="grid-group">
-              <div class="grid-child">
-                <div class="card-specialist">
-                  <a href="#" class="link-absolute"></a>
-                  <div class="card-specialist__header">
-                    <div class="person-card">
-                      <picture class="person-card__photo">
-                        <img loading="lazy" src="img/card-person-img-01.jpg" alt="ФИО | Должность">
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="card-specialist__body">
-                    <div class="card-specialist__body_badges">
-                      <div class="badge-date">
-                        <div class="badge-date__icon"></div>
-                        <span class="badge-date__text">Стаж: более 27 лет</span>
-                      </div>
-                    </div>
-                    <h3 class="card-specialist__body_name">Гладков Олег Александрович</h3>
-                    <p class="card-specialist__body_text">Онколог. Директор медицинского центра ООО «RMC». Доктор медицинских наук.</p>
+      </div>
+    </section>
+    <section class="section-default prices-direction-specialists">
+      <div class="container">
+        <div class="section-default__header">
+          <h1 class="title">Приём ведут специалисты</h1>
+        </div>
+        <div class="section-default__body">
+          <div class="grid-group">
+            <div class="grid-child">
+              <div class="card-specialist">
+                <a href="#" class="link-absolute"></a>
+                <div class="card-specialist__header">
+                  <div class="person-card">
+                    <picture class="person-card__photo">
+                      <img loading="lazy" src="img/card-person-img-01.jpg" alt="ФИО | Должность">
+                    </picture>
                   </div>
                 </div>
-              </div>
-              <div class="grid-child">
-                <div class="card-specialist">
-                  <a href="#" class="link-absolute"></a>
-                  <div class="card-specialist__header">
-                    <div class="person-card">
-                      <picture class="person-card__photo">
-                        <img loading="lazy" src="img/card-person-img-02.jpg" alt="ФИО | Должность">
-                      </picture>
+                <div class="card-specialist__body">
+                  <div class="card-specialist__body_badges">
+                    <div class="badge-date">
+                      <div class="badge-date__icon"></div>
+                      <span class="badge-date__text">Стаж: более 27 лет</span>
                     </div>
                   </div>
-                  <div class="card-specialist__body">
-                    <div class="card-specialist__body_badges">
-                      <div class="badge-date">
-                        <div class="badge-date__icon"></div>
-                        <span class="badge-date__text">Стаж: более 9 лет</span>
-                      </div>
-                    </div>
-                    <h3 class="card-specialist__body_name">Райгородский Максим Владимирович</h3>
-                    <p class="card-specialist__body_text">Онколог. Врач-онколог.</p>
-                  </div>
+                  <h3 class="card-specialist__body_name">Гладков Олег Александрович</h3>
+                  <p class="card-specialist__body_text">Онколог. Директор медицинского центра ООО «RMC». Доктор
+                    медицинских наук.</p>
                 </div>
               </div>
-              <div class="grid-child">
-                <div class="card-specialist">
-                  <a href="#" class="link-absolute"></a>
-                  <div class="card-specialist__header">
-                    <div class="person-card">
-                      <picture class="person-card__photo">
-                        <img loading="lazy" src="img/card-person-img-03.jpg" alt="ФИО | Должность">
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="card-specialist__body">
-                    <div class="card-specialist__body_badges">
-                      <div class="badge-date">
-                        <div class="badge-date__icon"></div>
-                        <span class="badge-date__text">Стаж: более 32 лет</span>
-                      </div>
-                    </div>
-                    <h3 class="card-specialist__body_name">Надвикова Елена Алексеевна</h3>
-                    <p class="card-specialist__body_text">Онколог. Хирург-онколог. Кандидат медицинских наук.</p>
+            </div>
+            <div class="grid-child">
+              <div class="card-specialist">
+                <a href="#" class="link-absolute"></a>
+                <div class="card-specialist__header">
+                  <div class="person-card">
+                    <picture class="person-card__photo">
+                      <img loading="lazy" src="img/card-person-img-02.jpg" alt="ФИО | Должность">
+                    </picture>
                   </div>
                 </div>
-              </div>
-              <div class="grid-child">
-                <div class="card-specialist">
-                  <a href="#" class="link-absolute"></a>
-                  <div class="card-specialist__header">
-                    <div class="person-card">
-                      <picture class="person-card__photo">
-                        <img loading="lazy" src="img/card-person-img-04.jpg" alt="ФИО | Должность">
-                      </picture>
+                <div class="card-specialist__body">
+                  <div class="card-specialist__body_badges">
+                    <div class="badge-date">
+                      <div class="badge-date__icon"></div>
+                      <span class="badge-date__text">Стаж: более 9 лет</span>
                     </div>
                   </div>
-                  <div class="card-specialist__body">
-                    <div class="card-specialist__body_badges">
-                      <div class="badge-date">
-                        <div class="badge-date__icon"></div>
-                        <span class="badge-date__text">Стаж: более 23 лет</span>
-                      </div>
-                    </div>
-                    <h3 class="card-specialist__body_name">Хавлюк Лариса Геннадьевна</h3>
-                    <p class="card-specialist__body_text">Онкология. Врач-онколог.</p>
-                  </div>
+                  <h3 class="card-specialist__body_name">Райгородский Максим Владимирович</h3>
+                  <p class="card-specialist__body_text">Онколог. Врач-онколог.</p>
                 </div>
               </div>
-              <div class="grid-child">
-                <div class="card-specialist">
-                  <a href="#" class="link-absolute"></a>
-                  <div class="card-specialist__header">
-                    <div class="person-card">
-                      <picture class="person-card__photo">
-                        <img loading="lazy" src="img/card-person-img-05.jpg" alt="ФИО | Должность">
-                      </picture>
+            </div>
+            <div class="grid-child">
+              <div class="card-specialist">
+                <a href="#" class="link-absolute"></a>
+                <div class="card-specialist__header">
+                  <div class="person-card">
+                    <picture class="person-card__photo">
+                      <img loading="lazy" src="img/card-person-img-03.jpg" alt="ФИО | Должность">
+                    </picture>
+                  </div>
+                </div>
+                <div class="card-specialist__body">
+                  <div class="card-specialist__body_badges">
+                    <div class="badge-date">
+                      <div class="badge-date__icon"></div>
+                      <span class="badge-date__text">Стаж: более 32 лет</span>
                     </div>
                   </div>
-                  <div class="card-specialist__body">
-                    <div class="card-specialist__body_badges">
-                      <div class="badge-date">
-                        <div class="badge-date__icon"></div>
-                        <span class="badge-date__text">Стаж: более 23 лет</span>
-                      </div>
-                    </div>
-                    <h3 class="card-specialist__body_name">Абрамов Игорь Иванович</h3>
-                    <p class="card-specialist__body_text">Врач-уролог.</p>
+                  <h3 class="card-specialist__body_name">Надвикова Елена Алексеевна</h3>
+                  <p class="card-specialist__body_text">Онколог. Хирург-онколог. Кандидат медицинских наук.</p>
+                </div>
+              </div>
+            </div>
+            <div class="grid-child">
+              <div class="card-specialist">
+                <a href="#" class="link-absolute"></a>
+                <div class="card-specialist__header">
+                  <div class="person-card">
+                    <picture class="person-card__photo">
+                      <img loading="lazy" src="img/card-person-img-04.jpg" alt="ФИО | Должность">
+                    </picture>
                   </div>
+                </div>
+                <div class="card-specialist__body">
+                  <div class="card-specialist__body_badges">
+                    <div class="badge-date">
+                      <div class="badge-date__icon"></div>
+                      <span class="badge-date__text">Стаж: более 23 лет</span>
+                    </div>
+                  </div>
+                  <h3 class="card-specialist__body_name">Хавлюк Лариса Геннадьевна</h3>
+                  <p class="card-specialist__body_text">Онкология. Врач-онколог.</p>
+                </div>
+              </div>
+            </div>
+            <div class="grid-child">
+              <div class="card-specialist">
+                <a href="#" class="link-absolute"></a>
+                <div class="card-specialist__header">
+                  <div class="person-card">
+                    <picture class="person-card__photo">
+                      <img loading="lazy" src="img/card-person-img-05.jpg" alt="ФИО | Должность">
+                    </picture>
+                  </div>
+                </div>
+                <div class="card-specialist__body">
+                  <div class="card-specialist__body_badges">
+                    <div class="badge-date">
+                      <div class="badge-date__icon"></div>
+                      <span class="badge-date__text">Стаж: более 23 лет</span>
+                    </div>
+                  </div>
+                  <h3 class="card-specialist__body_name">Абрамов Игорь Иванович</h3>
+                  <p class="card-specialist__body_text">Врач-уролог.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="section-default prices-direction-article">
-        <div class="container">
-          <div class="section-default__header">
-            <h1 class="title">Урология</h1>
-          </div>
-          <div class="section-default__body">
-            <article class="article">
-              <p>Урология – область медицины, объединяющая в себе несколько пограничных специализаций. В современной медицине уролог часто является специалистом смежных дисциплин – андрологии, гинекологии, педиатрии.</p>
-              <p>Мужская урология (андрология)специализируется на лечении таких заболеваний, как мужское бесплодие, воспаление предстательной железы (простатит), воспаление мочевого пузыря, почек, мочеиспускательного канала, мочекаменная болезнь, а также инфекции, передающиеся половым путем (уреаплазмоз, генитальный герпес, микоплазма, гарднереллез, хламидиоз и др.).</p>
-              <p>Женская урология (урогинекология) занимается диагностикой и лечением воспалений наружных и внутренних половых органов, мочевого пузыря, почек, мочеиспускательного канала, мочекаменной болезни, а также заболеваний, передающихся половым путем (микоплазма, генитального герпеса, хламидиоза, уреаплазмоза, гарднереллеза и др.).</p>
-            </article>
-          </div>
+      </div>
+    </section>
+    <section class="section-default prices-direction-article">
+      <div class="container">
+        <div class="section-default__header">
+          <h1 class="title">Урология</h1>
         </div>
-      </section>
-    </main>
+        <div class="section-default__body">
+          <article class="article">
+            <p>Урология – область медицины, объединяющая в себе несколько пограничных специализаций. В современной
+              медицине уролог часто является специалистом смежных дисциплин – андрологии, гинекологии, педиатрии.</p>
+            <p>Мужская урология (андрология)специализируется на лечении таких заболеваний, как мужское бесплодие,
+              воспаление предстательной железы (простатит), воспаление мочевого пузыря, почек, мочеиспускательного
+              канала, мочекаменная болезнь, а также инфекции, передающиеся половым путем (уреаплазмоз, генитальный
+              герпес, микоплазма, гарднереллез, хламидиоз и др.).</p>
+            <p>Женская урология (урогинекология) занимается диагностикой и лечением воспалений наружных и внутренних
+              половых органов, мочевого пузыря, почек, мочеиспускательного канала, мочекаменной болезни, а также
+              заболеваний, передающихся половым путем (микоплазма, генитального герпеса, хламидиоза, уреаплазмоза,
+              гарднереллеза и др.).</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    @include('partials/footer.html')
-    @include('partials/modal.html')
-  </body>
+  @include('partials/footer.html')
+  @include('partials/modal.html')
+</body>
 
 </html>
