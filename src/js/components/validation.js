@@ -1,6 +1,8 @@
 import { validateForms } from '../functions/validate-forms'
 import { modal } from './modal'
 
+// Модель для Яндекс.Метрика целей
+// ===============================
 let model = {
 	form: {
 		'.js-form-call': 'callback',
