@@ -1,62 +1,63 @@
 // breadcrumb
 //============================
 .breadcrumb {
-  width: 100%;
-  overflow-x: auto;
-  scrollbar-width: none;  // Firefox
-  -ms-overflow-style: none;  // Internet Explorer 10+
-  -webkit-overflow-scrolling: touch;
+	width: 100%;
+	overflow-x: auto;
+	scrollbar-width: none; // Firefox
+	-ms-overflow-style: none; // Internet Explorer 10+
+	-webkit-overflow-scrolling: touch;
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
+	&::-webkit-scrollbar {
+		display: none;
+	}
 
-  &__nav {
-    padding: 0;
-    display: table;
-  }
+	&__nav {
+		padding: 0;
+		display: table;
+		white-space: nowrap;
+	}
 
-  li {
-    display: table-cell;
-    opacity: 0.5;
-    transition: var(--transition);
+	li {
+		display: table-cell;
+		opacity: 0.5;
+		transition: var(--transition);
 
-    &:hover {
-      opacity: 1;
-    }
+		&:hover {
+			opacity: 1;
+		}
 
-    &:last-child {
-      opacity: 1;
+		&:last-child {
+			opacity: 1;
 
-      a {
-        pointer-events: none;
-        cursor: text;
-      }
-    }
+			a {
+				pointer-events: none;
+				cursor: text;
+			}
+		}
 
-    a {
-      white-space: nowrap;
-      color: var(--dark-primary);
-    }
-  }
+		a {
+			white-space: nowrap;
+			color: var(--dark-primary);
+		}
+	}
 
-  li + li {
-    padding-left: 8px;
+	li + li {
+		padding-left: 8px;
 
-    @media only screen and (max-width: 780px) {
-      padding-left: 14px;
-    }
+		@media only screen and (max-width: 780px) {
+			padding-left: 14px;
+		}
 
-    &::before {
-      margin-right: 8px;
-      content: '/';
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 1;
+		&::before {
+			margin-right: 8px;
+			content: '/';
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 1;
 
-      @media only screen and (max-width: 780px) {
-        display: none;
-      }
-    }
-  }
+			@media only screen and (max-width: 780px) {
+				display: none;
+			}
+		}
+	}
 }

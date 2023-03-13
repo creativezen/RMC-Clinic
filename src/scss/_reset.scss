@@ -1,7 +1,7 @@
 $legacy_support_for_ie: false !default;
 
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 *,
@@ -28,7 +28,7 @@ button,
 input,
 select,
 textarea {
-  margin: 0;
+	margin: 0;
 }
 
 ul,
@@ -129,14 +129,15 @@ textarea {
 	}
 }
 
-button, input {
+button,
+input {
 	line-height: normal;
 }
 
 button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
 	-webkit-appearance: button;
 	cursor: pointer;
 	@if $legacy_support_for_ie {
@@ -149,14 +150,16 @@ input[disabled] {
 	cursor: default;
 }
 
-button, input {
+button,
+input {
 	&::-moz-focus-inner {
 		border: 0;
 		padding: 0;
 	}
 }
 
-button, a {
+button,
+a {
 	padding: 0;
 	background-color: transparent;
 }
@@ -167,13 +170,15 @@ textarea {
 	resize: none;
 }
 
-table, th, td {
+table,
+th,
+td {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
 input {
-	&[type="search"] {
+	&[type='search'] {
 		-webkit-appearance: textfield;
 		-moz-box-sizing: content-box;
 		-webkit-box-sizing: content-box;
@@ -185,8 +190,8 @@ input {
 		}
 	}
 
-	&[type="checkbox"],
-	&[type="radio"] {
+	&[type='checkbox'],
+	&[type='radio'] {
 		box-sizing: border-box;
 		padding: 0;
 		@if $legacy_support_for_ie {
@@ -204,7 +209,7 @@ legend {
 	width: 100%;
 
 	+ * {
-			clear: both;
+		clear: both;
 	}
 }
 
@@ -220,11 +225,11 @@ body:not(:-moz-handler-blocked) fieldset {
 }
 
 /* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */
-@media (prefers-reduced-motion: reduce) {
-	* {
-	  animation-duration: 0.01ms !important;
-	  animation-iteration-count: 1 !important;
-	  transition-duration: 0.01ms !important;
-	  scroll-behavior: auto !important;
-	}
-}
+// @media (prefers-reduced-motion: reduce) {
+// 	* {
+// 	  animation-duration: 0.01ms !important;
+// 	  animation-iteration-count: 1 !important;
+// 	  transition-duration: 0.01ms !important;
+// 	  scroll-behavior: auto !important;
+// 	}
+// }

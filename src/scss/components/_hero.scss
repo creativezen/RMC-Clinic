@@ -1,223 +1,222 @@
-@use "../mixins" as mix;
+@use '../mixins' as mix;
 @use './slider';
 
 // hero cover
 //============================
 .hero-cover {
-  position: relative;
-  @include mix.interpolate(height, 780px, 1920px, 500px, 600px);
-  @include mix.interpolate(padding-top, 320px, 1920px, 30px, 110px);
-  @include mix.interpolate(padding-bottom, 320px, 1920px, 30px, 110px);
-  padding-left: 0;
-  padding-right: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+	position: relative;
+	@include mix.interpolate(min-height, 780px, 1920px, 500px, 600px);
+	@include mix.interpolate(padding-top, 320px, 1920px, 30px, 110px);
+	@include mix.interpolate(padding-bottom, 320px, 1920px, 30px, 110px);
+	padding-left: 0;
+	padding-right: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 
-  @media only screen and (max-width: 780px) {
-    &:not(.hero-base) {
-      height: auto;
-      min-height: 500px;
-    }
-  }
+	// @media only screen and (max-width: 780px) {
+	// 	&:not(.hero-base) {
+	// 		height: auto;
+	// 	}
+	// }
 
-  @media only screen and (max-width: 380px) {
-    &:not(.hero-base) {
-      min-height: 400px;
-    }
-  }
+	@media only screen and (max-width: 380px) {
+		&:not(.hero-base) {
+			min-height: 400px;
+		}
+	}
 
-  &__img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
+	&__img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		overflow: hidden;
 
-    &::after {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      content: '';
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-color: rgba(4, 44, 56, 0.35);
-    }
+		&::after {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			content: '';
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba(4, 44, 56, 0.35);
+		}
 
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
 
-  &__content {
-    position: relative;
-    width: 100%;
+	&__content {
+		position: relative;
+		width: 100%;
 
-    .breadcrumb {
-      li a {
-        color: var(--light-white);
-      }
+		.breadcrumb {
+			li a {
+				color: var(--light-white);
+			}
 
-      li + li::before {
-        color: var(--light-white);
-      }
-    }
-  }
+			li + li::before {
+				color: var(--light-white);
+			}
+		}
+	}
 
-  &__title {
-    @extend .slider-hero__title;
-    @include mix.interpolate(font-size, 320px, 1480px, 36px, 56px);
-    line-height: 1.2;
-  }
+	&__title {
+		@extend .slider-hero__title;
+		@include mix.interpolate(font-size, 320px, 1480px, 36px, 56px);
+		line-height: 1.2;
+	}
 
-  &__text {
-    font-size: 26px;
-    font-weight: 400;
-    line-height: 1.4;
-    letter-spacing: -0.01em;
-    color: var(--light-white);
-  }
+	&__text {
+		font-size: 26px;
+		font-weight: 400;
+		line-height: 1.4;
+		letter-spacing: -0.01em;
+		color: var(--light-white);
+	}
 
-  &__price {
-    display: inline-block;
+	&__price {
+		display: inline-block;
 
-    @media only screen and (max-width: 480px) {
-      display: block;
-    }
+		@media only screen and (max-width: 480px) {
+			display: block;
+		}
 
-    &_content {
-      display: flex;
-      align-items: center;
-      @include mix.interpolate(padding, 320px, 1480px, 15px, 30px);
-      @include mix.interpolate(border-radius, 320px, 1480px, 6px, 10px);
-      background: rgba(4, 44, 56, 0.4);
-      font-size: 24px;
-      font-weight: 500;
-      line-height: 1.3;
-      letter-spacing: -0.01em;
-      color: var(--light-white);
+		&_content {
+			display: flex;
+			align-items: center;
+			@include mix.interpolate(padding, 320px, 1480px, 15px, 30px);
+			@include mix.interpolate(border-radius, 320px, 1480px, 6px, 10px);
+			background: rgba(4, 44, 56, 0.4);
+			font-size: 24px;
+			font-weight: 500;
+			line-height: 1.3;
+			letter-spacing: -0.01em;
+			color: var(--light-white);
 
-      @media only screen and (max-width: 480px) {
-        display: block;
-      }
-    }
+			@media only screen and (max-width: 480px) {
+				display: block;
+			}
+		}
 
-    &_btn + * {
-      margin-left: 20px;
+		&_btn + * {
+			margin-left: 20px;
 
-      @media only screen and (max-width: 480px) {
-        margin-left: 0;
-        margin-top: 10px;
-        font-size: 20px;
-        text-align: center;
-      }
-    }
+			@media only screen and (max-width: 480px) {
+				margin-left: 0;
+				margin-top: 10px;
+				font-size: 20px;
+				text-align: center;
+			}
+		}
 
-    @media only screen and (max-width: 480px) {
-      &_btn {
-        width: 100%;
-      }
-    }
-  }
+		@media only screen and (max-width: 480px) {
+			&_btn {
+				width: 100%;
+			}
+		}
+	}
 
-  &__title + &__text,
-  &__title + &__price,
-  &__title + &__search,
-  &__title + .breadcrumb,
-  &__title + .btn,
-  &__title + .btn-icon,
-  &__text + .btn,
-  &__text + .btn-icon,
-  &__text + .breadcrumb,
-  &__price + .breadcrumb,
-  &__search + .breadcrumb {
-    @include mix.interpolate(margin-top, 480px, 1920px, 26px, 40px);
-  }
+	&__title + &__text,
+	&__title + &__price,
+	&__title + &__search,
+	&__title + .breadcrumb,
+	&__title + .btn,
+	&__title + .btn-icon,
+	&__text + .btn,
+	&__text + .btn-icon,
+	&__text + .breadcrumb,
+	&__price + .breadcrumb,
+	&__search + .breadcrumb {
+		@include mix.interpolate(margin-top, 480px, 1920px, 26px, 40px);
+	}
 }
 
 // hero base
 //============================
 .hero-base {
-  @extend .hero-cover;
-  height: auto;
-  @include mix.interpolate(padding-top, 320px, 1480px, 20px, 50px);
-  background-color: var(--light-white);
+	@extend .hero-cover;
+	height: auto;
+	@include mix.interpolate(padding-top, 320px, 1480px, 20px, 50px);
+	background-color: var(--light-white);
 
-  @media only screen and (max-width: 480px) {
-    .btn,
-    .btn-icon {
-      width: 100%;
-    }
-  }
+	@media only screen and (max-width: 480px) {
+		.btn,
+		.btn-icon {
+			width: 100%;
+		}
+	}
 
-  &__content {
-    width: 100%;
-  }
+	&__content {
+		width: 100%;
+	}
 
-  &__title {
-    @extend .hero-cover__title;
-    color: var(--dark-primary);
-  }
+	&__title {
+		@extend .hero-cover__title;
+		color: var(--dark-primary);
+	}
 
-  &__text {
-    @extend .hero-cover__text;
-    color: var(--dark-primary);
-  }
+	&__text {
+		@extend .hero-cover__text;
+		color: var(--dark-primary);
+	}
 
-  &__badges {
-    display: flex;
-    align-items: center;
+	&__badges {
+		display: flex;
+		align-items: center;
 
-    > * + * {
-      margin-left: 20px;
-    }
-  }
+		> * + * {
+			margin-left: 20px;
+		}
+	}
 
-  &__accent {
-    @include mix.interpolate(margin-top, 320px, 1480px, 10px, 20px);
-    @include mix.interpolate(margin-bottom, 320px, 1480px, 10px, 20px);
-    line-height: 1.4;
+	&__accent {
+		@include mix.interpolate(margin-top, 320px, 1480px, 10px, 20px);
+		@include mix.interpolate(margin-bottom, 320px, 1480px, 10px, 20px);
+		line-height: 1.4;
 
-    @media only screen and (max-width: 780px) {
-      @include mix.interpolate(margin-top, 320px, 780px, 10px, 20px);
-    }
+		@media only screen and (max-width: 780px) {
+			@include mix.interpolate(margin-top, 320px, 780px, 10px, 20px);
+		}
 
-    .intro {
-      @include mix.interpolate(margin-bottom, 320px, 1480px, 10px, 16px);
-      font-weight: 500;
-      letter-spacing: -0.02em;
-      color: var(--spec-red);
-    }
-  }
+		.intro {
+			@include mix.interpolate(margin-bottom, 320px, 1480px, 10px, 16px);
+			font-weight: 500;
+			letter-spacing: -0.02em;
+			color: var(--spec-red);
+		}
+	}
 
-  .breadcrumb {
-    @include mix.interpolate(margin-bottom, 320px, 1480px, 40px, 80px);
-  }
+	.breadcrumb {
+		@include mix.interpolate(margin-bottom, 320px, 1480px, 40px, 80px);
+	}
 
-  &__badges + &__title {
-    margin-top: 20px;
-  }
+	&__badges + &__title {
+		margin-top: 20px;
+	}
 }
 
 // hero post
 //============================
 .hero-post {
-  @extend .hero-base;
-  padding-bottom: 0;
+	@extend .hero-base;
+	padding-bottom: 0;
 
-  &__content {
-    @extend .hero-base__content;
-  }
+	&__content {
+		@extend .hero-base__content;
+	}
 
-  &__title {
-    @extend .hero-base__title;
-  }
+	&__title {
+		@extend .hero-base__title;
+	}
 
-  &__badges {
-    @extend .hero-base__badges;
-  }
+	&__badges {
+		@extend .hero-base__badges;
+	}
 }

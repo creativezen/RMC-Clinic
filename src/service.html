@@ -1,367 +1,421 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
 
-  @include('./partials/head.html', {
-  "title": 'Онкология | RMC-Clinic',
-  })
+@include('./partials/head.html', {
+"title": 'Онкология | RMC-Clinic',
+})
 
-  @include('partials/svg-sprite.html')
+@include('partials/svg-sprite.html')
 
-  <body class="page__body">
-    @include('partials/header.html')
+<body class="page__body">
+  @include('partials/header.html')
 
-    <main class="main">
-      <section class="section hero-cover">
-        <picture class="hero-cover__img">
-          <img src="img/hero-img-02.jpg" alt="О клинике" loading="lazy" width="1920" height="500">
-        </picture>
-        <div class="hero-cover__content container">
-          <h1 class="hero-cover__title">Консультация онколога</h1>
-          <div class="hero-cover__price">
-            <div class="hero-cover__price_content">
-              <a href="#"
-                class="hero-cover__price_btn btn js-button-appointment"
-                id="js-button-appointment"
-                data-id-direction="80"
-                data-id-group="763"
-                data-graph-path="modal-appointment">
-                Запись на приём
+  <main class="main">
+    <section class="section hero-cover">
+      <picture class="hero-cover__img">
+        <img src="img/hero-img-02.jpg" alt="О клинике" loading="lazy" width="1920" height="500">
+      </picture>
+      <div class="hero-cover__content container">
+        <h1 class="hero-cover__title">Лабораторные исследования Инвитро. Микробиологические исследования:
+          неспецифические воспалительные заболевания различных локализаций</h1>
+        <div class="hero-cover__price">
+          <div class="hero-cover__price_content">
+            <a href="#" class="hero-cover__price_btn btn js-button-appointment" id="js-button-appointment"
+              data-id-direction="80" data-id-group="763" data-graph-path="modal-appointment">
+              Запись на приём
+            </a>
+            <p>Цена от 750 ₽</p>
+          </div>
+        </div>
+        <div class="breadcrumb">
+          <ul class="breadcrumb__nav">
+            <li><a href="#" class="link-breadcrumb">Главная</a></li>
+            <li><a href="#" class="link-breadcrumb">Услуги и цены</a></li>
+            <li><a href="#" class="link-breadcrumb">Услуги</a></li>
+            <li><a href="#" class="link-breadcrumb">Лабораторные исследования Инвитро</a></li>
+            <li><a href="#" class="link-breadcrumb">Микробиологические исследования: неспецифические воспалительные
+                заболевания различных локализаций</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="section-sidebar service-main">
+      <div class="container">
+        <div class="section-sidebar__body">
+          <div class="section-sidebar__main">
+            <article class="article js-article-scroll">
+              <h2 id="kakie-patalogii-lechit-onkolog">Какие патологии лечит онколог?</h2>
+              <p>Злокачественное новообразование может развиться из любой ткани человеческого организма, соответственно
+                врач-онколог занимается лечением разнообразных органов и систем. Общепринятым во всём мире является
+                выделение в отдельную специальность врача-гематолога – специалиста, основной целью которого является
+                лечение заболеваний, в том числе и опухолевых, возникающих из кроветворных органов (костного мозга,
+                селезёнки).</p>
+              <p>В нашей клинике «RMC» осуществляется диагностика и амбулаторное лечение самых разнообразных опухолей,
+                за исключением острых и хронических лейкозов.</p>
+              <p>Злокачественное новообразование может появиться в любом возрасте, поэтому важно регулярно проводить
+                комплексное обследование организма для выявления патологий на ранней стадии, когда они хорошо поддаются
+                лечению.</p>
+              <p>Для подтверждения диагноза и разработки тактики лечения необходима консультация онколога.</p>
+              <p>Рак классифицируется не только в зависимости от органа, который поражают злокачественные
+                новообразования, но и характера изменения клеток. По этому признаку выделяют раковую опухоль следующих
+                типов:</p>
+              <ul>
+                <li>Лимфома – образуется из клеток лимфатической жидкости.</li>
+                <li>Карцинома – формируется из эпителиальных клеток (на слизистой и эпидермисе).</li>
+                <li>Лейкоз – поражены клетки костного мозга.</li>
+                <li>Саркома – развивается из соединительной ткани.</li>
+                <li>Тератома – злокачественное образование формируется из эмбриональных клеток в половых — органах.</li>
+                <li>Гликома – формируется в нервных клетках.</li>
+                <li>Меланома – поражаются клетки эпидермиса, ответственные на выработку пигмента меланина.</li>
+              </ul>
+              <hr>
+              <h2 id="kak-prohodit-lechenie">Как проходит лечение?</h2>
+              <p>Лечение начинается с консультации онколога, куда входит сбор анамнеза и данных наружного осмотра.
+                Подавляющее большинство опухолевых заболеваний скрыто от человеческих глаз и требуют проведения
+                дополнительных лабораторных и инструментальных методов исследований. В клинике «RMC» врачи-онкологи в
+                Екатеринбурге проводят ультразвуковые исследования, эндоскопические исследования, биопсии опухолевых
+                образований и костного мозга. Компьютерная томография и лабораторные исследования по договору в других
+                учреждениях.</p>
+              <p>После сбора всех необходимых данных устанавливается диагноз и вырабатывается план лечения. Мы применяем
+                комплексный подход, учитывая индивидуальные потребности пациента. Пациент всегда принимает участие в
+                обсуждении преимуществ, недостатков, эффективности, побочных явлений того или иного вида лечения.
+                Индивидуальный план составляется для каждого пациента.</p>
+              <hr>
+              <h2 id="priom-onkologa-v-ekaterinburge">Прием онколога в Екатеринбурге</h2>
+              <p>В медицинском центре «RMC» врачи-онкологи проводят амбулаторное хирургическое лечение первичных и
+                метастатических опухолей кожи, молочной железы, мягких тканей, а также химио- или гормонотерапию. При
+                необходимости хирургического вмешательства большего объёма и/или необходимости проведения лучевой
+                терапии, больной может быть направлен в соответствующее лечебное учреждение.</p>
+              <p>После завершения радикального лечения (хирургического, лучевой терапии, химиотерапии) пациентов у нас в
+                клинике «RMC» или в любом другом учреждении, не только в России, но и за рубежом, осуществляется
+                планирование и проведение регулярного динамического наблюдения в соответствии с современными
+                Европейскими стандартами.</p>
+              <p>К сожалению, в большинстве случаев, злокачественную опухоль, имеющую значительное распространение,
+                полностью излечить не удаётся. Поэтому чрезвычайно актуальным является ранняя диагностика. Выявление
+                злокачественного новообразования на I стадии заболевания позволяет излечить опухоль в среднем с
+                вероятностью 90-95%. В нашей клинике «RMC» уделяется много внимания именно этому аспекту медицинской
+                деятельности.</p>
+              <p>Раннее выявление злокачественной опухоли проводится в соответствии с основными принципами доказательной
+                медицины, используя Североамериканские и другие национальные рекомендации, что позволяет практически в 2
+                раза повысить эффективность таких программ.</p>
+              <p>В целях профилактики или при обнаружении первых признаков заболевания необходимо консультироваться с
+                врачами.</p>
+              <p>После сбора всех необходимых данных устанавливается диагноз и вырабатывается план лечения. Мы применяем
+                комплексный подход, учитывая индивидуальные потребности пациента. Пациент всегда принимает участие в
+                обсуждении преимуществ, недостатков, эффективности, побочных явлений того или иного вида лечения.
+                Индивидуальный план составляется для каждого пациента.</p>
+              <hr>
+              <h2 id="ceni-na-consultacii-onkologov">Цены на консультации онкологов</h2>
+              <div class="table-price">
+                <div class="table-price__header">
+                  <div class="table-price__row">
+                    <div class="table-price__cell cell-code">Код услуги</div>
+                    <div class="table-price__cell cell-auto">Наименование</div>
+                    <div class="table-price__cell cell-price">Цена, ₽</div>
+                  </div>
+                </div>
+                <div class="table-price__body">
+                  <div class="table-price__row">
+                    <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                    <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога
+                    </div>
+                    <div class="table-price__cell cell-price" data-content="Цена, ₽">350</div>
+                  </div>
+                  <div class="table-price__row">
+                    <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                    <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога по
+                      телефону и электронной почте
+                      в течении цикла химиотерапии</div>
+                    <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                  </div>
+                  <div class="table-price__row">
+                    <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                    <div class="table-price__cell cell-auto" data-content="Наименование">Консультация химиотерапевта II
+                      категории</div>
+                    <div class="table-price__cell cell-price" data-content="Цена, ₽">1 200</div>
+                  </div>
+                  <div class="table-price__row">
+                    <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                    <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога по
+                      паллиативной терапии первичная</div>
+                    <div class="table-price__cell cell-price" data-content="Цена, ₽">2 000</div>
+                  </div>
+                  <div class="table-price__row">
+                    <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                    <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога
+                    </div>
+                    <div class="table-price__cell cell-price" data-content="Цена, ₽">350</div>
+                  </div>
+                  <div class="table-price__row">
+                    <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                    <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога по
+                      телефону и электронной почте
+                      в течении цикла химиотерапии</div>
+                    <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                  </div>
+                  <div class="table-price__row">
+                    <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                    <div class="table-price__cell cell-auto" data-content="Наименование">Консультация химиотерапевта II
+                      категории</div>
+                    <div class="table-price__cell cell-price" data-content="Цена, ₽">1 200</div>
+                  </div>
+                  <div class="table-price__row">
+                    <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                    <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога по
+                      паллиативной терапии первичная</div>
+                    <div class="table-price__cell cell-price" data-content="Цена, ₽">2 000</div>
+                  </div>
+                  <div class="table-price__row">
+                    <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                    <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога
+                    </div>
+                    <div class="table-price__cell cell-price" data-content="Цена, ₽">350</div>
+                  </div>
+                  <div class="table-price__row">
+                    <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                    <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога по
+                      телефону и электронной почте
+                      в течении цикла химиотерапии</div>
+                    <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                  </div>
+                  <div class="table-price__row">
+                    <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                    <div class="table-price__cell cell-auto" data-content="Наименование">Консультация химиотерапевта II
+                      категории</div>
+                    <div class="table-price__cell cell-price" data-content="Цена, ₽">1 200</div>
+                  </div>
+                  <div class="table-price__row">
+                    <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                    <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога по
+                      паллиативной терапии первичная</div>
+                    <div class="table-price__cell cell-price" data-content="Цена, ₽">2 000</div>
+                  </div>
+                  <div class="table-price__row">
+                    <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                    <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога
+                    </div>
+                    <div class="table-price__cell cell-price" data-content="Цена, ₽">350</div>
+                  </div>
+                  <div class="table-price__row">
+                    <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                    <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога по
+                      телефону и электронной почте
+                      в течении цикла химиотерапии</div>
+                    <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
+                  </div>
+                  <div class="table-price__row">
+                    <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                    <div class="table-price__cell cell-auto" data-content="Наименование">Консультация химиотерапевта II
+                      категории</div>
+                    <div class="table-price__cell cell-price" data-content="Цена, ₽">1 200</div>
+                  </div>
+                  <div class="table-price__row">
+                    <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
+                    <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога по
+                      паллиативной терапии первичная</div>
+                    <div class="table-price__cell cell-price" data-content="Цена, ₽">2 000</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="section-sidebar__aside">
+            <div class="stiky">
+              <ul class="sidebar-nav aside-item js-sidebar-nav">
+                <li class="sidebar-nav__item"><a href="#kakie-patalogii-lechit-onkolog" data-scroll>Какие патологии
+                    лечит онколог?</a></li>
+                <li class="sidebar-nav__item"><a href="#kak-prohodit-lechenie" data-scroll>Как проходит лечение?</a>
+                </li>
+                <li class="sidebar-nav__item"><a href="#priom-onkologa-v-ekaterinburge" data-scroll>Прием онколога в
+                    Екатеринбурге</a></li>
+                <li class="sidebar-nav__item"><a href="#ceni-na-consultacii-onkologov" data-scroll>Цены на консультации
+                    онкологов</a></li>
+              </ul>
+              <a href="#" class="btn aside-item js-button-appointment" data-graph-path="modal-appointment"
+                data-id-group="763">
+                Записаться на прием
               </a>
-              <p>Цена от 750 ₽</p>
-            </div>
-          </div>
-          <div class="breadcrumb">
-            <ul class="breadcrumb__nav">
-              <li><a href="#" class="link-breadcrumb">Главная</a></li>
-              <li><a href="#" class="link-breadcrumb">Направления</a></li>
-              <li><a href="#" class="link-breadcrumb">Онкология</a></li>
-              <li><a href="#" class="link-breadcrumb">Консультация онколога</a></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section class="section-sidebar service-main">
-        <div class="container">
-          <div class="section-sidebar__body">
-            <div class="section-sidebar__main">
-              <article class="article js-article-scroll">
-                <h2 id="kakie-patalogii-lechit-onkolog">Какие патологии лечит онколог?</h2>
-                <p>Злокачественное новообразование может развиться из любой ткани человеческого организма, соответственно врач-онколог занимается лечением разнообразных органов и систем. Общепринятым во всём мире является выделение в отдельную специальность врача-гематолога – специалиста, основной целью которого является лечение заболеваний, в том числе и опухолевых, возникающих из кроветворных органов (костного мозга, селезёнки).</p>
-                <p>В нашей клинике «RMC» осуществляется диагностика и амбулаторное лечение самых разнообразных опухолей, за исключением острых и хронических лейкозов.</p>
-                <p>Злокачественное новообразование может появиться в любом возрасте, поэтому важно регулярно проводить комплексное обследование организма для выявления патологий на ранней стадии, когда они хорошо поддаются лечению.</p>
-                <p>Для подтверждения диагноза и разработки тактики лечения необходима консультация онколога.</p>
-                <p>Рак классифицируется не только в зависимости от органа, который поражают злокачественные новообразования, но и характера изменения клеток. По этому признаку выделяют раковую опухоль следующих типов:</p>
-                <ul>
-                  <li>Лимфома – образуется из клеток лимфатической жидкости.</li>
-                  <li>Карцинома – формируется из эпителиальных клеток (на слизистой и эпидермисе).</li>
-                  <li>Лейкоз – поражены клетки костного мозга.</li>
-                  <li>Саркома – развивается из соединительной ткани.</li>
-                  <li>Тератома – злокачественное образование формируется из эмбриональных клеток в половых — органах.</li>
-                  <li>Гликома – формируется в нервных клетках.</li>
-                  <li>Меланома – поражаются клетки эпидермиса, ответственные на выработку пигмента меланина.</li>
-                </ul>
-                <hr>
-                <h2 id="kak-prohodit-lechenie">Как проходит лечение?</h2>
-                <p>Лечение начинается с консультации онколога, куда входит сбор анамнеза и данных наружного осмотра. Подавляющее большинство опухолевых заболеваний скрыто от человеческих глаз и требуют проведения дополнительных лабораторных и инструментальных методов исследований. В клинике «RMC» врачи-онкологи в Екатеринбурге проводят ультразвуковые исследования, эндоскопические исследования, биопсии опухолевых образований и костного мозга. Компьютерная томография и лабораторные исследования по договору в других учреждениях.</p>
-                <p>После сбора всех необходимых данных устанавливается диагноз и вырабатывается план лечения. Мы применяем комплексный подход, учитывая индивидуальные потребности пациента. Пациент всегда принимает участие в обсуждении преимуществ, недостатков, эффективности, побочных явлений того или иного вида лечения. Индивидуальный план составляется для каждого пациента.</p>
-                <hr>
-                <h2 id="priom-onkologa-v-ekaterinburge">Прием онколога в Екатеринбурге</h2>
-                <p>В медицинском центре «RMC» врачи-онкологи проводят амбулаторное хирургическое лечение первичных и метастатических опухолей кожи, молочной железы, мягких тканей, а также химио- или гормонотерапию. При необходимости хирургического вмешательства большего объёма и/или необходимости проведения лучевой терапии, больной может быть направлен в соответствующее лечебное учреждение.</p>
-                <p>После завершения радикального лечения (хирургического, лучевой терапии, химиотерапии) пациентов у нас в клинике «RMC» или в любом другом учреждении, не только в России, но и за рубежом, осуществляется планирование и проведение регулярного динамического наблюдения в соответствии с современными Европейскими стандартами.</p>
-                <p>К сожалению, в большинстве случаев, злокачественную опухоль, имеющую значительное распространение, полностью излечить не удаётся. Поэтому чрезвычайно актуальным является ранняя диагностика. Выявление злокачественного новообразования на I стадии заболевания позволяет излечить опухоль в среднем с вероятностью 90-95%. В нашей клинике «RMC» уделяется много внимания именно этому аспекту медицинской деятельности.</p>
-                <p>Раннее выявление злокачественной опухоли проводится в соответствии с основными принципами доказательной медицины, используя Североамериканские и другие национальные рекомендации, что позволяет практически в 2 раза повысить эффективность таких программ.</p>
-                <p>В целях профилактики или при обнаружении первых признаков заболевания необходимо консультироваться с врачами.</p>
-                <p>После сбора всех необходимых данных устанавливается диагноз и вырабатывается план лечения. Мы применяем комплексный подход, учитывая индивидуальные потребности пациента. Пациент всегда принимает участие в обсуждении преимуществ, недостатков, эффективности, побочных явлений того или иного вида лечения. Индивидуальный план составляется для каждого пациента.</p>
-                <hr>
-                <h2 id="ceni-na-consultacii-onkologov">Цены на консультации онкологов</h2>
-                <div class="table-price">
-                  <div class="table-price__header">
-                    <div class="table-price__row">
-                      <div class="table-price__cell cell-code">Код услуги</div>
-                      <div class="table-price__cell cell-auto">Наименование</div>
-                      <div class="table-price__cell cell-price">Цена, ₽</div>
-                    </div>
-                  </div>
-                  <div class="table-price__body">
-                    <div class="table-price__row">
-                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                      <div class="table-price__cell cell-price" data-content="Цена, ₽">350</div>
-                    </div>
-                    <div class="table-price__row">
-                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога по телефону и электронной почте
-                        в течении цикла химиотерапии</div>
-                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                    </div>
-                    <div class="table-price__row">
-                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация химиотерапевта II категории</div>
-                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 200</div>
-                    </div>
-                    <div class="table-price__row">
-                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога по паллиативной терапии первичная</div>
-                      <div class="table-price__cell cell-price" data-content="Цена, ₽">2 000</div>
-                    </div>
-                    <div class="table-price__row">
-                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                      <div class="table-price__cell cell-price" data-content="Цена, ₽">350</div>
-                    </div>
-                    <div class="table-price__row">
-                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога по телефону и электронной почте
-                        в течении цикла химиотерапии</div>
-                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                    </div>
-                    <div class="table-price__row">
-                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация химиотерапевта II категории</div>
-                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 200</div>
-                    </div>
-                    <div class="table-price__row">
-                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога по паллиативной терапии первичная</div>
-                      <div class="table-price__cell cell-price" data-content="Цена, ₽">2 000</div>
-                    </div>
-                    <div class="table-price__row">
-                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                      <div class="table-price__cell cell-price" data-content="Цена, ₽">350</div>
-                    </div>
-                    <div class="table-price__row">
-                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога по телефону и электронной почте
-                        в течении цикла химиотерапии</div>
-                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                    </div>
-                    <div class="table-price__row">
-                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация химиотерапевта II категории</div>
-                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 200</div>
-                    </div>
-                    <div class="table-price__row">
-                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога по паллиативной терапии первичная</div>
-                      <div class="table-price__cell cell-price" data-content="Цена, ₽">2 000</div>
-                    </div>
-                    <div class="table-price__row">
-                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога-маммолога</div>
-                      <div class="table-price__cell cell-price" data-content="Цена, ₽">350</div>
-                    </div>
-                    <div class="table-price__row">
-                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога по телефону и электронной почте
-                        в течении цикла химиотерапии</div>
-                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 300</div>
-                    </div>
-                    <div class="table-price__row">
-                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация химиотерапевта II категории</div>
-                      <div class="table-price__cell cell-price" data-content="Цена, ₽">1 200</div>
-                    </div>
-                    <div class="table-price__row">
-                      <div class="table-price__cell cell-code" data-content="Код услуги">104000</div>
-                      <div class="table-price__cell cell-auto" data-content="Наименование">Консультация онколога по паллиативной терапии первичная</div>
-                      <div class="table-price__cell cell-price" data-content="Цена, ₽">2 000</div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="section-sidebar__aside">
-              <div class="stiky">
-                <ul class="sidebar-nav aside-item js-sidebar-nav">
-                  <li class="sidebar-nav__item"><a href="#kakie-patalogii-lechit-onkolog" data-scroll>Какие патологии лечит онколог?</a></li>
-                  <li class="sidebar-nav__item"><a href="#kak-prohodit-lechenie" data-scroll>Как проходит лечение?</a></li>
-                  <li class="sidebar-nav__item"><a href="#priom-onkologa-v-ekaterinburge" data-scroll>Прием онколога в Екатеринбурге</a></li>
-                  <li class="sidebar-nav__item"><a href="#ceni-na-consultacii-onkologov" data-scroll>Цены на консультации онкологов</a></li>
-                </ul>
-                <a href="#"
-                  class="btn aside-item js-button-appointment"
-                  data-graph-path="modal-appointment"
-                  data-id-group="763">
-                  Записаться на прием
-                </a>
-              </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="section-default service-specialists">
-        <div class="container">
-          <div class="section-default__header">
-            <h1 class="title">Приём ведут специалисты</h1>
-          </div>
-          <div class="section-default__body">
-            <div class="grid-group">
-              <div class="grid-child">
-                <div class="card-specialist">
-                  <a href="#" class="link-absolute"></a>
-                  <div class="card-specialist__header">
-                    <div class="person-card">
-                      <picture class="person-card__photo">
-                        <img loading="lazy" src="img/card-person-img-01.jpg" alt="ФИО | Должность">
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="card-specialist__body">
-                    <div class="card-specialist__body_badges">
-                      <div class="badge-date">
-                        <div class="badge-date__icon"></div>
-                        <span class="badge-date__text">Стаж: более 27 лет</span>
-                      </div>
-                    </div>
-                    <h3 class="card-specialist__body_name">Гладков Олег Александрович</h3>
-                    <p class="card-specialist__body_text">Онколог. Директор медицинского центра ООО «RMC». Доктор медицинских наук.</p>
+      </div>
+    </section>
+    <section class="section-default service-specialists">
+      <div class="container">
+        <div class="section-default__header">
+          <h1 class="title">Приём ведут специалисты</h1>
+        </div>
+        <div class="section-default__body">
+          <div class="grid-group">
+            <div class="grid-child">
+              <div class="card-specialist">
+                <a href="#" class="link-absolute"></a>
+                <div class="card-specialist__header">
+                  <div class="person-card">
+                    <picture class="person-card__photo">
+                      <img loading="lazy" src="img/card-person-img-01.jpg" alt="ФИО | Должность">
+                    </picture>
                   </div>
                 </div>
-              </div>
-              <div class="grid-child">
-                <div class="card-specialist">
-                  <a href="#" class="link-absolute"></a>
-                  <div class="card-specialist__header">
-                    <div class="person-card">
-                      <picture class="person-card__photo">
-                        <img loading="lazy" src="img/card-person-img-02.jpg" alt="ФИО | Должность">
-                      </picture>
+                <div class="card-specialist__body">
+                  <div class="card-specialist__body_badges">
+                    <div class="badge-date">
+                      <div class="badge-date__icon"></div>
+                      <span class="badge-date__text">Стаж: более 27 лет</span>
                     </div>
                   </div>
-                  <div class="card-specialist__body">
-                    <div class="card-specialist__body_badges">
-                      <div class="badge-date">
-                        <div class="badge-date__icon"></div>
-                        <span class="badge-date__text">Стаж: более 9 лет</span>
-                      </div>
-                    </div>
-                    <h3 class="card-specialist__body_name">Райгородский Максим Владимирович</h3>
-                    <p class="card-specialist__body_text">Онколог. Врач-онколог.</p>
-                  </div>
+                  <h3 class="card-specialist__body_name">Гладков Олег Александрович</h3>
+                  <p class="card-specialist__body_text">Онколог. Директор медицинского центра ООО «RMC». Доктор
+                    медицинских наук.</p>
                 </div>
               </div>
-              <div class="grid-child">
-                <div class="card-specialist">
-                  <a href="#" class="link-absolute"></a>
-                  <div class="card-specialist__header">
-                    <div class="person-card">
-                      <picture class="person-card__photo">
-                        <img loading="lazy" src="img/card-person-img-03.jpg" alt="ФИО | Должность">
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="card-specialist__body">
-                    <div class="card-specialist__body_badges">
-                      <div class="badge-date">
-                        <div class="badge-date__icon"></div>
-                        <span class="badge-date__text">Стаж: более 32 лет</span>
-                      </div>
-                    </div>
-                    <h3 class="card-specialist__body_name">Надвикова Елена Алексеевна</h3>
-                    <p class="card-specialist__body_text">Онколог. Хирург-онколог. Кандидат медицинских наук.</p>
+            </div>
+            <div class="grid-child">
+              <div class="card-specialist">
+                <a href="#" class="link-absolute"></a>
+                <div class="card-specialist__header">
+                  <div class="person-card">
+                    <picture class="person-card__photo">
+                      <img loading="lazy" src="img/card-person-img-02.jpg" alt="ФИО | Должность">
+                    </picture>
                   </div>
                 </div>
-              </div>
-              <div class="grid-child">
-                <div class="card-specialist">
-                  <a href="#" class="link-absolute"></a>
-                  <div class="card-specialist__header">
-                    <div class="person-card">
-                      <picture class="person-card__photo">
-                        <img loading="lazy" src="img/card-person-img-04.jpg" alt="ФИО | Должность">
-                      </picture>
+                <div class="card-specialist__body">
+                  <div class="card-specialist__body_badges">
+                    <div class="badge-date">
+                      <div class="badge-date__icon"></div>
+                      <span class="badge-date__text">Стаж: более 9 лет</span>
                     </div>
                   </div>
-                  <div class="card-specialist__body">
-                    <div class="card-specialist__body_badges">
-                      <div class="badge-date">
-                        <div class="badge-date__icon"></div>
-                        <span class="badge-date__text">Стаж: более 23 лет</span>
-                      </div>
-                    </div>
-                    <h3 class="card-specialist__body_name">Хавлюк Лариса Геннадьевна</h3>
-                    <p class="card-specialist__body_text">Онкология. Врач-онколог.</p>
-                  </div>
+                  <h3 class="card-specialist__body_name">Райгородский Максим Владимирович</h3>
+                  <p class="card-specialist__body_text">Онколог. Врач-онколог.</p>
                 </div>
               </div>
-              <div class="grid-child">
-                <div class="card-specialist">
-                  <a href="#" class="link-absolute"></a>
-                  <div class="card-specialist__header">
-                    <div class="person-card">
-                      <picture class="person-card__photo">
-                        <img loading="lazy" src="img/card-person-img-05.jpg" alt="ФИО | Должность">
-                      </picture>
+            </div>
+            <div class="grid-child">
+              <div class="card-specialist">
+                <a href="#" class="link-absolute"></a>
+                <div class="card-specialist__header">
+                  <div class="person-card">
+                    <picture class="person-card__photo">
+                      <img loading="lazy" src="img/card-person-img-03.jpg" alt="ФИО | Должность">
+                    </picture>
+                  </div>
+                </div>
+                <div class="card-specialist__body">
+                  <div class="card-specialist__body_badges">
+                    <div class="badge-date">
+                      <div class="badge-date__icon"></div>
+                      <span class="badge-date__text">Стаж: более 32 лет</span>
                     </div>
                   </div>
-                  <div class="card-specialist__body">
-                    <div class="card-specialist__body_badges">
-                      <div class="badge-date">
-                        <div class="badge-date__icon"></div>
-                        <span class="badge-date__text">Стаж: более 23 лет</span>
-                      </div>
-                    </div>
-                    <h3 class="card-specialist__body_name">Абрамов Игорь Иванович</h3>
-                    <p class="card-specialist__body_text">Врач-уролог.</p>
+                  <h3 class="card-specialist__body_name">Надвикова Елена Алексеевна</h3>
+                  <p class="card-specialist__body_text">Онколог. Хирург-онколог. Кандидат медицинских наук.</p>
+                </div>
+              </div>
+            </div>
+            <div class="grid-child">
+              <div class="card-specialist">
+                <a href="#" class="link-absolute"></a>
+                <div class="card-specialist__header">
+                  <div class="person-card">
+                    <picture class="person-card__photo">
+                      <img loading="lazy" src="img/card-person-img-04.jpg" alt="ФИО | Должность">
+                    </picture>
                   </div>
+                </div>
+                <div class="card-specialist__body">
+                  <div class="card-specialist__body_badges">
+                    <div class="badge-date">
+                      <div class="badge-date__icon"></div>
+                      <span class="badge-date__text">Стаж: более 23 лет</span>
+                    </div>
+                  </div>
+                  <h3 class="card-specialist__body_name">Хавлюк Лариса Геннадьевна</h3>
+                  <p class="card-specialist__body_text">Онкология. Врач-онколог.</p>
+                </div>
+              </div>
+            </div>
+            <div class="grid-child">
+              <div class="card-specialist">
+                <a href="#" class="link-absolute"></a>
+                <div class="card-specialist__header">
+                  <div class="person-card">
+                    <picture class="person-card__photo">
+                      <img loading="lazy" src="img/card-person-img-05.jpg" alt="ФИО | Должность">
+                    </picture>
+                  </div>
+                </div>
+                <div class="card-specialist__body">
+                  <div class="card-specialist__body_badges">
+                    <div class="badge-date">
+                      <div class="badge-date__icon"></div>
+                      <span class="badge-date__text">Стаж: более 23 лет</span>
+                    </div>
+                  </div>
+                  <h3 class="card-specialist__body_name">Абрамов Игорь Иванович</h3>
+                  <p class="card-specialist__body_text">Врач-уролог.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="section-default service-form">
-        <div class="container">
-          <div class="section-default__header">
-            <h1 class="title">Запись на приём</h1>
-          </div>
-          <div class="section-default__body">
-            <div class="card-form">
-              <form class="form js-form-appointment-block">
-                <fieldset class="form__body grid-group">
-                  <div class="form__body_item grid-child">
-                    <label class="label" for="name-question">Имя</label>
-                    <input class="input input-name" type="text" name="name-question" placeholder="Укажите ваше имя" required>
+      </div>
+    </section>
+    <section class="section-default service-form">
+      <div class="container">
+        <div class="section-default__header">
+          <h1 class="title">Запись на приём</h1>
+        </div>
+        <div class="section-default__body">
+          <div class="card-form">
+            <form class="form js-form-appointment-block">
+              <fieldset class="form__body grid-group">
+                <div class="form__body_item grid-child">
+                  <label class="label" for="name-question">Имя</label>
+                  <input class="input input-name" type="text" name="name-question" placeholder="Укажите ваше имя"
+                    required>
+                </div>
+                <div class="form__body_item grid-child">
+                  <label class="label" for="tel-question">Контактный телефон</label>
+                  <input class="input input-tel" type="tel" name="tel-question" placeholder="+7(ХХХ) ХХХ-ХХ-ХХ"
+                    required>
+                </div>
+                <div class="form__body_item grid-child">
+                  <label class="label">Выберите услугу</label>
+                  <div class="select-wrapper">
+                    <select class="select select-service">
+                      <option value="default" selected="">Не выбрано</option>
+                      <option value="">Выбрано 1</option>
+                      <option value="">Выбрано 2</option>
+                      <option value="">Выбрано 3</option>
+                      <option value="">Выбрано 4</option>
+                    </select>
                   </div>
-                  <div class="form__body_item grid-child">
-                    <label class="label" for="tel-question">Контактный телефон</label>
-                    <input class="input input-tel" type="tel" name="tel-question" placeholder="+7(ХХХ) ХХХ-ХХ-ХХ" required>
-                  </div>
-                  <div class="form__body_item grid-child">
-                    <label class="label">Выберите услугу</label>
-                    <div class="select-wrapper">
-                      <select class="select select-service">
-                        <option value="default" selected="">Не выбрано</option>
-                        <option value="">Выбрано 1</option>
-                        <option value="">Выбрано 2</option>
-                        <option value="">Выбрано 3</option>
-                        <option value="">Выбрано 4</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form__body_item grid-child">
-                    <label class="label" for="date-appointment">Выберите дату</label>
-                    <input class="input input-date" type="date" name="date-appointment">
-                  </div>
-                </fieldset>
-                <fieldset class="form__footer">
-                  <label class="label label--agree" for="agree-question">
-                    <input class="checkbox input-agree" id="agree-question" type="checkbox" required>
-                    <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#" target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
-                  </label>
-                  <button type="submit" class="btn block">Отправить</button>
-                </fieldset>
-              </form>
-            </div>
+                </div>
+                <div class="form__body_item grid-child">
+                  <label class="label" for="date-appointment">Выберите дату</label>
+                  <input class="input input-date" type="date" name="date-appointment">
+                </div>
+              </fieldset>
+              <fieldset class="form__footer">
+                <label class="label label--agree" for="agree-question">
+                  <input class="checkbox input-agree" id="agree-question" type="checkbox" required>
+                  <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#"
+                      target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
+                </label>
+                <button type="submit" class="btn block">Отправить</button>
+              </fieldset>
+            </form>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    @include('partials/footer.html')
-    @include('partials/modal.html')
+  @include('partials/footer.html')
+  @include('partials/modal.html')
 
-  </body>
+</body>
 
 </html>
