@@ -1,170 +1,171 @@
 // Link
 // ===================================
 .link {
-  color: var(--blue-hover);
-  text-decoration: none;
-  cursor: pointer;
+	color: var(--blue-hover);
+	text-decoration: none;
+	cursor: pointer;
 }
 
 // Link arrow
 // ===================================
 .link-arrow {
-  $parent: &;
-  display: inline-block;
-  color: var(--brand-blue);
-  text-decoration: none;
-  cursor: pointer;
+	$parent: &;
+	display: inline-block;
+	color: var(--brand-blue);
+	text-decoration: none;
+	cursor: pointer;
+	transition: var(--transition);
 
-  &:hover {
-    #{$parent}__text {
-      color: var(--dark-primary);
-    }
-  }
+	&:hover {
+		#{$parent}__text {
+			color: var(--dark-primary);
+		}
+	}
 
-  &__text {
-    font-size: inherit;
-    transition: var(--transition);
-  }
+	&__text {
+		font-size: inherit;
+		transition: var(--transition);
+	}
 
-  &__icon {
-    position: relative;
-    top: 0.39em;
-    width: 1.3em;
-    height: 1.3em;
+	&__icon {
+		position: relative;
+		top: 0.39em;
+		width: 1.3em;
+		height: 1.3em;
 
-    use {
-      fill: var(--brand-blue);
-      transition: var(--transition);
-    }
-  }
+		use {
+			fill: var(--brand-blue);
+			transition: var(--transition);
+		}
+	}
 
-  &--small {
-    font-size: 14px;
+	&--small {
+		font-size: 14px;
 
-    &:hover {
-      #{$parent}__icon use {
-        fill: var(--brand-blue);
-      }
-    }
+		&:hover {
+			#{$parent}__icon use {
+				fill: var(--brand-blue);
+			}
+		}
 
-    #{$parent}__text {
-      font-size: 14px;
-      color: var(--dark-05);
-    }
+		#{$parent}__text {
+			font-size: 14px;
+			color: var(--dark-05);
+		}
 
-    #{$parent}__icon {
-      top: 0.34em;
-      width: 1.2em;
-      height: 1.2em;
+		#{$parent}__icon {
+			top: 0.34em;
+			width: 1.2em;
+			height: 1.2em;
 
-      @media only screen and (max-width: 480px) {
-        top: 0.24em;
-      }
+			@media only screen and (max-width: 480px) {
+				top: 0.24em;
+			}
 
-      use {
-        fill: var(--dark-05);
-      }
-    }
-  }
+			use {
+				fill: var(--dark-05);
+			}
+		}
+	}
 }
 
 // Link-absolute
 // ===================================
 .link-absolute {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  outline: none;
-  cursor: pointer;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	outline: none;
+	cursor: pointer;
 }
 
 // Link-download
 // ===================================
 .link-download {
-  $parent: &;
-  display: inline-block;
-  color: var(--dark-primary);
-  text-decoration: none;
-  cursor: pointer;
+	$parent: &;
+	display: inline-block;
+	color: var(--dark-primary);
+	text-decoration: none;
+	cursor: pointer;
 
-  &:hover {
-    #{$parent}__text {
-      color: var(--blue-primary);
-    }
+	&:hover {
+		#{$parent}__text {
+			color: var(--blue-primary);
+		}
 
-    #{$parent}__icon use {
-      fill: var(--blue-primary);
-    }
-  }
+		#{$parent}__icon use {
+			fill: var(--blue-primary);
+		}
+	}
 
-  &__text {
-    line-height: 1;
-    transition: var(--transition);
-  }
+	&__text {
+		line-height: 1;
+		transition: var(--transition);
+	}
 
-  &__icon {
-    margin-left: 2px;
-    position: relative;
-    top: 0.19em;
-    width: 1em;
-    height: 1em;
+	&__icon {
+		margin-left: 2px;
+		position: relative;
+		top: 0.19em;
+		width: 1em;
+		height: 1em;
 
-    use {
-      fill: var(--dark-primary);
-      transition: var(--transition);
-    }
-  }
+		use {
+			fill: var(--dark-primary);
+			transition: var(--transition);
+		}
+	}
 }
 
 // Link-url
 // ===================================
 .link-url {
-  @extend .link-download;
+	@extend .link-download;
 
-  &__text {
-    @extend .link-download__text;
-  }
+	&__text {
+		@extend .link-download__text;
+	}
 
-  &__icon {
-    @extend .link-download__icon;
-    top: 2px;
-  }
+	&__icon {
+		@extend .link-download__icon;
+		top: 2px;
+	}
 }
 
 // Link-reset
 // ===================================
 .link-reset {
-  $parent: &;
-  @extend .link-download;
+	$parent: &;
+	@extend .link-download;
 
-  &:hover {
-    #{$parent}__icon use {
-      fill: var(--dark-primary);
-    }
-  }
+	&:hover {
+		#{$parent}__icon use {
+			fill: var(--dark-primary);
+		}
+	}
 
-  &__text {
-    @extend .link-download__text;
-  }
+	&__text {
+		@extend .link-download__text;
+	}
 
-  &__icon {
-    @extend .link-download__icon;
+	&__icon {
+		@extend .link-download__icon;
 
-    use {
-      fill: var(--spec-red);
-    }
-  }
+		use {
+			fill: var(--spec-red);
+		}
+	}
 }
 
 // link breadcrumb
 // ===================================
 .link-breadcrumb {
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  text-decoration: none;
-  cursor: pointer;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 0.01em;
+	text-decoration: none;
+	cursor: pointer;
 }

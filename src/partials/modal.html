@@ -6,7 +6,9 @@
       <form class="form js-form-call">
         <div class="form__header">
           <span class="form__close js-close" aria-label="Закрыть модальное окно">
-            <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+            <svg class="close-svg" viewbox="0 0 24 24">
+              <use xlink:href="#icon-close"></use>
+            </svg>
           </span>
         </div>
         <fieldset class="form__body">
@@ -23,7 +25,8 @@
         <fieldset class="form__footer">
           <label class="label label--agree" for="agree-call">
             <input class="checkbox input-agree" id="agree-call" type="checkbox" required>
-            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#" target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
+            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#"
+                target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
           </label>
           <button type="submit" class="btn block">Отправить</button>
         </fieldset>
@@ -38,7 +41,9 @@
         <input type="hidden" name="IBLOCK_ID" value="">
         <div class="form__header">
           <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
-            <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+            <svg class="close-svg" viewbox="0 0 24 24">
+              <use xlink:href="#icon-close"></use>
+            </svg>
           </span>
         </div>
         <fieldset class="form__body">
@@ -69,13 +74,15 @@
           </div>
           <div class="form__body_item">
             <label class="label" for="message-question">Вопрос</label>
-            <textarea class="textarea input-question" name="message-question" placeholder="Ваш текст" required></textarea>
+            <textarea class="textarea input-question" name="message-question" placeholder="Ваш текст"
+              required></textarea>
           </div>
         </fieldset>
         <fieldset class="form__footer">
           <label class="label label--agree" for="agree-question">
             <input class="checkbox input-agree" id="agree-question" type="checkbox" required>
-            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#" target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
+            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#"
+                target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
           </label>
           <button type="submit" class="btn block">Отправить</button>
         </fieldset>
@@ -89,7 +96,9 @@
       <form class="form js-form-appointment" data-form="appointment">
         <div class="form__header">
           <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
-            <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+            <svg class="close-svg" viewbox="0 0 24 24">
+              <use xlink:href="#icon-close"></use>
+            </svg>
           </span>
         </div>
         <fieldset class="form__body">
@@ -112,7 +121,8 @@
                 <option data-id="82" value="Анестезиология и реаниматология">Анестезиология и реаниматология</option>
                 <option data-id="88" value="Вакцинация">Вакцинация</option>
                 <option data-id="83" value="Дерматовенерология">Дерматовенерология</option>
-                <option data-id="85" value="Лабораторные исследования Инвитро">Лабораторные исследования Инвитро</option>
+                <option data-id="85" value="Лабораторные исследования Инвитро">Лабораторные исследования Инвитро
+                </option>
                 <option data-id="41" value="Маммология">Маммология</option>
                 <option data-id="86" value="Общая">Общая</option>
                 <option data-id="18" value="Онкология">Онкология</option>
@@ -146,7 +156,48 @@
         <fieldset class="form__footer">
           <label class="label label--agree" for="agree-appointment">
             <input class="checkbox input-agree" id="agree-appointment" type="checkbox">
-            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#" target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
+            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#"
+                target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
+          </label>
+          <button type="submit" class="btn block">Отправить</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+  <!-- Записаться на приём. Отдельная услуга -->
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-appointment-single">
+    <div class="graph-modal__content">
+      <form class="form js-form-appointment" data-form="appointment">
+        <div class="form__header">
+          <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
+            <svg class="close-svg" viewbox="0 0 24 24">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </span>
+        </div>
+        <fieldset class="form__body">
+          <legend class="form__legend">Записаться на приём</legend>
+          <p class="form__content_title">Цена 1050 ₽</p>
+          <p class="form__content_text">Название текущей услуги</p>
+          <div class="form__body_item">
+            <label class="label" for="name-appointment">Имя</label>
+            <input class="input input-name" type="text" name="name-appointment" placeholder="Укажите ваше имя">
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="tel-appointment">Контактный телефон</label>
+            <input class="input input-tel" type="tel" name="tel-appointment" placeholder="+7(ХХХ) ХХХ-ХХ-ХХ">
+          </div>
+          <div class="form__body_item">
+            <label class="label" for="date-appointment">Выберите дату</label>
+            <input class="input input-date" type="date" name="date-appointment">
+          </div>
+        </fieldset>
+        <fieldset class="form__footer">
+          <label class="label label--agree" for="agree-appointment">
+            <input class="checkbox input-agree" id="agree-appointment" type="checkbox">
+            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#"
+                target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
           </label>
           <button type="submit" class="btn block">Отправить</button>
         </fieldset>
@@ -160,7 +211,9 @@
       <form class="form js-form-director">
         <div class="form__header">
           <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
-            <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+            <svg class="close-svg" viewbox="0 0 24 24">
+              <use xlink:href="#icon-close"></use>
+            </svg>
           </span>
         </div>
         <fieldset class="form__body">
@@ -189,7 +242,8 @@
         <fieldset class="form__footer">
           <label class="label label--agree" for="agree-director">
             <input class="checkbox input-agree" id="agree-director" type="checkbox">
-            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#" target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
+            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#"
+                target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
           </label>
           <button type="submit" class="btn block">Отправить</button>
         </fieldset>
@@ -203,21 +257,25 @@
       <form class="form js-form-fns">
         <div class="form__header">
           <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
-            <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+            <svg class="close-svg" viewbox="0 0 24 24">
+              <use xlink:href="#icon-close"></use>
+            </svg>
           </span>
         </div>
         <fieldset class="form__body">
           <legend class="form__legend">Запросить документы для ФНС</legend>
           <div class="form__content">
             <p class="form__content_title">Возврат 13% НДФЛ за лечение</p>
-            <p class="form__content_text">Справку для оформления возврата Вы можете получить в нашей бухгалтерии в четверг с 9:00 до 17:00, кроме выходных, документы можно подвезти в любое другое удобное для вас время.</p>
+            <p class="form__content_text">Справку для оформления возврата Вы можете получить в нашей бухгалтерии в
+              четверг с 9:00 до 17:00, кроме выходных, документы можно подвезти в любое другое удобное для вас время.
+            </p>
             <p class="form__content_title">Документы, необходимые для выдачи справки:</p>
             <p class="form__content_text">
-              <ul class="list-form">
-                <li class="list-form__item">Договор с МЦ «RMC».</li>
-                <li class="list-form__item">Дополнительные соглашения к договору с чеками (оригиналы).</li>
-                <li class="list-form__item">ИНН.</li>
-              </ul>
+            <ul class="list-form">
+              <li class="list-form__item">Договор с МЦ «RMC».</li>
+              <li class="list-form__item">Дополнительные соглашения к договору с чеками (оригиналы).</li>
+              <li class="list-form__item">ИНН.</li>
+            </ul>
             </p>
           </div>
           <div class="form__body_item">
@@ -232,7 +290,8 @@
         <fieldset class="form__footer">
           <label class="label label--agree" for="agree-fns">
             <input class="checkbox input-agree" id="agree-fns" type="checkbox">
-            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#" target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
+            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#"
+                target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
           </label>
           <button type="submit" class="btn block">Отправить</button>
         </fieldset>
@@ -247,7 +306,9 @@
         <input type="hidden" name="IBLOCK_ID" value="">
         <div class="form__header">
           <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
-            <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+            <svg class="close-svg" viewbox="0 0 24 24">
+              <use xlink:href="#icon-close"></use>
+            </svg>
           </span>
         </div>
         <fieldset class="form__body">
@@ -292,7 +353,8 @@
         <fieldset class="form__footer">
           <label class="label label--agree" for="agree-feedback">
             <input class="checkbox input-agree" id="agree-feedback" type="checkbox">
-            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#" target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
+            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#"
+                target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
           </label>
           <button type="submit" class="btn block">Отправить</button>
         </fieldset>
@@ -306,7 +368,9 @@
       <form class="form js-form-contact">
         <div class="form__header">
           <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
-            <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+            <svg class="close-svg" viewbox="0 0 24 24">
+              <use xlink:href="#icon-close"></use>
+            </svg>
           </span>
         </div>
         <fieldset class="form__body">
@@ -335,7 +399,8 @@
         <fieldset class="form__footer">
           <label class="label label--agree" for="agree-contact">
             <input class="checkbox input-agree" id="agree-contact" type="checkbox">
-            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#" target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
+            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#"
+                target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
           </label>
           <button type="submit" class="btn block">Отправить</button>
         </fieldset>
@@ -349,7 +414,9 @@
       <form class="form header-search js-form-search">
         <div class="form__header">
           <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
-            <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+            <svg class="close-svg" viewbox="0 0 24 24">
+              <use xlink:href="#icon-close"></use>
+            </svg>
           </span>
         </div>
         <div class="form__legend">Искать на сайте</div>
@@ -368,7 +435,9 @@
         <input id="sessid" type="hidden" value="session09352346">
         <div class="form__header">
           <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
-            <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+            <svg class="close-svg" viewbox="0 0 24 24">
+              <use xlink:href="#icon-close"></use>
+            </svg>
           </span>
         </div>
         <div class="form__body" id="vacancia-form-body">
@@ -386,7 +455,8 @@
           </div>
           <div class="form__content">
             <h4>от 45 000 до 70 000 ₽ до вычета налогов</h4>
-            <p>Ознакомительный какой-нибудь текст о том, кто нужен в нескольких словах, а далее обязанности, требования и условия.</p>
+            <p>Ознакомительный какой-нибудь текст о том, кто нужен в нескольких словах, а далее обязанности, требования
+              и условия.</p>
             <h4>Обязанности:</h4>
             <ul>
               <li>Организация медицинской деятельности предприятия</li>
@@ -397,7 +467,8 @@
             </ul>
             <h5>Требования:</h5>
             <ul>
-              <li>Высшее образование, дополнительная профессиональная поподготовка (интернатура/ординатура) — по одной из спспециальностей: "Терапия", "Неврология, "Гериатрия"</li>
+              <li>Высшее образование, дополнительная профессиональная поподготовка (интернатура/ординатура) — по одной
+                из спспециальностей: "Терапия", "Неврология, "Гериатрия"</li>
               <li>Стрессоустойчивость, доброжелательность</li>
             </ul>
             <h5>Условия:</h5>
@@ -431,7 +502,8 @@
         <fieldset class="form__footer">
           <label class="label label--agree" for="agree-vacancia">
             <input class="checkbox input-agree" id="agree-vacancia" type="checkbox">
-            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#" target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
+            <span>Даю согласие на обработку и использование персональных данных согласно 152-ФЗ, с <a href="#"
+                target="_blank">правилами политики обработки персональных данных</a> ознакомлен</span>
           </label>
           <button type="submit" class="btn block">Отправить</button>
         </fieldset>
@@ -440,18 +512,22 @@
   </div>
 
   <!-- Успешно отправлено -->
-  <div class="graph-modal__container js-modal-success" role="dialog" aria-modal="true" data-graph-target="modal-success">
+  <div class="graph-modal__container js-modal-success" role="dialog" aria-modal="true"
+    data-graph-target="modal-success">
     <div class="graph-modal__content">
       <div class="form js-form-vacancia">
         <div class="form__header">
           <span class="form__close graph-modal-close js-close" aria-label="Закрыть модальное окно">
-            <svg class="close-svg" viewbox="0 0 24 24"><use xlink:href="#icon-close"></use></svg>
+            <svg class="close-svg" viewbox="0 0 24 24">
+              <use xlink:href="#icon-close"></use>
+            </svg>
           </span>
         </div>
         <div class="form__body">
           <legend class="form__legend">Успешно отправлено</legend>
           <div class="form__body_item">
-            <p class="form__content_text">В ближайшее время наш специалист свяжется с вами, чтобы подтвердить ваши данные</p>
+            <p class="form__content_text">В ближайшее время наш специалист свяжется с вами, чтобы подтвердить ваши
+              данные</p>
           </div>
         </div>
       </div>
@@ -459,4 +535,3 @@
   </div>
 
 </div>
-

@@ -773,7 +773,7 @@
 // ===================================
 .card-gradient-icon {
 	@extend .card-gradient;
-	min-height: auto;
+	min-height: 240px;
 
 	&__header {
 		@extend .card-gradient__header;
@@ -792,7 +792,15 @@
 		$parent: &;
 
 		.link-arrow {
+			padding: 0.2em 0.8em 0.6em;
+			background-color: var(--light-white);
+			border-radius: 1000px;
+			border: 1px solid var(--light-white);
+			color: var(--brand-green);
+
 			&:hover {
+				background-color: transparent;
+
 				.link-arrow__text {
 					color: var(--light-white);
 				}
@@ -803,12 +811,12 @@
 
 			&__text {
 				font-weight: 500;
-				color: var(--light-white);
+				color: inherit;
 			}
 
 			&__icon {
 				use {
-					fill: var(--light-white);
+					fill: var(--brand-green);
 				}
 			}
 		}

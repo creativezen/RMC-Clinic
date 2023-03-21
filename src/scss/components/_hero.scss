@@ -21,7 +21,7 @@
 	// }
 
 	@media only screen and (max-width: 380px) {
-		&:not(.hero-base) {
+		&:not(.hero-base):not(.hero-post) {
 			min-height: 400px;
 		}
 	}
@@ -207,6 +207,7 @@
 .hero-post {
 	@extend .hero-base;
 	padding-bottom: 0;
+	min-height: 0;
 
 	&__content {
 		@extend .hero-base__content;
