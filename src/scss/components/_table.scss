@@ -4,11 +4,13 @@
 // ===================================
 .table-price {
 	$parent: &;
-	--this-space: 0 20px 20px 20px;
+	--this-space: calc(var(--scale) * 0.6);
+	// --this-padding: 0 var(--this-space) var(--this-space) var(--this-space);
 	// padding: 0 20px 20px 20px;
 
 	&__header {
-		padding: var(--this-space);
+		padding-inline: var(--this-space);
+		padding-bottom: var(--this-space);
 		@include mix.interpolate(border-top-left-radius, 320px, 1480px, 6px, 10px);
 		@include mix.interpolate(border-top-right-radius, 320px, 1480px, 6px, 10px);
 		overflow: hidden;
@@ -34,7 +36,9 @@
 	}
 
 	&__body {
-		padding: var(--this-space);
+		padding-inline: var(--this-space);
+		padding-bottom: var(--this-space);
+
 		#{$parent}__row {
 			transition: var(--transition);
 
@@ -47,8 +51,9 @@
 	}
 
 	&__footer {
-		padding: var(--this-space);
-		margin-top: 10px;
+		padding-inline: var(--this-space);
+		padding-bottom: var(--this-space);
+		margin-top: var(--this-space);
 
 		@media only screen and (max-width: 880px) {
 			.btn-small {
@@ -73,13 +78,13 @@
 
 	@media only screen and (max-width: 480px) {
 		&__row + &__row {
-			margin-top: 10px;
-			padding-top: 10px;
+			margin-top: var(--this-space);
+			padding-top: var(--this-space);
 		}
 	}
 
 	&__cell {
-		padding: 15px 20px;
+		padding: var(--this-space);
 		font-weight: 400;
 		color: var(--dark-075);
 		transition: var(--transition);
@@ -95,7 +100,7 @@
 			&::before {
 				flex-shrink: 0;
 				width: 95px;
-				margin-right: 12px;
+				margin-right: var(--this-space);
 				content: attr(data-content);
 				font-size: 14px;
 				font-weight: 400;
@@ -137,7 +142,7 @@
 
 	@media only screen and (max-width: 480px) {
 		&__cell + &__cell {
-			margin-top: 6px;
+			margin-top: var(--this-space);
 		}
 	}
 
