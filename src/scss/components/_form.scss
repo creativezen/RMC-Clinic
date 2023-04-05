@@ -63,6 +63,17 @@
 			font-weight: 500;
 			line-height: 1.3;
 			letter-spacing: -0.01em;
+
+			&.accent {
+				display: inline-block;
+				padding: 0.6em;
+				border-radius: 6px;
+				background-color: #ccf4ed;
+
+				& + * {
+					@include mix.interpolate(margin-top, 320px, 1480px, 12px, 20px);
+				}
+			}
 		}
 
 		&_text {
@@ -72,6 +83,12 @@
 
 			@media only screen and (max-width: 480px) {
 				line-height: 1.4;
+			}
+
+			&.service-name {
+				@include mix.interpolate(font-size, 320px, 1480px, 16px, 20px);
+				line-height: 1.4;
+				color: var(--dark-black);
 			}
 		}
 
