@@ -630,6 +630,7 @@ const rulesVacancia = [
 
 let formAppointmentBlock = document.querySelector('.js-form-appointment-block')
 let formQuestionBlock = document.querySelector('.js-form-question-block')
+let formFeedbackBlock = document.querySelector('.js-form-feedback-block')
 let formContact = document.querySelector('.js-form-contact')
 let formVacancia = document.querySelector('.js-form-vacancia')
 let formFeedback = document.querySelector('.js-form-feedback')
@@ -708,6 +709,15 @@ if (formVacancia) {
 if (formFeedback) {
 	validateForms(
 		'.js-form-feedback',
+		[...rulesForFeedback],
+		showSuccess,
+		callYandexTarget
+	)
+}
+
+if (formFeedbackBlock) {
+	validateForms(
+		'.js-form-feedback-block',
 		[...rulesForFeedback],
 		showSuccess,
 		callYandexTarget
