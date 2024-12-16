@@ -1,263 +1,302 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
 
-  @include('./partials/head.html', {
-  "title": 'Комфортная эндоскопия «во сне» | RMC-Clinic',
-  })
+@include('./partials/head.html', {
+"title": 'Комфортная эндоскопия «во сне» | RMC-Clinic',
+})
 
-  @include('partials/svg-sprite.html')
+@include('partials/svg-sprite.html')
 
-  <body class="page__body">
+<body class="page__body">
     @include('partials/header.html')
 
     <main class="main">
-      <section class="section hero-post">
-        <div class="hero-post__content container">
-          <div class="breadcrumb">
-            <ul class="breadcrumb__nav">
-              <li><a href="#" class="link-breadcrumb">Главная</a></li>
-              <li><a href="#" class="link-breadcrumb">О клинике</a></li>
-              <li><a href="#" class="link-breadcrumb">Новости</a></li>
-              <li><a href="#" class="link-breadcrumb">Комфортная эндоскопия «во сне»</a></li>
-            </ul>
-          </div>
-          <div class="hero-post__badges">
-            <div class="badge-date">
-              <div class="badge-date__icon"></div>
-              <span class="badge-date__text">15 ноября 2019 г.</span>
-            </div>
-            <div class="badge-time">
-              <div class="badge-time__icon"></div>
-              <span class="badge-time__text">10 мин.</span>
-            </div>
-          </div>
-          <h1 class="hero-post__title">Комфортная эндоскопия «во сне»</h1>
-        </div>
-      </section>
-      <section class="section-sidebar post-main">
-        <div class="container">
-          <div class="section-sidebar__body">
-            <div class="section-sidebar__main">
-              <article class="article">
-                <p>Эндоскопия во сне проходит без всякой боли и дискомфорта. Однако, комфорт пациента – важный, но далеко не главный аргумент при выборе данной методики. Основной ее плюс в том, что когда пациент спит, доктор может выполнить весь необходимый комплекс диагностики с большей точностью и эффективностью, а это повышает качество процедуры, автоматически снижая процент диагностических ошибок.</p>
-                <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст. Здесь ваш текст. Здесь ваш текст"</p>
-                <picture>
-                  <img src="img/card-video-img-01.jpg" alt="">
-                </picture>
-                <h4>Преимущества эндоскопии «во сне»</h4>
-                <ul>
-                  <li>Комфорт для пациента</li>
-                  <li>Позволяет врачу детально и качественно провести обследование</li>
-                  <li>Безопасный медикаментозный сон</li>
-                </ul>
-                <p><b>*требуется консультация анестезиолога</b></p>
-              </article>
-              <div class="article-nav">
-                <a href="#" class="link-arrow article-nav__prev">
-                  <svg class="link-arrow__icon" viewbox="0 0 24 24">
-                    <use xlink:href="#icon-arrow-simple"></use>
-                  </svg>
-                  <span class="link-arrow__text">Предыдущая статья</span>
-                </a>
-                <a href="#" class="link-arrow article-nav__next">
-                  <span class="link-arrow__text">Следующая статья</span>
-                  <svg class="link-arrow__icon" viewbox="0 0 24 24">
-                    <use xlink:href="#icon-arrow-simple"></use>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div class="section-sidebar__aside">
-              <div class="stiky">
-                <ul class="sidebar-nav aside-item">
-                  <div class="sidebar-nav__header">
-                    <p class="sidebar-nav__header_text">Топ-5 новостей</p>
-                  </div>
-                  <li class="sidebar-nav__item"><a href="">Лицензии</a></li>
-                  <li class="sidebar-nav__item"><a href="">Новости</a></li>
-                  <li class="sidebar-nav__item"><a href="">Администрация клиники</a></li>
-                  <li class="sidebar-nav__item"><a href="">Структура клиники</a></li>
-                  <li class="sidebar-nav__item"><a href="">Нормативные документы</a></li>
-                  <li class="sidebar-nav__item"><a href="">Вакансии</a></li>
-                  <li class="sidebar-nav__item"><a href="">Взаимодействие с медицинскими организациями</a></li>
-                  <li class="sidebar-nav__item"><a href="">Страховые партнеры</a></li>
-                </ul>
-                <a href="#" class="btn aside-item">Смотреть все новости</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section-default post-service">
-        <div class="container">
-          <div class="section-default__header">
-            <h1 class="title">Цены на услуги по направлению</h1>
-            <a href="#" class="link-arrow">
-              <span class="link-arrow__text">Посмотреть все цены</span>
-              <svg class="link-arrow__icon" viewbox="0 0 24 24">
-                <use xlink:href="#icon-arrow-simple"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="section-default__body">
-            <div class="swiper js-swiper-service" data-slider="4">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="card-service">
-                    <div class="card-service__header">
-                      <div class="badge badge--small">Терапия</div>
-                      <small class="card-service__header_small">№ 101003</small>
-                    </div>
-                    <div class="card-service__body">
-                      <p class="card-service__body_text">Осмотр терапевта (перед манипуляциями, и по сопроводительным документам)</p>
-                    </div>
-                    <div class="card-service__footer">
-                      <div class="card-service__footer_price">1400 ₽</div>
-                      <a href="#" class="link-arrow link-arrow--small">
-                        <span class="link-arrow__text">Записаться</span>
-                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
-                          <use xlink:href="#icon-arrow-right"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
+        <section class="section hero-post">
+            <div class="hero-post__content container">
+                <div class="breadcrumb">
+                    <ul class="breadcrumb__nav">
+                        <li><a href="#" class="link-breadcrumb">Главная</a></li>
+                        <li><a href="#" class="link-breadcrumb">О клинике</a></li>
+                        <li><a href="#" class="link-breadcrumb">Новости</a></li>
+                        <li><a href="#" class="link-breadcrumb">Комфортная эндоскопия «во сне»</a></li>
+                    </ul>
                 </div>
-                <div class="swiper-slide">
-                  <div class="card-service">
-                    <div class="card-service__header">
-                      <div class="badge badge--small">Терапия</div>
-                      <small class="card-service__header_small">№ 101003</small>
+                <div class="hero-post__badges">
+                    <div class="badge-date">
+                        <div class="badge-date__icon"></div>
+                        <span class="badge-date__text">15 ноября 2019 г.</span>
                     </div>
-                    <div class="card-service__body">
-                      <p class="card-service__body_text">Осмотр терапевта (перед манипуляциями, и по сопроводительным документам)</p>
+                    <div class="badge-time">
+                        <div class="badge-time__icon"></div>
+                        <span class="badge-time__text">10 мин.</span>
                     </div>
-                    <div class="card-service__footer">
-                      <div class="card-service__footer_price">1400 ₽</div>
-                      <a href="#" class="link-arrow link-arrow--small">
-                        <span class="link-arrow__text">Записаться</span>
-                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
-                          <use xlink:href="#icon-arrow-right"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="card-service">
-                    <div class="card-service__header">
-                      <div class="badge badge--small">Терапия</div>
-                      <small class="card-service__header_small">№ 101003</small>
-                    </div>
-                    <div class="card-service__body">
-                      <p class="card-service__body_text">Осмотр терапевта (перед манипуляциями, и по сопроводительным документам)</p>
-                    </div>
-                    <div class="card-service__footer">
-                      <div class="card-service__footer_price">1400 ₽</div>
-                      <a href="#" class="link-arrow link-arrow--small">
-                        <span class="link-arrow__text">Записаться</span>
-                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
-                          <use xlink:href="#icon-arrow-right"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card-service">
-                    <div class="card-service__header">
-                      <div class="badge badge--small">Терапия</div>
-                      <small class="card-service__header_small">№ 101003</small>
-                    </div>
-                    <div class="card-service__body">
-                      <p class="card-service__body_text">Осмотр терапевта (перед манипуляциями, и по сопроводительным документам)</p>
-                    </div>
-                    <div class="card-service__footer">
-                      <div class="card-service__footer_price">1400 ₽</div>
-                      <a href="#" class="link-arrow link-arrow--small">
-                        <span class="link-arrow__text">Записаться</span>
-                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
-                          <use xlink:href="#icon-arrow-right"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card-service">
-                    <div class="card-service__header">
-                      <div class="badge badge--small">Терапия</div>
-                      <small class="card-service__header_small">№ 101003</small>
-                    </div>
-                    <div class="card-service__body">
-                      <p class="card-service__body_text">Осмотр терапевта (перед манипуляциями, и по сопроводительным документам)</p>
-                    </div>
-                    <div class="card-service__footer">
-                      <div class="card-service__footer_price">1400 ₽</div>
-                      <a href="#" class="link-arrow link-arrow--small">
-                        <span class="link-arrow__text">Записаться</span>
-                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
-                          <use xlink:href="#icon-arrow-right"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card-service">
-                    <div class="card-service__header">
-                      <div class="badge badge--small">Терапия</div>
-                      <small class="card-service__header_small">№ 101003</small>
-                    </div>
-                    <div class="card-service__body">
-                      <p class="card-service__body_text">Осмотр терапевта (перед манипуляциями, и по сопроводительным документам)</p>
-                    </div>
-                    <div class="card-service__footer">
-                      <div class="card-service__footer_price">1400 ₽</div>
-                      <a href="#" class="link-arrow link-arrow--small">
-                        <span class="link-arrow__text">Записаться</span>
-                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
-                          <use xlink:href="#icon-arrow-right"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card-service">
-                    <div class="card-service__header">
-                      <div class="badge badge--small">Терапия</div>
-                      <small class="card-service__header_small">№ 101003</small>
-                    </div>
-                    <div class="card-service__body">
-                      <p class="card-service__body_text">Осмотр терапевта (перед манипуляциями, и по сопроводительным документам)</p>
-                    </div>
-                    <div class="card-service__footer">
-                      <div class="card-service__footer_price">1400 ₽</div>
-                      <a href="#" class="link-arrow link-arrow--small">
-                        <span class="link-arrow__text">Записаться</span>
-                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
-                          <use xlink:href="#icon-arrow-right"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="slider-pagination swiper-pagination"></div>
+                <h1 class="hero-post__title">Комфортная эндоскопия «во сне»</h1>
             </div>
-            <div class="swiper-button-next next-service">
-              <svg class="btn-svg" viewbox="0 0 24 24"><use xlink:href="#icon-arrow-right"></use></svg>
+        </section>
+
+        <section class="section-sidebar post-main">
+            <div class="container">
+                <div class="section-sidebar__body">
+                    <div class="section-sidebar__main">
+                        <article class="article">
+                            <p>Эндоскопия во сне проходит без всякой боли и дискомфорта. Однако, комфорт пациента – важный, но далеко не главный аргумент при выборе данной методики. Основной ее плюс в том, что когда пациент спит, доктор может выполнить весь необходимый комплекс диагностики с большей точностью и эффективностью, а это повышает качество процедуры, автоматически снижая процент диагностических ошибок.</p>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>Преимущество</th>
+                                        <th>Описание</th>
+                                        <th>Описание</th>
+                                        <th>Описание</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Высокое качество изображений</td>
+                                        <td>Четкость и детализация снимков.</td>
+                                        <td>Четкость и детализация снимков.</td>
+                                        <td>Четкость и детализация снимков.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Быстрота</td>
+                                        <td>Мгновенное получение результатов.</td>
+                                        <td>Мгновенное получение результатов.</td>
+                                        <td>Мгновенное получение результатов.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Безопасность</td>
+                                        <td>Сниженная доза радиации.</td>
+                                        <td>Сниженная доза радиации.</td>
+                                        <td>Сниженная доза радиации.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Удобство</td>
+                                        <td>Легкое хранение и передача снимков.</td>
+                                        <td>Легкое хранение и передача снимков.</td>
+                                        <td>Легкое хранение и передача снимков.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст. Здесь ваш текст. Здесь ваш текст"</p>
+                            <picture>
+                                <img src="img/card-video-img-01.jpg" alt="">
+                            </picture>
+                            <h4>Преимущества эндоскопии «во сне»</h4>
+                            <ul>
+                                <li>Комфорт для пациента</li>
+                                <li>Позволяет врачу детально и качественно провести обследование</li>
+                                <li>Безопасный медикаментозный сон</li>
+                            </ul>
+                            <p><b>*требуется консультация анестезиолога</b></p>
+                        </article>
+                        <div class="article-nav">
+                            <a href="#" class="link-arrow article-nav__prev">
+                                <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                                    <use xlink:href="#icon-arrow-simple"></use>
+                                </svg>
+                                <span class="link-arrow__text">Предыдущая статья</span>
+                            </a>
+                            <a href="#" class="link-arrow article-nav__next">
+                                <span class="link-arrow__text">Следующая статья</span>
+                                <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                                    <use xlink:href="#icon-arrow-simple"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="section-sidebar__aside">
+                        <div class="stiky">
+                            <ul class="sidebar-nav aside-item">
+                                <div class="sidebar-nav__header">
+                                    <p class="sidebar-nav__header_text">Топ-5 новостей</p>
+                                </div>
+                                <li class="sidebar-nav__item"><a href="">Лицензии</a></li>
+                                <li class="sidebar-nav__item"><a href="">Новости</a></li>
+                                <li class="sidebar-nav__item"><a href="">Администрация клиники</a></li>
+                                <li class="sidebar-nav__item"><a href="">Структура клиники</a></li>
+                                <li class="sidebar-nav__item"><a href="">Нормативные документы</a></li>
+                                <li class="sidebar-nav__item"><a href="">Вакансии</a></li>
+                                <li class="sidebar-nav__item"><a href="">Взаимодействие с медицинскими организациями</a></li>
+                                <li class="sidebar-nav__item"><a href="">Страховые партнеры</a></li>
+                            </ul>
+                            <a href="#" class="btn aside-item">Смотреть все новости</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="swiper-button-prev prev-service">
-              <svg class="btn-svg" viewbox="0 0 24 24"><use xlink:href="#icon-arrow-right"></use></svg>
+        </section>
+        <section class="section-default post-service">
+            <div class="container">
+                <div class="section-default__header">
+                    <h1 class="title">Цены на услуги по направлению</h1>
+                    <a href="#" class="link-arrow">
+                        <span class="link-arrow__text">Посмотреть все цены</span>
+                        <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                            <use xlink:href="#icon-arrow-simple"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="section-default__body">
+                    <div class="swiper js-swiper-service" data-slider="4">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card-service">
+                                    <div class="card-service__header">
+                                        <div class="badge badge--small">Терапия</div>
+                                        <small class="card-service__header_small">№ 101003</small>
+                                    </div>
+                                    <div class="card-service__body">
+                                        <p class="card-service__body_text">Осмотр терапевта (перед манипуляциями, и по сопроводительным документам)</p>
+                                    </div>
+                                    <div class="card-service__footer">
+                                        <div class="card-service__footer_price">1400 ₽</div>
+                                        <a href="#" class="link-arrow link-arrow--small">
+                                            <span class="link-arrow__text">Записаться</span>
+                                            <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                                                <use xlink:href="#icon-arrow-right"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-service">
+                                    <div class="card-service__header">
+                                        <div class="badge badge--small">Терапия</div>
+                                        <small class="card-service__header_small">№ 101003</small>
+                                    </div>
+                                    <div class="card-service__body">
+                                        <p class="card-service__body_text">Осмотр терапевта (перед манипуляциями, и по сопроводительным документам)</p>
+                                    </div>
+                                    <div class="card-service__footer">
+                                        <div class="card-service__footer_price">1400 ₽</div>
+                                        <a href="#" class="link-arrow link-arrow--small">
+                                            <span class="link-arrow__text">Записаться</span>
+                                            <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                                                <use xlink:href="#icon-arrow-right"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-service">
+                                    <div class="card-service__header">
+                                        <div class="badge badge--small">Терапия</div>
+                                        <small class="card-service__header_small">№ 101003</small>
+                                    </div>
+                                    <div class="card-service__body">
+                                        <p class="card-service__body_text">Осмотр терапевта (перед манипуляциями, и по сопроводительным документам)</p>
+                                    </div>
+                                    <div class="card-service__footer">
+                                        <div class="card-service__footer_price">1400 ₽</div>
+                                        <a href="#" class="link-arrow link-arrow--small">
+                                            <span class="link-arrow__text">Записаться</span>
+                                            <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                                                <use xlink:href="#icon-arrow-right"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-service">
+                                    <div class="card-service__header">
+                                        <div class="badge badge--small">Терапия</div>
+                                        <small class="card-service__header_small">№ 101003</small>
+                                    </div>
+                                    <div class="card-service__body">
+                                        <p class="card-service__body_text">Осмотр терапевта (перед манипуляциями, и по сопроводительным документам)</p>
+                                    </div>
+                                    <div class="card-service__footer">
+                                        <div class="card-service__footer_price">1400 ₽</div>
+                                        <a href="#" class="link-arrow link-arrow--small">
+                                            <span class="link-arrow__text">Записаться</span>
+                                            <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                                                <use xlink:href="#icon-arrow-right"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-service">
+                                    <div class="card-service__header">
+                                        <div class="badge badge--small">Терапия</div>
+                                        <small class="card-service__header_small">№ 101003</small>
+                                    </div>
+                                    <div class="card-service__body">
+                                        <p class="card-service__body_text">Осмотр терапевта (перед манипуляциями, и по сопроводительным документам)</p>
+                                    </div>
+                                    <div class="card-service__footer">
+                                        <div class="card-service__footer_price">1400 ₽</div>
+                                        <a href="#" class="link-arrow link-arrow--small">
+                                            <span class="link-arrow__text">Записаться</span>
+                                            <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                                                <use xlink:href="#icon-arrow-right"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-service">
+                                    <div class="card-service__header">
+                                        <div class="badge badge--small">Терапия</div>
+                                        <small class="card-service__header_small">№ 101003</small>
+                                    </div>
+                                    <div class="card-service__body">
+                                        <p class="card-service__body_text">Осмотр терапевта (перед манипуляциями, и по сопроводительным документам)</p>
+                                    </div>
+                                    <div class="card-service__footer">
+                                        <div class="card-service__footer_price">1400 ₽</div>
+                                        <a href="#" class="link-arrow link-arrow--small">
+                                            <span class="link-arrow__text">Записаться</span>
+                                            <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                                                <use xlink:href="#icon-arrow-right"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-service">
+                                    <div class="card-service__header">
+                                        <div class="badge badge--small">Терапия</div>
+                                        <small class="card-service__header_small">№ 101003</small>
+                                    </div>
+                                    <div class="card-service__body">
+                                        <p class="card-service__body_text">Осмотр терапевта (перед манипуляциями, и по сопроводительным документам)</p>
+                                    </div>
+                                    <div class="card-service__footer">
+                                        <div class="card-service__footer_price">1400 ₽</div>
+                                        <a href="#" class="link-arrow link-arrow--small">
+                                            <span class="link-arrow__text">Записаться</span>
+                                            <svg class="link-arrow__icon" viewbox="0 0 24 24">
+                                                <use xlink:href="#icon-arrow-right"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-pagination swiper-pagination"></div>
+                    </div>
+                    <div class="swiper-button-next next-service">
+                        <svg class="btn-svg" viewbox="0 0 24 24">
+                            <use xlink:href="#icon-arrow-right"></use>
+                        </svg>
+                    </div>
+                    <div class="swiper-button-prev prev-service">
+                        <svg class="btn-svg" viewbox="0 0 24 24">
+                            <use xlink:href="#icon-arrow-right"></use>
+                        </svg>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
     </main>
 
     @include('partials/footer.html')
     @include('partials/modal.html')
-  </body>
+</body>
 
 </html>

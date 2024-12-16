@@ -6,173 +6,235 @@
 // ===================================
 .article {
 
-  * {
-    text-align: justify;
-
-    @media only screen and (max-width: 480px) {
-      text-align: left;
-    }
-  }
-
-  b, strong {
-    display: inline-block;
-    font-weight: 600;
-    color: black;
-  }
-
-  p {
-    b, strong {
-      display: inline
-    }
-  }
-
-  h1, h2 {
-    @extend .title;
-  }
-
-  > * + h1,
-  > * + h2 {
-    @include mix.interpolate(margin-top, 320px, 1480px, 26px, 46px);
-  }
-
-  h1 + *,
-  h2 + * {
-    @include mix.interpolate(margin-top, 320px, 1480px, 18px, 30px);
-  }
-
-  h3 + * {
-    @include mix.interpolate(margin-top, 320px, 1480px, 14px, 22px);
-  }
-
-  h4 + * {
-    @include mix.interpolate(margin-top, 320px, 1480px, 10px, 20px);
-  }
-
-  h5 + * {
-    @include mix.interpolate(margin-top, 320px, 1480px, 8px, 16px);
-  }
-
-  > * + h3 {
-    @include mix.interpolate(margin-top, 320px, 1480px, 24px, 34px);
-  }
-
-  > * + h4 {
-    @include mix.interpolate(margin-top, 320px, 1480px, 18px, 30px);
-  }
-
-  > * + h5 {
-    @include mix.interpolate(margin-top, 320px, 1480px, 12px, 26px);
-  }
-
-  p {
-    @include mix.interpolate(font-size, 320px, 1480px, 16px, 18px);
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: -0.01em;
-    color: var(--dark-075);
-  }
-
-  > * + p,
-  > * + strong,
-  > * + b,
-  > * + ul,
-  > * ol {
-    @include mix.interpolate(margin-top, 320px, 1480px, 14px, 20px);
-  }
-
-  big {
-    font-weight: 500;
-    color: var(--dark-primary);
-  }
-
-  hr {
-    height: 1px;
-    border: 0;
-    background-color: var(--dark-03);
-  }
-
-  hr {
-    @include mix.interpolate(margin-top, 320px, 1480px, 16px, 40px);
-  }
-
-  ul {
-    @extend .list-article;
-    list-style-type: none;
-
-    li {
-      @extend .list-article__item;
-      @include mix.interpolate(font-size, 320px, 1480px, 16px, 18px);
-
-      &::before {
-        top: 0.8em;
+    * {
+        text-align: justify;
 
         @media only screen and (max-width: 480px) {
-          top: 0.7em;
+            text-align: left;
         }
-      }
     }
 
-    > * + li {
-      @include mix.interpolate(margin-top, 320px, 1480px, 6px, 10px);
-    }
-  }
-
-  ol {
-    @extend .list-article;
-    @include mix.interpolate(padding-left, 320px, 1480px, 10px, 20px);
-
-    li {
-      @extend .list-article__item;
-      @include mix.interpolate(font-size, 320px, 1480px, 16px, 18px);
-      padding-left: 0;
-
-      &::before {
-        display: none
-      }
+    b,
+    strong {
+        display: inline-block;
+        font-weight: 600;
+        color: black;
     }
 
-    > * + li {
-      @include mix.interpolate(margin-top, 320px, 1480px, 6px, 10px);
+    p {
+
+        b,
+        strong {
+            display: inline
+        }
     }
-  }
 
-  picture {
-    display: block;
-    @include mix.interpolate(margin-top, 320px, 1480px, 16px, 30px);
-  }
+    h1,
+    h2 {
+        @extend .title;
+    }
 
-  .video-cover {
-    @include mix.interpolate(margin-top, 320px, 1480px, 20px, 40px);
-  }
+    >*+h1,
+    >*+h2 {
+        @include mix.interpolate(margin-top, 320px, 1480px, 26px, 46px);
+    }
+
+    h1+*,
+    h2+* {
+        @include mix.interpolate(margin-top, 320px, 1480px, 18px, 30px);
+    }
+
+    h3+* {
+        @include mix.interpolate(margin-top, 320px, 1480px, 14px, 22px);
+    }
+
+    h4+* {
+        @include mix.interpolate(margin-top, 320px, 1480px, 10px, 20px);
+    }
+
+    h5+* {
+        @include mix.interpolate(margin-top, 320px, 1480px, 8px, 16px);
+    }
+
+    >*+h3 {
+        @include mix.interpolate(margin-top, 320px, 1480px, 24px, 34px);
+    }
+
+    >*+h4 {
+        @include mix.interpolate(margin-top, 320px, 1480px, 18px, 30px);
+    }
+
+    >*+h5 {
+        @include mix.interpolate(margin-top, 320px, 1480px, 12px, 26px);
+    }
+
+    p {
+        @include mix.interpolate(font-size, 320px, 1480px, 16px, 18px);
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: -0.01em;
+        color: var(--dark-075);
+    }
+
+    >*+p,
+    >*+strong,
+    >*+b,
+    >*+ul,
+    >* + ol,
+    > * + table {
+        @include mix.interpolate(margin-top, 320px, 1480px, 14px, 20px);
+    }
+
+    big {
+        font-weight: 500;
+        color: var(--dark-primary);
+    }
+
+    hr {
+        height: 1px;
+        border: 0;
+        background-color: var(--dark-03);
+    }
+
+    hr {
+        @include mix.interpolate(margin-top, 320px, 1480px, 16px, 40px);
+    }
+
+    ul {
+        @extend .list-article;
+        list-style-type: none;
+
+        li {
+            @extend .list-article__item;
+            @include mix.interpolate(font-size, 320px, 1480px, 16px, 18px);
+
+            &::before {
+                top: 0.8em;
+
+                @media only screen and (max-width: 480px) {
+                    top: 0.7em;
+                }
+            }
+        }
+
+        >*+li {
+            @include mix.interpolate(margin-top, 320px, 1480px, 6px, 10px);
+        }
+    }
+
+    ol {
+        @extend .list-article;
+        @include mix.interpolate(padding-left, 320px, 1480px, 10px, 20px);
+
+        li {
+            @extend .list-article__item;
+            @include mix.interpolate(font-size, 320px, 1480px, 16px, 18px);
+            padding-left: 0;
+
+            &::before {
+                display: none
+            }
+        }
+
+        >*+li {
+            @include mix.interpolate(margin-top, 320px, 1480px, 6px, 10px);
+        }
+    }
+
+    picture {
+        display: block;
+        @include mix.interpolate(margin-top, 320px, 1480px, 16px, 30px);
+    }
+
+    .video-cover {
+        @include mix.interpolate(margin-top, 320px, 1480px, 20px, 40px);
+    }
+
+    table {
+        display: table;
+        width: 100%;
+        border: 1px solid var(--table-border);
+        text-align: left;
+
+        /* Скрываем скроллбар */
+        white-space: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            width: 0;
+            background-color: transparent;
+        }
+
+        * {
+            text-align: inherit;
+        }
+
+        tr {
+            width: 100%;
+            display: flex;
+            align-items: stretch;
+
+            > * {
+                flex: 1;
+            }
+        }
+
+        th {
+            font-weight: 600;
+        }
+
+        th,
+        td {
+            padding: 0.6em 1em;
+            border: 1px solid var(--table-border);
+            white-space: normal;
+            font-size: inherit;
+            line-height: 1.2;
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        @media only screen and (max-width: 780px) {
+            display: block;
+
+            td,
+            th {
+                min-width: 140px;
+            }
+        }
+    }
 }
 
 // article nav
 // ===================================
 .article-nav {
-  @include mix.interpolate(margin-top, 320px, 1480px, 20px, 40px);
-  @include mix.interpolate(padding, 320px, 1480px, 10px, 30px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @include mix.interpolate(border-radius, 320px, 1480px, 12px, 20px);
-  border: 1px solid var(--light-03);
-  background-color: var(--light-01);
+    @include mix.interpolate(margin-top, 320px, 1480px, 20px, 40px);
+    @include mix.interpolate(padding, 320px, 1480px, 10px, 30px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mix.interpolate(border-radius, 320px, 1480px, 12px, 20px);
+    border: 1px solid var(--light-03);
+    background-color: var(--light-01);
 
-  @media only screen and (max-width: 380px) {
-    background-color: var(--light-white);
-    border: none;
-    padding: 0;
+    @media only screen and (max-width: 380px) {
+        background-color: var(--light-white);
+        border: none;
+        padding: 0;
 
-    &__prev, &__next {
-      span {
-        font-size: 13px;
-      }
+        &__prev,
+        &__next {
+            span {
+                font-size: 13px;
+            }
+        }
     }
-  }
 
-  &__prev {
-    .link-arrow__icon {
-      transform: rotate(-180deg);
+    &__prev {
+        .link-arrow__icon {
+            transform: rotate(-180deg);
+        }
     }
-  }
 }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('./partials/head.html', {
+"title": 'Несуществующая страница | RMC-Clinic',
+})
+
+@include('partials/svg-sprite.html')
+
+<body class="page__body">
+  @include('partials/header.html')
+
+  <main class="main">
+    <section class="section-default notfound-main">
+      <div class="container">
+        <div class="section-default__body">
+          <div class="notfound__content">
+            <picture><img src="img/svg/svg-no-results.svg" alt="" width="260" height="260"></picture>
+            <h1 class="section-default__title">По вашему запросу ничего не найдено</h1>
+            <a href="index.html" class="btn">На главную</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @include('partials/footer.html')
+  @include('partials/modal.html')
+</body>
+
+</html>

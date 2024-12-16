@@ -1,12 +1,14 @@
 @use '../mixins' as mix;
+@use './mixins/fluid-text' as size;
 
-// Table price
-// ===================================
+
+
+
+
+/* Table price */
 .table-price {
 	$parent: &;
 	--this-space: calc(var(--scale) * 0.6);
-	// --this-padding: 0 var(--this-space) var(--this-space) var(--this-space);
-	// padding: 0 20px 20px 20px;
 
 	&__header {
 		padding-inline: var(--this-space);
@@ -145,25 +147,4 @@
 			margin-top: var(--this-space);
 		}
 	}
-
-	// .list-service {
-	// 	padding: 0;
-	// 	margin-top: 0;
-
-	// 	.list-service__item {
-	// 		border: 0;
-	// 	}
-
-	// 	.list-service__item_title {
-	// 		padding: 15px 20px;
-	// 		margin-inline: 20px;
-	// 		border-top: 1px solid;
-	// 		border-bottom: 1px solid;
-	// 		background-color: rgba(179, 225, 240, 0.3);
-	// 	}
-
-	// 	.table-price {
-	// 		margin-top: 0;
-	// 	}
-	// }
 }
